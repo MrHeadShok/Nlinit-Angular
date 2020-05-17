@@ -1,0 +1,67 @@
+<ion-content>
+
+
+  <ion-card color="transparent">
+    <ion-card-header>
+
+      <ion-card-title> Nlinit
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <h2> Nlinit is a completely free app -for now-.</h2> <br />
+      <h2> Create your desired projects </h2> <br />
+      <h2> Check your charts </h2> <br />
+      <h2>Add
+        members
+        and lot more</h2>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card color="transparent">
+    <ion-card-title>Login :</ion-card-title>
+    <ion-item color="transparent">
+      <ion-label position="floating">
+        <h2>Email address</h2>
+      </ion-label>
+      <ion-input color="transparent" type="Email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+
+    <ion-item color="transparent">
+      <ion-label color="transparent" position="floating" minlength="5" pattern="Password">
+        <h2> Password</h2>
+      </ion-label>
+      <ion-input color="transparent" type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+  </ion-card>
+
+
+  <ion-card color="transparent">
+    <ion-button expand="block" (click)="navigateToHome()">Login </ion-button>
+    <ion-button expand="full" color="secondary" (click)="navigateToSignupPage()">I
+      don't have an account!</ion-button>
+  </ion-card>
+</ion-content>
+
+<style>
+  ion-button {
+    position: relative;
+
+  }
+
+  ion-card-title {
+    color: rgb(92, 88, 88);
+  }
+
+  ion-content {
+    --background: #fff url('/assets/img/charts.jpg') no-repeat center center / cover;
+
+  }
+
+  ion-item {
+    padding-top: 3px;
+    position: block;
+    margin-bottom: 2px;
+  }
+</style>

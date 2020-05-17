@@ -1,0 +1,74 @@
+<div class="overlay">
+
+
+ 
+
+
+
+<div class="modal_content">
+  <ion-header>
+  <ion-title  class="title">Project Details</ion-title>
+  <ion-button class="back" fill="clear" (click)="onClose()"> <ion-icon slot="end" name="arrow-back" ></ion-icon></ion-button>
+
+</ion-header>
+      
+     
+<ion-content  class="main-view">
+<ion-card>
+ 
+  <ion-card-content>
+    
+    <ion-item>
+      <ion-label id="title" position="floating" >Title</ion-label>
+      <ion-input [(ngModel)]="projectname" ></ion-input>
+    </ion-item>
+      <br>
+      <ion-item>
+        <ion-label id="description" position="floating" color="primary">Description</ion-label>
+        <ion-textarea></ion-textarea>
+      </ion-item>
+      <br>
+      <ion-item>
+        <ion-label id="start-date" position="floating" color="primary">Start date</ion-label>
+        <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+      </ion-item>
+      <ion-item>
+      <ion-label id="start-date" position="floating" color="primary">Project Start Time</ion-label>
+        <ion-datetime display-format="h:mm A" picker-format="h:mm A" value="1990-02-19T07:43Z"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label id="start-date" position="floating" color="primary">Project Ends on</ion-label>
+        <ion-datetime value="1990-02-20" placeholder="Select Date"></ion-datetime>
+      </ion-item>
+      <br>
+
+
+      <ion-button expand="full" (click)="addpPoject()">
+        <ion-icon name="checkmark-circle"></ion-icon>
+      <div>Add</div>
+    </ion-button>
+
+
+  </ion-card-content>
+</ion-card>
+
+
+</ion-content>
+
+
+
+
+</div>
+</div>
+
+
+<style>
+
+ion-button {
+      position: relative;
+      margin-left:5px ;
+      margin-right:5px ;
+      margin-bottom: 10px;
+  
+    }
+</style>
