@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
@@ -12,12 +12,16 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AddProjectComponent } from './components/add-project/add-project.component';
-import {SideMenuComponent} from './components/side-menu/side-menu.component'
+import { SideMenuComponent } from './components/side-menu/side-menu.component'
+
 
 
 @NgModule({
-  declarations: [AppComponent,AddProjectComponent,SideMenuComponent],
-  entryComponents: [AddProjectComponent,SideMenuComponent],
+  declarations: [AppComponent, AddProjectComponent, SideMenuComponent],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
+  entryComponents: [AddProjectComponent, SideMenuComponent],
   imports: [BrowserModule, FormsModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
     StatusBar,

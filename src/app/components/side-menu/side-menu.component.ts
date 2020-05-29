@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-side-menu',
@@ -8,9 +9,20 @@ import { MenuController } from '@ionic/angular';
 })
 export class SideMenuComponent implements OnInit {
 
-  constructor(private menu: MenuController) { }
+  constructor(private menu: MenuController, public router: Router) { }
 
   ngOnInit() {}
+
+  navigateToDashboard() {
+    this.router.navigate(['tabs/tab1'])
+    console.log("Directed to dashboard")
+
+  }
+
+  navigateToProjects() {
+    this.router.navigate(['projectspage'])
+    console.log("Directed to Projects")
+  }
 
   openFirst() {
     this.menu.enable(true, 'first');
@@ -25,6 +37,7 @@ export class SideMenuComponent implements OnInit {
     this.menu.enable(true, 'custom');
     this.menu.open('custom');
   }
+  
 }
 
 

@@ -10,7 +10,9 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
 
 
 
+
 @NgModule({
+  
   entryComponents: [],
   imports: [
     IonicModule,

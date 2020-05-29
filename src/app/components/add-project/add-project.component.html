@@ -1,74 +1,46 @@
-<div class="overlay">
+<ion-item color="transparent">
+  <ion-label position="floating">
+    <p>
+      <ion-icon name="briefcase-outline"></ion-icon> Project Name
+    </p>
+  </ion-label>
+  <ion-input type="text" [(ngModel)]="projectname"></ion-input>
+</ion-item>
+
+<ion-item color="transparent">
+  <ion-label position="floating">
+    <p>
+      <ion-icon name="information-circle-outline"></ion-icon> Project Information
+    </p>
+  </ion-label>
+  <ion-input type="text" [(ngModel)]="projectinformation"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label id="start-date" position="floating" color="primary">Start date</ion-label>
+  <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+</ion-item>
+<ion-item>
+  <ion-label id="start-date" position="floating" color="primary">Project Ends on</ion-label>
+  <ion-datetime value="1990-02-20" placeholder="Select Date"></ion-datetime>
+</ion-item>
 
 
- 
 
 
 
-<div class="modal_content">
-  <ion-header>
-  <ion-title  class="title">Project Details</ion-title>
-  <ion-button class="back" fill="clear" (click)="onClose()"> <ion-icon slot="end" name="arrow-back" ></ion-icon></ion-button>
-
-</ion-header>
-      
-     
-<ion-content  class="main-view">
-<ion-card>
- 
-  <ion-card-content>
-    
-    <ion-item>
-      <ion-label id="title" position="floating" >Title</ion-label>
-      <ion-input [(ngModel)]="projectname" ></ion-input>
-    </ion-item>
-      <br>
-      <ion-item>
-        <ion-label id="description" position="floating" color="primary">Description</ion-label>
-        <ion-textarea></ion-textarea>
-      </ion-item>
-      <br>
-      <ion-item>
-        <ion-label id="start-date" position="floating" color="primary">Start date</ion-label>
-        <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
-      </ion-item>
-      <ion-item>
-      <ion-label id="start-date" position="floating" color="primary">Project Start Time</ion-label>
-        <ion-datetime display-format="h:mm A" picker-format="h:mm A" value="1990-02-19T07:43Z"></ion-datetime>
-      </ion-item>
-      <ion-item>
-        <ion-label id="start-date" position="floating" color="primary">Project Ends on</ion-label>
-        <ion-datetime value="1990-02-20" placeholder="Select Date"></ion-datetime>
-      </ion-item>
-      <br>
 
 
-      <ion-button expand="full" (click)="addpPoject()">
-        <ion-icon name="checkmark-circle"></ion-icon>
-      <div>Add</div>
+
+<div style="display: inline-block;">
+
+    <ion-button fill="clear" (click)="dismissModal()">
+      <ion-icon name="close-circle-outline"></ion-icon> &nbsp; &nbsp;Cancel
     </ion-button>
-
-
-  </ion-card-content>
-</ion-card>
-
-
-</ion-content>
-
-
+    
+  <ion-button fill="clear" (click)="savePoject()" >
+    <ion-icon name="save-outline"></ion-icon> &nbsp; &nbsp;Save
+  </ion-button>
 
 
 </div>
-</div>
-
-
-<style>
-
-ion-button {
-      position: relative;
-      margin-left:5px ;
-      margin-right:5px ;
-      margin-bottom: 10px;
-  
-    }
-</style>

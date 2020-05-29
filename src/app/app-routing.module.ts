@@ -7,10 +7,8 @@ const routes: Routes = [
     path: 'startpage',
     loadChildren: () => import('./pages/startpage/startpage.module').then( m => m.StartpagePageModule)
   },
-  {
-    path: '',
-    loadChildren: () => import('./pages/tabs/tabs.module').then(m => m.TabsPageModule)
-  },
+  
+
   {
     path: 'signup',
     loadChildren: () => import('./pages/signup/signup.module').then( m => m.SignupPageModule)
@@ -21,7 +19,11 @@ const routes: Routes = [
   },
   {
     path: 'projectspage',
-    loadChildren: () => import('./pages/projectspage/projectspage.module').then( m => m.ProjectspagePageModule)
+    loadChildren: () => import('./pages/projectspage/projectspage.module').then(m => m.ProjectspagePageModule)
+  },
+  {
+    path: '',
+    loadChildren: () => import('./pages/tabs/tabs.module').then(m => m.TabsPageModule)
   }
 
 ];

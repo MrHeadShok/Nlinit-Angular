@@ -1,55 +1,60 @@
+<ion-menu side="end"  content-id="main-content" swipe-gesture="true">
 
 
-<ion-menu side="start" menuId="first" contentId="main">
-  <ion-header>
-    <ion-toolbar color="primary">
-      <ion-title>Start Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content>
-    <ion-list>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-    </ion-list>
-  </ion-content>
+  <ion-card color="transparent">
+    <img src="../../../assets/img/avatar.jpg" alt="Avatar">
+    <ion-card-header>
+      <ion-card-subtitle>Role</ion-card-subtitle>
+      <ion-card-title color="light">UserName</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <div>
+    <ion-button expand="full" color="#7c46ce" (click)="navigateToDashboard()">
+      <ion-icon name="reader-outline"></ion-icon> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Dashboard
+    </ion-button>
+
+    <ion-button expand="full" color="#7c46ce">
+      <ion-icon name="person-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; My profile
+    </ion-button>
+
+    <ion-button expand="full" color="#7c46ce" (click)="navigateToProjects()">
+      <ion-icon name="bar-chart-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Projects
+    </ion-button>
+
+    <ion-button expand="full" color="#7c46ce">
+      <ion-icon name="pie-chart-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Statistics
+    </ion-button>
+  </div>
+
+
+  <div>
+
+    <ion-button expand="full" color="#7c46ce">
+      <ion-icon name="construct-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Settings
+    </ion-button>
+
+    <ion-button expand="full" color="#7c46ce">
+      <ion-icon name="log-out-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Logout
+    </ion-button>
+  </div>
+
+
+
 </ion-menu>
 
-<ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+
+
+<div class="ion-page" id="main-content">
   <ion-header>
-    <ion-toolbar color="tertiary">
-      <ion-title>Custom Menu</ion-title>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button>
+          <ion-icon name="menu"> me </ion-icon>
+        </ion-menu-button>
+      </ion-buttons>
+
     </ion-toolbar>
   </ion-header>
-  <ion-content>
-    <ion-list>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-    </ion-list>
-  </ion-content>
-</ion-menu>
 
-<ion-menu side="end" type="push" contentId="main">
-  <ion-header>
-    <ion-toolbar color="danger">
-      <ion-title>End Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content>
-    <ion-list>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-      <ion-item>Menu Item</ion-item>
-    </ion-list>
-  </ion-content>
-</ion-menu>
-
-<ion-router-outlet id="main"></ion-router-outlet>
-
+</div>

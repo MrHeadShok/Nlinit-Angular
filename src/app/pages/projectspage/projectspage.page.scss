@@ -1,0 +1,36 @@
+ion-content {
+    --background: linear-gradient(to top, #3a3a3a -39%, #660066 77%);
+
+}
+
+h2{
+    font-weight: bold;
+    color: white;
+    font-family: "Arial Black",
+    Gadget,
+    sans-serif;
+
+}
+
+p {
+    font-weight: bold;
+    color: white;
+    font-family: "Arial Black",
+    Gadget,
+    sans-serif;
+}
+
+ion-card{
+    position: relative;
+    margin-top: 30px;
+}
+
+div.projectcards{
+    margin-top: 53px;
+}
+
+.description {
+    margin-top: 73px ;
+    margin-left: 13px;
+    margin-right: 13px;
+}
