@@ -12,18 +12,18 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AddProjectComponent } from './components/add-project/add-project.component';
-import { SideMenuComponent } from './components/side-menu/side-menu.component';
+
 
 
 
 
 
 @NgModule({
-  declarations: [AppComponent, AddProjectComponent, SideMenuComponent],
+  declarations: [AppComponent, AddProjectComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-  entryComponents: [AddProjectComponent, SideMenuComponent],
+  entryComponents: [AddProjectComponent],
   imports: [BrowserModule, FormsModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
     StatusBar,

@@ -1,66 +1,66 @@
 <ion-app>
 
 
-  <ion-menu side="start" content-id="main-content" swipe-gesture="true">
+    <ion-menu side="start" content-id="main-content" swipe-gesture="true">
 
 
-      <ion-card color="transparent">
-          <img src="../../../assets/img/avatar.jpg" alt="Avatar">
-          <ion-card-header>
-              <ion-card-subtitle>Role</ion-card-subtitle>
-              <ion-card-title color="light">UserName</ion-card-title>
-          </ion-card-header>
-      </ion-card>
+        <ion-card color="transparent">
+            <img src="../../../assets/img/avatar.jpg" alt="Avatar">
+            <ion-card-header>
+                <ion-card-subtitle>Role</ion-card-subtitle>
+                <ion-card-title color="light">UserName</ion-card-title>
+            </ion-card-header>
+        </ion-card>
 
-      <div>
-          <ion-button expand="full" color="#7c46ce" (click)="navigateToDashboard()">
-              <ion-icon name="reader-outline"></ion-icon> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Dashboard
-          </ion-button>
+        <div>
+            <ion-button expand="full" color="#7c46ce" (click)="navigateToDashboard()">
+                <ion-icon name="reader-outline"></ion-icon> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Dashboard
+            </ion-button>
 
-          <ion-button expand="full" color="#7c46ce">
-              <ion-icon name="person-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; My profile
-          </ion-button>
+            <ion-button expand="full" color="#7c46ce">
+                <ion-icon name="person-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; My profile
+            </ion-button>
 
-          <ion-button expand="full" color="#7c46ce" (click)="navigateToProjects()">
-              <ion-icon name="bar-chart-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Projects
-          </ion-button>
+            <ion-button expand="full" color="#7c46ce" (click)="navigateToProjects()">
+                <ion-icon name="bar-chart-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Projects
+            </ion-button>
 
-          <ion-button expand="full" color="#7c46ce">
-              <ion-icon name="pie-chart-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Statistics
-          </ion-button>
-      </div>
-
-
-      <div>
-
-          <ion-button expand="full" color="#7c46ce">
-              <ion-icon name="construct-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Settings
-          </ion-button>
-
-          <ion-button expand="full" color="#7c46ce">
-              <ion-icon name="log-out-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Logout
-          </ion-button>
-      </div>
-
-  </ion-menu>
+            <ion-button expand="full" color="#7c46ce">
+                <ion-icon name="pie-chart-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Statistics
+            </ion-button>
+        </div>
 
 
+        <div>
 
-  <div class="ion-page" id="main-content">
-      <ion-header *ngIf="getIsTabVisible">
-          <ion-toolbar>
-              <ion-buttons slot="start">
-                  <ion-menu-button>
-                      <ion-icon name="menu">  </ion-icon>
-                  </ion-menu-button>
-              </ion-buttons>
+            <ion-button expand="full" color="#7c46ce">
+                <ion-icon name="construct-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Settings
+            </ion-button>
 
-          </ion-toolbar>
-      </ion-header>
-<ion-router-outlet></ion-router-outlet>
-  </div>
- 
+            <ion-button expand="full" color="#7c46ce">
+                <ion-icon name="log-out-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Logout
+            </ion-button>
+        </div>
+
+    </ion-menu>
 
 
+
+    <div class="ion-page" id="main-content">
+        <ion-header *ngIf="getIsTabVisible">
+            <ion-toolbar>
+                <ion-buttons slot="start">
+                    <ion-menu-button>
+                        <ion-icon name="reorder-three"></ion-icon>
+                    </ion-menu-button>
+                </ion-buttons>
+
+            </ion-toolbar>
+        </ion-header>
+ <ion-router-outlet></ion-router-outlet>
+    </div>
+
+
+   
 
 </ion-app>
