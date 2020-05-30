@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {SideMenuComponent} from '../../components/side-menu/side-menu.component'
 import { MenuController } from '@ionic/angular';
 
 @Component({

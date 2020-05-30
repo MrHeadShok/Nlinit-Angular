@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AddProjectComponent } from 'src/app/components/add-project/add-project.component';
 import { ModalController, AnimationController, IonRouterOutlet } from '@ionic/angular';
 import { Router } from '@angular/router';
-
+import { AppComponent } from 'src/app/app.component';
 
 
 
@@ -20,6 +20,12 @@ export class ProjectspagePage implements OnInit {
   constructor(private routerOutlet: IonRouterOutlet,public modalController: ModalController, private router: Router, public animationCtrl: AnimationController) { }
 
   ngOnInit() {
+    console.log("DEbug: ProjectspagePage");
+  }
+
+
+  ionViewWillEnter() {
+    AppComponent.isTabVisible = true;
   }
 
   navigateToDashboard() {

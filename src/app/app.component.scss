@@ -1,0 +1,35 @@
+img {
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    padding: 5px;
+    left: initial;
+    width: 150px;
+    margin-left: 60px;
+}
+
+ion-card {
+    margin-bottom: 10px;
+    margin-top: 11px;
+    position: relative;
+
+}
+
+ion-menu {
+    --background: linear-gradient(to right, rgb(201, 75, 75), rgb(75, 19, 79));
+    //filter: blur(8px);
+}
+
+ion-button {
+    margin-bottom: 7px;
+}
+
+div {
+    margin-bottom: 31px;
+}
+
+
+
+
+.my-custom-menu {
+    --width: 500px;
+}

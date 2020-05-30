@@ -14,15 +14,24 @@
     </p>
   </ion-label>
   <ion-input type="text" [(ngModel)]="projectinformation"></ion-input>
+
 </ion-item>
 
-<ion-item>
-  <ion-label id="start-date" position="floating" color="primary">Start date</ion-label>
-  <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+<ion-item color="transparent">
+  <ion-label position="floating">
+    <p>
+      <ion-icon name="calendar-outline"></ion-icon>Start date
+    </p>
+  </ion-label>
+  <ion-datetime value="2020-07-07" placeholder="Select Date"></ion-datetime>
 </ion-item>
-<ion-item>
-  <ion-label id="start-date" position="floating" color="primary">Project Ends on</ion-label>
-  <ion-datetime value="1990-02-20" placeholder="Select Date"></ion-datetime>
+<ion-item color="transparent">
+  <ion-label position="floating">
+    <p>
+      <ion-icon name="calendar-outline"></ion-icon> Project Ends on
+    </p>
+  </ion-label>
+  <ion-datetime value="2020-07-07" placeholder="Select Date"></ion-datetime>
 </ion-item>
 
 
@@ -34,11 +43,11 @@
 
 <div style="display: inline-block;">
 
-    <ion-button fill="clear" (click)="dismissModal()">
-      <ion-icon name="close-circle-outline"></ion-icon> &nbsp; &nbsp;Cancel
-    </ion-button>
-    
-  <ion-button fill="clear" (click)="savePoject()" >
+  <ion-button fill="clear" (click)="dismissModal()">
+    <ion-icon name="close-circle-outline"></ion-icon> &nbsp; &nbsp;Cancel
+  </ion-button>
+
+  <ion-button fill="clear" (click)="savePoject()">
     <ion-icon name="save-outline"></ion-icon> &nbsp; &nbsp;Save
   </ion-button>
 

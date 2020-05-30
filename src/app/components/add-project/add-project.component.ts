@@ -8,6 +8,7 @@ import { ModalController } from '@ionic/angular';
   templateUrl: './add-project.component.html',
   styleUrls: ['./add-project.component.scss'],
 })
+  
 export class AddProjectComponent implements OnInit {
 
   projectname: any = ''; // Entered Text

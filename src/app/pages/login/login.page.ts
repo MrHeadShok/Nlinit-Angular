@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
+import { AppComponent } from 'src/app/app.component';
+
 
 @Component({
   selector: 'app-login',
@@ -14,6 +16,12 @@ export class LoginPage implements OnInit {
   
 
   ngOnInit() {
+    console.log("DEbug: ProjectspagePage");
+  }
+
+  ionViewWillEnter() {
+    AppComponent.isTabVisible = false;
+    console.log("debug  ionViewWillEnter")
   }
 
   navigateToSignupPage(){
@@ -22,7 +30,12 @@ export class LoginPage implements OnInit {
   }
 
 
-  async navigateToHome(){
+  async navigateToHome() {
+    
+    let user = "";
+    let pass = "";
+    console.log("debug _ Login ")
+
     this.router.navigate(['projectspage'])
     const toast = await this.toastController.create({
       message: '   You are  Successfully logged in!   ',

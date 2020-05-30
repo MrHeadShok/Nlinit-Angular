@@ -12,7 +12,9 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AddProjectComponent } from './components/add-project/add-project.component';
-import { SideMenuComponent } from './components/side-menu/side-menu.component'
+import { SideMenuComponent } from './components/side-menu/side-menu.component';
+
+
 
 
 
