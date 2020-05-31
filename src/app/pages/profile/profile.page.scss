@@ -1,0 +1,31 @@
+ion-content {
+    --background: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+    background-color: #7f5a83;
+    
+}
+.credentials{
+    margin-top: 63px;
+    margin-left: 20px;
+}
+
+
+img {
+    border-radius: 50%;
+    width: 107px;
+}
+
+.user{
+    float: left;
+    margin-top:35px;
+    margin-left: 9px;
+}
+
+:root {
+    --ion-safe-area-top: 20px;
+    --ion-safe-area-bottom: 22px;
+}
+
+p {
+    font-weight: bold;
+    color: white;
+}

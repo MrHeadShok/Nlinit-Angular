@@ -38,4 +38,8 @@ export class AppComponent {
     this.router.navigate(['projectspage']);
   }
 
+  navigateToprofile() {
+    this.router.navigate(['profile']);
+  }
+
 }

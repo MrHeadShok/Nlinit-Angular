@@ -8,12 +8,12 @@ ion-card-title {
 }
 
 ion-content {
-    --background: linear-gradient(to top, #3a3a3a -39%, #660066 77%);
-
+    --background: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+    background-color: #7f5a83;
 }
 
-ion-input{
-    --color:#f4f5f8;
+ion-input {
+    --color: #f4f5f8;
 }
 
 ion-item {
@@ -23,9 +23,9 @@ ion-item {
 }
 
 
- div{
-     margin-top: 154;
- }
+div {
+    margin-top: 154;
+}
 
 
 ion-button {
@@ -34,6 +34,6 @@ ion-button {
 
 }
 
-p{
+p {
     font-weight: bold;
 }

@@ -15,8 +15,10 @@ ion-card {
 }
 
 ion-menu {
-    --background: linear-gradient(to right, rgb(201, 75, 75), rgb(75, 19, 79));
-    //filter: blur(8px);
+   
+    
+    --background: linear-gradient(315deg, #7d5abee5 0%, #09203ffa 74%);
+
 }
 
 ion-button {
@@ -35,5 +37,6 @@ div {
 }
 
 ion-toolbar {
-     --background: linear-gradient(to top, #3a3a3a -39%, #660066 77%);
+       --background: linear-gradient(315deg, #0e2c41 0%, #0d324d 74%);
+       background-color: #7f5a83;
 }
