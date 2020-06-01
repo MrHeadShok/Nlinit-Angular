@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { AddProjectComponent } from 'src/app/components/add-project/add-project.component';
+
 import { ModalController, AnimationController, IonRouterOutlet } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { AppComponent } from 'src/app/app.component';
 
 
-
+import { AddProjectComponent } from 'src/app/components/add-project/add-project.component';
 
 @Component({
   selector: 'app-projectspage',

@@ -11,8 +11,6 @@ import { ModalController } from '@ionic/angular';
   
 export class AddProjectComponent implements OnInit {
 
-  projectname: any = ''; // Entered Text
-  projectlist = []; // Array to store tasks
 
 
 
