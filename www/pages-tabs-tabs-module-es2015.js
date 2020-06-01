@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<ion-tabs>\n\n\n\n  <ion-tab-bar slot=\"bottom\">\n    <ion-tab-button tab=\"tab1\">\n      <ion-icon name=\"podium-outline\"></ion-icon>\n      <ion-label>Dashboard</ion-label>\n    </ion-tab-button>\n\n    <ion-tab-button tab=\"tab2\">\n      <ion-icon name=\"image-outline\"></ion-icon>\n      <ion-label>Photos</ion-label>\n    </ion-tab-button>\n\n        <ion-tab-button tab=\"messages\">\n          <ion-icon name=\"chatbubble-ellipses-outline\"></ion-icon>\n          <ion-label>Messages</ion-label>\n        </ion-tab-button>\n\n    <ion-tab-button tab=\"tab3\">\n      <ion-icon name=\"settings-outline\"></ion-icon>\n      <ion-label>Settings</ion-label>\n    </ion-tab-button>\n\n  </ion-tab-bar>\n\n\n\n\n</ion-tabs>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-tabs>\n\n\n\n  <ion-tab-bar slot=\"bottom\">\n    <ion-tab-button tab=\"tab1\">\n      <ion-icon name=\"pulse-outline\"></ion-icon>\n      <ion-label>Workflow</ion-label>\n    </ion-tab-button>\n\n    <ion-tab-button tab=\"messages\">\n      <ion-icon name=\"people-circle-outline\"></ion-icon>\n      <ion-label>Team</ion-label>\n    </ion-tab-button>\n\n    <ion-tab-button tab=\"tab2\">\n      <ion-icon name=\"image-outline\"></ion-icon>\n      <ion-label>Photos</ion-label>\n    </ion-tab-button>\n\n\n    <ion-tab-button tab=\"tab3\">\n      <ion-icon name=\"settings-outline\"></ion-icon>\n      <ion-label>Settings</ion-label>\n    </ion-tab-button>\n\n  </ion-tab-bar>\n\n\n\n\n</ion-tabs>");
 
 /***/ }),
 
@@ -42,7 +42,7 @@ const routes = [
             },
             {
                 path: 'tab1',
-                loadChildren: () => Promise.all(/*! import() | feed-tab-tab1-module */[__webpack_require__.e("common"), __webpack_require__.e("feed-tab-tab1-module")]).then(__webpack_require__.bind(null, /*! ../feed-tab/tab1.module */ "./src/app/pages/feed-tab/tab1.module.ts")).then(m => m.Tab1PageModule)
+                loadChildren: () => Promise.all(/*! import() | feed-tab-tab1-module */[__webpack_require__.e("default~feed-tab-tab1-module~pages-profile-profile-module~pages-test-test-module"), __webpack_require__.e("default~feed-tab-tab1-module~pages-test-test-module"), __webpack_require__.e("common"), __webpack_require__.e("feed-tab-tab1-module")]).then(__webpack_require__.bind(null, /*! ../feed-tab/tab1.module */ "./src/app/pages/feed-tab/tab1.module.ts")).then(m => m.Tab1PageModule)
             },
             {
                 path: 'tab2',
@@ -151,12 +151,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
+/* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/app.component */ "./src/app/app.component.ts");
+
 
 
 
 let TabsPage = class TabsPage {
     constructor(menu) {
         this.menu = menu;
+    }
+    ionViewWillEnter() {
+        src_app_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"].isTabVisible = true;
     }
     openFirst() {
         this.menu.enable(true, 'first');

@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "";
+    __webpack_exports__["default"] = "<ion-content>\r\n    <ion-card>\r\n        <div echarts [options]=\"chartOption\" class=\"demo-chart\"></div>\r\n    </ion-card>\r\n    <ion-card>\r\n        <div echarts [options]=\"options\" [theme]=\"theme\" class=\"demo-chart\"></div>\r\n    </ion-card>\r\n\r\n    <ion-card>\r\n        <canvas #doughnutCanvas></canvas>\r\n    </ion-card>\r\n\r\n</ion-content>";
     /***/
   },
 
@@ -152,6 +152,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _tab1_routing_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! ./tab1-routing.module */
     "./src/app/pages/feed-tab/tab1-routing.module.ts");
+    /* harmony import */
+
+
+    var ngx_echarts__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    /*! ngx-echarts */
+    "./node_modules/ngx-echarts/fesm2015/ngx-echarts.js");
+    /* harmony import */
+
+
+    var echarts__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    /*! echarts */
+    "./node_modules/echarts/index.js");
+    /* harmony import */
+
+
+    var echarts__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(echarts__WEBPACK_IMPORTED_MODULE_9__);
 
     var Tab1PageModule = function Tab1PageModule() {
       _classCallCheck(this, Tab1PageModule);
@@ -159,7 +175,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     Tab1PageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
       entryComponents: [],
-      imports: [_ionic_angular__WEBPACK_IMPORTED_MODULE_1__["IonicModule"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _explore_container_explore_container_module__WEBPACK_IMPORTED_MODULE_6__["ExploreContainerComponentModule"], _tab1_routing_module__WEBPACK_IMPORTED_MODULE_7__["Tab1PageRoutingModule"]],
+      imports: [ngx_echarts__WEBPACK_IMPORTED_MODULE_8__["NgxEchartsModule"].forRoot({
+        echarts: echarts__WEBPACK_IMPORTED_MODULE_9__
+      }), _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["IonicModule"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _explore_container_explore_container_module__WEBPACK_IMPORTED_MODULE_6__["ExploreContainerComponentModule"], _tab1_routing_module__WEBPACK_IMPORTED_MODULE_7__["Tab1PageRoutingModule"]],
       declarations: [_tab1_page__WEBPACK_IMPORTED_MODULE_5__["Tab1Page"]]
     })], Tab1PageModule);
     /***/
@@ -181,7 +199,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2ZlZWQtdGFiL3RhYjEucGFnZS5zY3NzIn0= */";
+    __webpack_exports__["default"] = ".demo-chart {\n  height: 400px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvZmVlZC10YWIvQzpcXFVzZXJzXFxUQWllYlxcRG9jdW1lbnRzXFxHaXRIdWJcXE5saW5pdC1Bbmd1bGFyL3NyY1xcYXBwXFxwYWdlc1xcZmVlZC10YWJcXHRhYjEucGFnZS5zY3NzIiwic3JjL2FwcC9wYWdlcy9mZWVkLXRhYi90YWIxLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGFBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2ZlZWQtdGFiL3RhYjEucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmRlbW8tY2hhcnQge1xyXG4gICAgaGVpZ2h0OiA0MDBweDtcclxufSIsIi5kZW1vLWNoYXJ0IHtcbiAgaGVpZ2h0OiA0MDBweDtcbn0iXX0= */";
     /***/
   },
 
@@ -219,64 +237,139 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @ionic/angular */
-    "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
+    var chart_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! chart.js */
+    "./node_modules/chart.js/dist/Chart.js");
     /* harmony import */
 
 
-    var _components_add_project_add_project_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! ../../components/add-project/add-project.component */
-    "./src/app/components/add-project/add-project.component.ts");
+    var chart_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(chart_js__WEBPACK_IMPORTED_MODULE_2__);
 
     var Tab1Page = /*#__PURE__*/function () {
-      function Tab1Page(modalController) {
+      function Tab1Page() {
         _classCallCheck(this, Tab1Page);
 
-        this.modalController = modalController;
+        this.chartOption = {
+          xAxis: {
+            type: 'category',
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+          },
+          yAxis: {
+            type: 'value'
+          },
+          series: [{
+            data: [820, 932, 901, 934, 1290, 1330, 1320],
+            type: 'line'
+          }]
+        };
+        this.options = {
+          backgroundColor: '#2c343c',
+          title: {
+            text: 'Customized Pie',
+            left: 'center',
+            top: 20,
+            textStyle: {
+              color: '#ccc'
+            }
+          },
+          tooltip: {
+            trigger: 'item',
+            formatter: '{a} <br/>{b} : {c} ({d}%)'
+          },
+          visualMap: {
+            show: false,
+            min: 80,
+            max: 600,
+            inRange: {
+              colorLightness: [0, 1]
+            }
+          },
+          series: [{
+            name: 'Counters',
+            type: 'pie',
+            radius: '55%',
+            center: ['50%', '50%'],
+            data: [{
+              value: 335,
+              name: 'C-1'
+            }, {
+              value: 310,
+              name: 'C-2'
+            }, {
+              value: 274,
+              name: 'C-3'
+            }, {
+              value: 235,
+              name: 'C-4'
+            }, {
+              value: 400,
+              name: 'C-5'
+            }].sort(function (a, b) {
+              return a.value - b.value;
+            }),
+            roseType: 'radius',
+            label: {
+              normal: {
+                textStyle: {
+                  color: 'rgba(255, 255, 255, 0.3)'
+                }
+              }
+            },
+            labelLine: {
+              normal: {
+                lineStyle: {
+                  color: 'rgba(255, 255, 255, 0.3)'
+                },
+                smooth: 0.2,
+                length: 10,
+                length2: 20
+              }
+            },
+            itemStyle: {
+              normal: {
+                color: '#c23531',
+                shadowBlur: 200,
+                shadowColor: 'rgba(0, 0, 0, 0.5)'
+              }
+            },
+            animationType: 'scale',
+            animationEasing: 'elasticOut',
+            animationDelay: function animationDelay() {
+              return Math.random() * 200;
+            }
+          }]
+        };
       }
 
       _createClass(Tab1Page, [{
-        key: "addpPoject",
-        value: function addpPoject() {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-            var modal;
-            return regeneratorRuntime.wrap(function _callee$(_context) {
-              while (1) {
-                switch (_context.prev = _context.next) {
-                  case 0:
-                    _context.next = 2;
-                    return this.modalController.create({
-                      component: _components_add_project_add_project_component__WEBPACK_IMPORTED_MODULE_3__["AddProjectComponent"]
-                    });
-
-                  case 2:
-                    modal = _context.sent;
-                    _context.next = 5;
-                    return modal.present();
-
-                  case 5:
-                    return _context.abrupt("return", _context.sent);
-
-                  case 7:
-                  case "end":
-                    return _context.stop();
-                }
-              }
-            }, _callee, this);
-          }));
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          this.doughnutChartMethod();
+        }
+      }, {
+        key: "doughnutChartMethod",
+        value: function doughnutChartMethod() {
+          this.doughnutChart = new chart_js__WEBPACK_IMPORTED_MODULE_2__["Chart"](this.doughnutCanvas.nativeElement, {
+            type: 'doughnut',
+            data: {
+              labels: ['Total projects', 'Currently working on'],
+              datasets: [{
+                label: '# of Votes',
+                data: [100, 30],
+                backgroundColor: ['rgba(255, 159, 64, 0.2)', 'rgba(255, 99, 132, 0.2)'],
+                hoverBackgroundColor: ['#FFCE56', '#FF6384']
+              }]
+            }
+          });
         }
       }]);
 
       return Tab1Page;
     }();
 
-    Tab1Page.ctorParameters = function () {
-      return [{
-        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"]
-      }];
-    };
-
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('doughnutCanvas', {
+      "static": true
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)], Tab1Page.prototype, "doughnutCanvas", void 0);
     Tab1Page = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-tab1',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -285,7 +378,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./tab1.page.scss */
       "./src/app/pages/feed-tab/tab1.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"]])], Tab1Page);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])], Tab1Page);
     /***/
   }
 }]);

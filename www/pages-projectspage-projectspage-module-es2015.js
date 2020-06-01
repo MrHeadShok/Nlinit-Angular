@@ -118,10 +118,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectspagePage", function() { return ProjectspagePage; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var src_app_components_add_project_add_project_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/components/add-project/add-project.component */ "./src/app/components/add-project/add-project.component.ts");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/app.component */ "./src/app/app.component.ts");
+/* harmony import */ var src_app_components_add_project_add_project_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/components/add-project/add-project.component */ "./src/app/components/add-project/add-project.component.ts");
 
 
 
@@ -141,7 +141,7 @@ let ProjectspagePage = class ProjectspagePage {
         console.log("DEbug: ProjectspagePage");
     }
     ionViewWillEnter() {
-        src_app_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"].isTabVisible = true;
+        src_app_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"].isTabVisible = true;
     }
     navigateToDashboard() {
         this.router.navigate(['tabs/tab1']);
@@ -169,7 +169,7 @@ let ProjectspagePage = class ProjectspagePage {
                 return enterAnimation(baseEl).direction('reverse');
             };
             const modal = yield this.modalController.create({
-                component: src_app_components_add_project_add_project_component__WEBPACK_IMPORTED_MODULE_2__["AddProjectComponent"],
+                component: src_app_components_add_project_add_project_component__WEBPACK_IMPORTED_MODULE_5__["AddProjectComponent"],
                 enterAnimation,
                 leaveAnimation
             });
@@ -178,10 +178,10 @@ let ProjectspagePage = class ProjectspagePage {
     }
 };
 ProjectspagePage.ctorParameters = () => [
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["IonRouterOutlet"] },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ModalController"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["AnimationController"] }
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["IonRouterOutlet"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["AnimationController"] }
 ];
 ProjectspagePage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -189,7 +189,7 @@ ProjectspagePage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./projectspage.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/projectspage/projectspage.page.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./projectspage.page.scss */ "./src/app/pages/projectspage/projectspage.page.scss")).default]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_3__["IonRouterOutlet"], _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ModalController"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["AnimationController"]])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["IonRouterOutlet"], _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["AnimationController"]])
 ], ProjectspagePage);
 
 
