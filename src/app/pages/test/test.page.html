@@ -4,7 +4,19 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-<ngx-charts-pie-grid [view]="view" [scheme]="colorScheme" [results]="single" (select)="onSelect($event)">
-</ngx-charts-pie-grid>
-</ion-content>
+  <ion-card fullscreen style="margin-top: 21px;">
+    <ion-card-header color="danger">
+      <ion-card-title color="light"> Contributions</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <canvas #doughnutCanvas></canvas>
+      
+
+    </ion-card-content>
+
+
+  </ion-card>
+
+

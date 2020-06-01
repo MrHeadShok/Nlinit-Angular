@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-tabs',
@@ -8,7 +9,11 @@ import { MenuController } from '@ionic/angular';
 })
 export class TabsPage {
 
-  constructor(private menu: MenuController) {}
+  constructor(private menu: MenuController) { }
+  ionViewWillEnter() {
+    AppComponent.isTabVisible = true;
+
+  }
 
   openFirst() {
     this.menu.enable(true, 'first');

@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { grid } from './data';
-
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Chart } from 'chart.js';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-test',
@@ -9,28 +8,52 @@ import { grid } from './data';
   styleUrls: ['./test.page.scss'],
 })
 export class TestPage implements OnInit {
+  
+  @ViewChild('doughnutCanvas', { static: true }) doughnutCanvas;
+  
 
-  single: any[];
-  view: any[] = [500, 400];
+  doughnutChart: any;
+  
 
-  showLegend: boolean = true;
-  showLabels: boolean = true;
+  constructor() {
 
+  }
 
-  colorScheme = {
-    domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
-  };
+  ionViewWillEnter() {
+    AppComponent.isTabVisible = true;
 
-
-  constructor() { 
-    Object.assign(this, { grid });
   }
 
   ngOnInit() {
+    this.doughnutChartMethod();
+    
+
+
   }
 
-  onSelect(event) {
-    console.log(event);
+
+  doughnutChartMethod() {
+    this.doughnutChart = new Chart(this.doughnutCanvas.nativeElement, {
+      type: 'doughnut',
+      data: {
+        labels: ['Total projects', 'Currently working on'],
+        datasets: [{
+          label: '# of Votes',
+          data: [100, 30],
+          backgroundColor: [
+            'rgba(255, 159, 64, 0.2)',
+            'rgba(255, 99, 132, 0.2)',
+          ],
+          hoverBackgroundColor: [
+
+            '#FFCE56',
+            '#FF6384'
+          ]
+        }]
+      }
+    });
   }
 
+
+  
 }

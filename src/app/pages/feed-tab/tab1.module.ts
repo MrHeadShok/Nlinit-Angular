@@ -7,14 +7,16 @@ import { ExploreContainerComponentModule } from '../../explore-container/explore
 
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 
+import { NgxEchartsModule } from 'ngx-echarts';
+import * as echarts from 'echarts';
 
-
-
+ 
 
 @NgModule({
   
   entryComponents: [],
   imports: [
+    NgxEchartsModule.forRoot({ echarts, }),
     IonicModule,
     CommonModule,
     FormsModule,
