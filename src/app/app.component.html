@@ -2,56 +2,76 @@
 
 
     <ion-menu side="start" content-id="main-content" swipe-gesture="true">
+        <ion-menu-toggle>
+
+            <ion-card color="transparent">
+                <img src="../../../assets/img/avatar.jpg" alt="Avatar">
+                <ion-card-header>
+                    <ion-card-subtitle color="light">Role</ion-card-subtitle>
+                    <ion-card-title color="light">UserName</ion-card-title>
+                </ion-card-header>
+            </ion-card>
+
+            <div class="higher">
+
+                <ion-button expand="full" color="#7c46ce" (click)="navigateToProjects()">
+                    <h5>
+                        <ion-icon name="bar-chart-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Projects
+                    </h5>
+                </ion-button>
 
 
-        <ion-card color="transparent">
-            <img src="../../../assets/img/avatar.jpg" alt="Avatar">
-            <ion-card-header>
-                <ion-card-subtitle color="light">Role</ion-card-subtitle>
-                <ion-card-title color="light">UserName</ion-card-title>
-            </ion-card-header>
-        </ion-card>
-
-        <div>
-            <ion-button expand="full" color="#7c46ce" (click)="navigateToDashboard()">
-                <ion-icon name="reader-outline"></ion-icon> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Dashboard
-            </ion-button>
-
-            <ion-button expand="full" color="#7c46ce" (click)="navigateToprofile()">
-                <ion-icon name="person-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; My profile
-            </ion-button>
-
-            <ion-button expand="full" color="#7c46ce" (click)="navigateToProjects()">
-                <ion-icon name="bar-chart-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Projects
-            </ion-button>
-
-            <ion-button expand="full" color="#7c46ce">
-                <ion-icon name="pie-chart-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Statistics
-            </ion-button>
-        </div>
+                <ion-button expand="full" color="#7c46ce" (click)="navigateToprofile()">
+                    <h5>
+                        <ion-icon name="person-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; My profile
+                    </h5>
+                </ion-button>
 
 
-        <div>
+                <ion-button expand="full" color="#7c46ce" (click)="navigateToprofile()">
+                    <h5>
+                        <ion-icon name="notifications-outline"></ion-icon> &nbsp; &nbsp; &nbsp; &nbsp;
+                        Notifications
+                    </h5>
+                </ion-button>
 
-            <ion-button expand="full" color="#7c46ce">
-                <ion-icon name="construct-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Settings
-            </ion-button>
 
-            <ion-button expand="full" color="#7c46ce">
-                <ion-icon name="log-out-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Logout
-            </ion-button>
-        </div>
+                <ion-button expand="full" color="#7c46ce">
+                    <h5>
+                        <ion-icon name="pie-chart-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Statistics
+                    </h5>
+                </ion-button>
 
+            </div>
+
+
+            <div class="lower">
+
+                <ion-button expand="full" color="#7c46ce">
+                    <h5>
+                        <ion-icon name="construct-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Settings
+                    </h5>
+                </ion-button>
+
+
+                <ion-button expand="full" color="#7c46ce">
+                    <h5>
+                        <ion-icon name="log-out-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Logout
+                    </h5>
+                </ion-button>
+
+            </div>
+        </ion-menu-toggle>
     </ion-menu>
 
 
 
     <div class="ion-page" id="main-content">
-        <ion-header  *ngIf="getIsTabVisible">
+        <ion-header *ngIf="getIsTabVisible">
             <ion-toolbar>
                 <ion-buttons slot="start">
                     <ion-menu-button>
-                        <ion-icon name="list-outline"></ion-icon>
+                        <ion-icon name="menu"></ion-icon>
                     </ion-menu-button>
                 </ion-buttons>
 

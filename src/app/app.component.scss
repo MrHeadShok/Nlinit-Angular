@@ -14,9 +14,10 @@ ion-card {
 
 }
 
-ion-menu {
-   
-    
+ion-menu,
+ion-menu-toggle {
+
+
     --background: linear-gradient(315deg, #7d5abee5 0%, #09203ffa 74%);
 
 }
@@ -25,11 +26,15 @@ ion-button {
     margin-bottom: 7px;
 }
 
-div {
-    margin-bottom: 31px;
+.higher{
+    margin-top:35px ;
+    position: relative;
 }
 
-
+.lower {
+    margin-top: 197px;
+    position: relative;
+}
 
 
 .my-custom-menu {
@@ -37,6 +42,11 @@ div {
 }
 
 ion-toolbar {
-       --background: linear-gradient(315deg, #0e2c41 0%, #0d324d 74%);
-       background-color: #7f5a83;
+    --background: linear-gradient(315deg, #0e2c41 0%, #0d324d 74%);
+    background-color: #7f5a83;
+}
+
+.ion-page {
+    background: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+
 }

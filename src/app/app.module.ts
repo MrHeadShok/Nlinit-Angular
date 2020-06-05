@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AddProjectComponent } from './components/add-project/add-project.component';
+import { Add2teamComponent } from './components/add2team/add2team.component';
 
 
 
@@ -19,11 +20,11 @@ import { AddProjectComponent } from './components/add-project/add-project.compon
 
 
 @NgModule({
-  declarations: [AppComponent, AddProjectComponent],
+  declarations: [AppComponent, AddProjectComponent, Add2teamComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-  entryComponents: [AddProjectComponent],
+  entryComponents: [AddProjectComponent, Add2teamComponent],
   imports: [BrowserModule, FormsModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
     StatusBar,

@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-content>\r\n    <ion-card>\r\n        <div echarts [options]=\"chartOption\" class=\"demo-chart\"></div>\r\n    </ion-card>\r\n    <ion-card>\r\n        <div echarts [options]=\"options\" [theme]=\"theme\" class=\"demo-chart\"></div>\r\n    </ion-card>\r\n\r\n    <ion-card>\r\n        <canvas #doughnutCanvas></canvas>\r\n    </ion-card>\r\n\r\n</ion-content>";
+    __webpack_exports__["default"] = "<ion-content>\r\n    <ion-card class=\"topC\">\r\n        <div echarts [options]=\"chartOption\" class=\"demo-chart\"></div>\r\n    </ion-card>\r\n    <ion-card>\r\n        <div echarts [options]=\"options\" [theme]=\"theme\" class=\"demo-chart\"></div>\r\n    </ion-card>\r\n\r\n    <ion-card>\r\n        <canvas #doughnutCanvas></canvas>\r\n    </ion-card>\r\n\r\n</ion-content>";
     /***/
   },
 
@@ -199,7 +199,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".demo-chart {\n  height: 400px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvZmVlZC10YWIvQzpcXFVzZXJzXFxUQWllYlxcRG9jdW1lbnRzXFxHaXRIdWJcXE5saW5pdC1Bbmd1bGFyL3NyY1xcYXBwXFxwYWdlc1xcZmVlZC10YWJcXHRhYjEucGFnZS5zY3NzIiwic3JjL2FwcC9wYWdlcy9mZWVkLXRhYi90YWIxLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGFBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2ZlZWQtdGFiL3RhYjEucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmRlbW8tY2hhcnQge1xyXG4gICAgaGVpZ2h0OiA0MDBweDtcclxufSIsIi5kZW1vLWNoYXJ0IHtcbiAgaGVpZ2h0OiA0MDBweDtcbn0iXX0= */";
+    __webpack_exports__["default"] = ".demo-chart {\n  height: 400px;\n}\n\n.topC {\n  margin-top: 60px;\n}\n\nion-content {\n  --background: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);\n  background-color: #7f5a83;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvZmVlZC10YWIvQzpcXFVzZXJzXFxUQWllYlxcRG9jdW1lbnRzXFxHaXRIdWJcXE5saW5pdC1Bbmd1bGFyL3NyY1xcYXBwXFxwYWdlc1xcZmVlZC10YWJcXHRhYjEucGFnZS5zY3NzIiwic3JjL2FwcC9wYWdlcy9mZWVkLXRhYi90YWIxLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGFBQUE7QUNDSjs7QURDQTtFQUNJLGdCQUFBO0FDRUo7O0FEQ0E7RUFDUSw4REFBQTtFQUNBLHlCQUFBO0FDRVIiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9mZWVkLXRhYi90YWIxLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5kZW1vLWNoYXJ0IHtcclxuICAgIGhlaWdodDogNDAwcHg7XHJcbn1cclxuLnRvcEN7XHJcbiAgICBtYXJnaW4tdG9wOiA2MHB4O1xyXG59XHJcblxyXG5pb24tY29udGVudHtcclxuICAgICAgICAtLWJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgzMTVkZWcsICM3ZjVhODMgMCUsICMwZDMyNGQgNzQlKTtcclxuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjN2Y1YTgzO1xyXG59IiwiLmRlbW8tY2hhcnQge1xuICBoZWlnaHQ6IDQwMHB4O1xufVxuXG4udG9wQyB7XG4gIG1hcmdpbi10b3A6IDYwcHg7XG59XG5cbmlvbi1jb250ZW50IHtcbiAgLS1iYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMzE1ZGVnLCAjN2Y1YTgzIDAlLCAjMGQzMjRkIDc0JSk7XG4gIGJhY2tncm91bmQtY29sb3I6ICM3ZjVhODM7XG59Il19 */";
     /***/
   },
 

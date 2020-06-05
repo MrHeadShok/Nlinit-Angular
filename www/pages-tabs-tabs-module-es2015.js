@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-tabs>\n\n\n\n  <ion-tab-bar slot=\"bottom\">\n    <ion-tab-button tab=\"tab1\">\n      <ion-icon name=\"pulse-outline\"></ion-icon>\n      <ion-label>Workflow</ion-label>\n    </ion-tab-button>\n\n    <ion-tab-button tab=\"messages\">\n      <ion-icon name=\"people-circle-outline\"></ion-icon>\n      <ion-label>Team</ion-label>\n    </ion-tab-button>\n\n    <ion-tab-button tab=\"tab2\">\n      <ion-icon name=\"image-outline\"></ion-icon>\n      <ion-label>Photos</ion-label>\n    </ion-tab-button>\n\n\n    <ion-tab-button tab=\"tab3\">\n      <ion-icon name=\"settings-outline\"></ion-icon>\n      <ion-label>Settings</ion-label>\n    </ion-tab-button>\n\n  </ion-tab-bar>\n\n\n\n\n</ion-tabs>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-tabs>\n\n\n\n  <ion-tab-bar slot=\"bottom\">\n    <ion-tab-button tab=\"tab1\">\n      <ion-icon name=\"pulse-outline\"></ion-icon>\n      <ion-label>Workflow</ion-label>\n    </ion-tab-button>\n\n    <ion-tab-button tab=\"messages\">\n      <ion-icon name=\"people-circle-outline\"></ion-icon>\n      <ion-label>Team</ion-label>\n    </ion-tab-button>\n\n    <ion-tab-button tab=\"tab2\">\n      <ion-icon name=\"image-outline\"></ion-icon>\n      <ion-label>Photos</ion-label>\n    </ion-tab-button>\n\n\n    <ion-tab-button tab=\"tab3\">\n      <ion-icon name=\"search-circle-outline\"></ion-icon>\n      <ion-label>Search</ion-label>\n    </ion-tab-button>\n\n  </ion-tab-bar>\n\n\n\n\n</ion-tabs>");
 
 /***/ }),
 
@@ -50,11 +50,11 @@ const routes = [
             },
             {
                 path: 'tab3',
-                loadChildren: () => Promise.all(/*! import() | chat-tab-tab3-module */[__webpack_require__.e("common"), __webpack_require__.e("chat-tab-tab3-module")]).then(__webpack_require__.bind(null, /*! ../chat-tab/tab3.module */ "./src/app/pages/chat-tab/tab3.module.ts")).then(m => m.Tab3PageModule)
+                loadChildren: () => Promise.all(/*! import() | search-tab-tab3-module */[__webpack_require__.e("common"), __webpack_require__.e("search-tab-tab3-module")]).then(__webpack_require__.bind(null, /*! ../search-tab/tab3.module */ "./src/app/pages/search-tab/tab3.module.ts")).then(m => m.Tab3PageModule)
             },
             {
                 path: 'messages',
-                loadChildren: () => __webpack_require__.e(/*! import() | messages-tab-messages-module */ "messages-tab-messages-module").then(__webpack_require__.bind(null, /*! ../messages-tab/messages.module */ "./src/app/pages/messages-tab/messages.module.ts")).then(m => m.MessagesPageModule)
+                loadChildren: () => __webpack_require__.e(/*! import() | team-tab-messages-module */ "team-tab-messages-module").then(__webpack_require__.bind(null, /*! ../team-tab/messages.module */ "./src/app/pages/team-tab/messages.module.ts")).then(m => m.MessagesPageModule)
             },
             {
                 path: '',

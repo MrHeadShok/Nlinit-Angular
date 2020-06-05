@@ -21,11 +21,11 @@ const routes: Routes = [
       },
       {
         path: 'tab3',
-        loadChildren: () => import('../chat-tab/tab3.module').then(m => m.Tab3PageModule)
+        loadChildren: () => import('../search-tab/tab3.module').then(m => m.Tab3PageModule)
       },
       {
         path: 'messages',
-        loadChildren: () => import('../messages-tab/messages.module').then(m => m.MessagesPageModule)
+        loadChildren: () => import('../team-tab/messages.module').then(m => m.MessagesPageModule)
       },
       {
         path: '',

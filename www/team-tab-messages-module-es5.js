@@ -4,37 +4,37 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["messages-tab-messages-module"], {
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["team-tab-messages-module"], {
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/messages-tab/messages.page.html":
-  /*!*********************************************************************************************!*\
-    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/messages-tab/messages.page.html ***!
-    \*********************************************************************************************/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/team-tab/messages.page.html":
+  /*!*****************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/team-tab/messages.page.html ***!
+    \*****************************************************************************************/
 
   /*! exports provided: default */
 
   /***/
-  function node_modulesRawLoaderDistCjsJsSrcAppPagesMessagesTabMessagesPageHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppPagesTeamTabMessagesPageHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "";
+    __webpack_exports__["default"] = "<ion-content>\r\n    <ion-card class=\"firstcard\">\r\n        <ion-card-title>\r\n            <ion-item>\r\n                <div style=\"float:left;\">\r\n                    <img src=\"../../../assets/img/avatar.jpg\" alt=\"Avatar\" style=\"float: left;\">\r\n                </div>\r\n                <h3>&nbsp;&nbsp;UserName</h3>\r\n\r\n\r\n                <ion-fab-button class=\"message\" color=\"warning\">\r\n                    <ion-icon name=\"chatbubble-ellipses-outline\"></ion-icon>\r\n                </ion-fab-button>\r\n\r\n\r\n\r\n            </ion-item>\r\n        </ion-card-title>\r\n\r\n        <ion-card-title>\r\n            <ion-item>\r\n                Tasks will be listed here\r\n\r\n            </ion-item>\r\n        </ion-card-title>\r\n    </ion-card>\r\n\r\n\r\n</ion-content>";
     /***/
   },
 
   /***/
-  "./src/app/pages/messages-tab/messages-routing.module.ts":
-  /*!***************************************************************!*\
-    !*** ./src/app/pages/messages-tab/messages-routing.module.ts ***!
-    \***************************************************************/
+  "./src/app/pages/team-tab/messages-routing.module.ts":
+  /*!***********************************************************!*\
+    !*** ./src/app/pages/team-tab/messages-routing.module.ts ***!
+    \***********************************************************/
 
   /*! exports provided: MessagesPageRoutingModule */
 
   /***/
-  function srcAppPagesMessagesTabMessagesRoutingModuleTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppPagesTeamTabMessagesRoutingModuleTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
@@ -67,7 +67,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var _messages_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! ./messages.page */
-    "./src/app/pages/messages-tab/messages.page.ts");
+    "./src/app/pages/team-tab/messages.page.ts");
 
     var routes = [{
       path: '',
@@ -86,15 +86,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
-  "./src/app/pages/messages-tab/messages.module.ts":
-  /*!*******************************************************!*\
-    !*** ./src/app/pages/messages-tab/messages.module.ts ***!
-    \*******************************************************/
+  "./src/app/pages/team-tab/messages.module.ts":
+  /*!***************************************************!*\
+    !*** ./src/app/pages/team-tab/messages.module.ts ***!
+    \***************************************************/
 
   /*! exports provided: MessagesPageModule */
 
   /***/
-  function srcAppPagesMessagesTabMessagesModuleTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppPagesTeamTabMessagesModuleTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
@@ -139,13 +139,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var _messages_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! ./messages-routing.module */
-    "./src/app/pages/messages-tab/messages-routing.module.ts");
+    "./src/app/pages/team-tab/messages-routing.module.ts");
     /* harmony import */
 
 
     var _messages_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! ./messages.page */
-    "./src/app/pages/messages-tab/messages.page.ts");
+    "./src/app/pages/team-tab/messages.page.ts");
 
     var MessagesPageModule = function MessagesPageModule() {
       _classCallCheck(this, MessagesPageModule);
@@ -159,35 +159,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
-  "./src/app/pages/messages-tab/messages.page.scss":
-  /*!*******************************************************!*\
-    !*** ./src/app/pages/messages-tab/messages.page.scss ***!
-    \*******************************************************/
+  "./src/app/pages/team-tab/messages.page.scss":
+  /*!***************************************************!*\
+    !*** ./src/app/pages/team-tab/messages.page.scss ***!
+    \***************************************************/
 
   /*! exports provided: default */
 
   /***/
-  function srcAppPagesMessagesTabMessagesPageScss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppPagesTeamTabMessagesPageScss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".my-custom-menu {\n  --width: 500px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvbWVzc2FnZXMtdGFiL0M6XFxVc2Vyc1xcVEFpZWJcXERvY3VtZW50c1xcR2l0SHViXFxObGluaXQtQW5ndWxhci9zcmNcXGFwcFxccGFnZXNcXG1lc3NhZ2VzLXRhYlxcbWVzc2FnZXMucGFnZS5zY3NzIiwic3JjL2FwcC9wYWdlcy9tZXNzYWdlcy10YWIvbWVzc2FnZXMucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksY0FBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvbWVzc2FnZXMtdGFiL21lc3NhZ2VzLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5teS1jdXN0b20tbWVudSB7XHJcbiAgICAtLXdpZHRoOiA1MDBweDtcclxufSIsIi5teS1jdXN0b20tbWVudSB7XG4gIC0td2lkdGg6IDUwMHB4O1xufSJdfQ== */";
+    __webpack_exports__["default"] = "ion-content {\n  --background: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);\n}\n\n.firstcard {\n  margin-top: 63px;\n}\n\nion-card {\n  margin-top: 11px;\n}\n\nimg {\n  border-radius: 50%;\n  width: 107px;\n}\n\n.message {\n  margin-left: 28px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvdGVhbS10YWIvQzpcXFVzZXJzXFxUQWllYlxcRG9jdW1lbnRzXFxHaXRIdWJcXE5saW5pdC1Bbmd1bGFyL3NyY1xcYXBwXFxwYWdlc1xcdGVhbS10YWJcXG1lc3NhZ2VzLnBhZ2Uuc2NzcyIsInNyYy9hcHAvcGFnZXMvdGVhbS10YWIvbWVzc2FnZXMucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksOERBQUE7QUNDSjs7QURFQTtFQUNJLGdCQUFBO0FDQ0o7O0FERUE7RUFDSSxnQkFBQTtBQ0NKOztBREVBO0VBQ0ksa0JBQUE7RUFDQSxZQUFBO0FDQ0o7O0FERUE7RUFDSSxpQkFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvdGVhbS10YWIvbWVzc2FnZXMucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW9uLWNvbnRlbnQge1xyXG4gICAgLS1iYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMzE1ZGVnLCAjN2Y1YTgzIDAlLCAjMGQzMjRkIDc0JSk7XHJcbn1cclxuXHJcbi5maXJzdGNhcmQge1xyXG4gICAgbWFyZ2luLXRvcDogNjNweDtcclxufVxyXG5cclxuaW9uLWNhcmQge1xyXG4gICAgbWFyZ2luLXRvcDogMTFweDtcclxufVxyXG5cclxuaW1nIHtcclxuICAgIGJvcmRlci1yYWRpdXM6IDUwJTtcclxuICAgIHdpZHRoOiAxMDdweDtcclxufVxyXG5cclxuLm1lc3NhZ2Uge1xyXG4gICAgbWFyZ2luLWxlZnQ6IDI4cHg7XHJcbn0iLCJpb24tY29udGVudCB7XG4gIC0tYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDMxNWRlZywgIzdmNWE4MyAwJSwgIzBkMzI0ZCA3NCUpO1xufVxuXG4uZmlyc3RjYXJkIHtcbiAgbWFyZ2luLXRvcDogNjNweDtcbn1cblxuaW9uLWNhcmQge1xuICBtYXJnaW4tdG9wOiAxMXB4O1xufVxuXG5pbWcge1xuICBib3JkZXItcmFkaXVzOiA1MCU7XG4gIHdpZHRoOiAxMDdweDtcbn1cblxuLm1lc3NhZ2Uge1xuICBtYXJnaW4tbGVmdDogMjhweDtcbn0iXX0= */";
     /***/
   },
 
   /***/
-  "./src/app/pages/messages-tab/messages.page.ts":
-  /*!*****************************************************!*\
-    !*** ./src/app/pages/messages-tab/messages.page.ts ***!
-    \*****************************************************/
+  "./src/app/pages/team-tab/messages.page.ts":
+  /*!*************************************************!*\
+    !*** ./src/app/pages/team-tab/messages.page.ts ***!
+    \*************************************************/
 
   /*! exports provided: MessagesPage */
 
   /***/
-  function srcAppPagesMessagesTabMessagesPageTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppPagesTeamTabMessagesPageTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
@@ -241,12 +241,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       selector: 'app-messages',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! raw-loader!./messages.page.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/messages-tab/messages.page.html"))["default"],
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/team-tab/messages.page.html"))["default"],
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./messages.page.scss */
-      "./src/app/pages/messages-tab/messages.page.scss"))["default"]]
+      "./src/app/pages/team-tab/messages.page.scss"))["default"]]
     }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["MenuController"]])], MessagesPage);
     /***/
   }
 }]);
-//# sourceMappingURL=messages-tab-messages-module-es5.js.map
+//# sourceMappingURL=team-tab-messages-module-es5.js.map
