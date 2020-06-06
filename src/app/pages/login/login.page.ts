@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { AppComponent } from 'src/app/app.component';
 
+import { AuthenticationService } from 'src/app/shared/authentification-service';
+
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,8 @@ import { AppComponent } from 'src/app/app.component';
 export class LoginPage implements OnInit {
 
   constructor(private router: Router,
-    public toastController: ToastController) { }
+    public toastController: ToastController,
+    public authService: AuthenticationService) { }
   
 
   ngOnInit() {
@@ -30,18 +33,28 @@ export class LoginPage implements OnInit {
   }
 
 
-  async navigateToHome() {
+  async logIn(email, password) {
+    console.log("in")
     
-    let user = "";
-    let pass = "";
-    console.log("debug _ Login ")
+    this.authService.SignIn(email.value, password.value)
+      .then(async (res) => {
+        if (this.authService.isEmailVerified==true) {
+          this.router.navigate(['projectspage'])
+          const toast = await this.toastController.create({
+            message: 'Successfully logged in!   ',
+            duration: 2000
+          });
+          toast.present();
+        } else {
+          window.alert('Email is not verified')
+          return false;
+        }
+      }).catch((error) => {
+        window.alert(error.message)
+      })
 
-    this.router.navigate(['projectspage'])
-    const toast = await this.toastController.create({
-      message: '   You are  Successfully logged in!   ',
-      duration: 2000
-    });
-    toast.present();
+    
+   
   }
 
 }

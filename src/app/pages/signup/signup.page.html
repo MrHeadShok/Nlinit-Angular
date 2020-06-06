@@ -17,7 +17,7 @@
          <ion-icon name="body-outline"></ion-icon> Full Name
        </p>
        </ion-label>
-      <ion-input color="transparent" [(ngModel)]="name"></ion-input>
+      <ion-input color="transparent" #fullname required></ion-input>
     </ion-item>
 
 
@@ -27,7 +27,7 @@
         <ion-icon name="person-circle-outline"></ion-icon> Email address
       </p>
     </ion-label>
-    <ion-input type="Email" [(ngModel)]="email"></ion-input>
+    <ion-input #email required type="Email"></ion-input>
   </ion-item>
 
   <ion-item color="transparent">
@@ -37,11 +37,11 @@
       </p>
 
     </ion-label>
-    <ion-input color="light" type="password" [(ngModel)]="password"></ion-input>
+    <ion-input color="light" type="password" #password required></ion-input>
   </ion-item>
 
 
-    <ion-radio-group value="group">
+    <ion-radio-group value="group" #role required>
       <ion-list-header>
         <ion-label color="light">
           <p>
@@ -70,7 +70,7 @@
   
 
   
-    <ion-button color="light" expand="block" (onclick)="potsToDb">
+    <ion-button color="light" expand="block" type="submit" (click)="signUp(fullname, email, password,role)" >
      <ion-icon name="person-add-outline"></ion-icon>
      <p> &nbsp; &nbsp;Create account!</p>
     </ion-button>

@@ -1,22 +1,28 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>test</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Register User</ion-title>
   </ion-toolbar>
 </ion-header>
 
-  <ion-card fullscreen style="margin-top: 21px;">
-    <ion-card-header color="danger">
-      <ion-card-title color="light"> Contributions</ion-card-title>
-    </ion-card-header>
+<ion-content>
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" #email required></ion-input>
+    </ion-item>
 
-    <ion-card-content>
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" #password required></ion-input>
+    </ion-item>
 
-      <canvas #doughnutCanvas></canvas>
-      
-
-    </ion-card-content>
-
-
-  </ion-card>
-
-
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" (click)="signUp(email, password)" expand="block">Register</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

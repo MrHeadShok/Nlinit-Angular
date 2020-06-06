@@ -14,7 +14,7 @@
         <ion-icon name="person-circle-outline"></ion-icon> Email address
       </p>
     </ion-label>
-    <ion-input type="Email" [(ngModel)]="email"></ion-input>
+    <ion-input type="text" #email required></ion-input>
   </ion-item>
 
 
@@ -25,15 +25,15 @@
       </p>
 
     </ion-label>
-    <ion-input color="light" type="password" [(ngModel)]="password"></ion-input>
+    <ion-input color="light" type="password" #password required></ion-input>
   </ion-item>
 
 
 
-  <ion-button color="light" expand="block" (click)="navigateToHome()">
+  <ion-button type="submit" color="light" expand="block" (click)="logIn(email, password)">
     <ion-icon name="log-in-outline"></ion-icon>
     <p>
-      &nbsp; &nbsp;Login
+       &nbsp;Login
     </p>
   </ion-button>
 
@@ -42,7 +42,7 @@
 
 
     <ion-button fill="clear" color="light" (click)="navigateToSignupPage()" style="margin-left: 133px;">
-      <ion-icon name="person-add-outline"></ion-icon> &nbsp; &nbsp;Sign up
+      <ion-icon name="person-add-outline"></ion-icon>  &nbsp;Sign up
     </ion-button>
 
 

@@ -15,6 +15,15 @@ import { AddProjectComponent } from './components/add-project/add-project.compon
 import { Add2teamComponent } from './components/add2team/add2team.component';
 
 
+//firebase related impors
+
+
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
+
 
 
 
@@ -25,9 +34,13 @@ import { Add2teamComponent } from './components/add2team/add2team.component';
     CUSTOM_ELEMENTS_SCHEMA
   ],
   entryComponents: [AddProjectComponent, Add2teamComponent],
-  imports: [BrowserModule, FormsModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, FormsModule, IonicModule.forRoot(), AppRoutingModule, AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
+    AngularFirestoreModule],
+  
   providers: [
-    StatusBar,
+    StatusBar, AngularFirestoreModule,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
