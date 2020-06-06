@@ -487,7 +487,7 @@ module.exports = webpackAsyncContext;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-app>\n\n\n    <ion-menu side=\"start\" content-id=\"main-content\" swipe-gesture=\"true\">\n        <ion-menu-toggle>\n\n            <ion-card color=\"transparent\">\n                <img src=\"../../../assets/img/avatar.jpg\" alt=\"Avatar\">\n                <ion-card-header>\n                    <ion-card-subtitle color=\"light\">Role</ion-card-subtitle>\n                    <ion-card-title color=\"light\">UserName</ion-card-title>\n                </ion-card-header>\n            </ion-card>\n\n            <div class=\"higher\">\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToProjects()\">\n                    <h5>\n                        <ion-icon name=\"bar-chart-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Projects\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToprofile()\">\n                    <h5>\n                        <ion-icon name=\"person-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; My profile\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToprofile()\">\n                    <h5>\n                        <ion-icon name=\"notifications-outline\"></ion-icon> &nbsp; &nbsp; &nbsp; &nbsp;\n                        Notifications\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\">\n                    <h5>\n                        <ion-icon name=\"pie-chart-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Statistics\n                    </h5>\n                </ion-button>\n\n            </div>\n\n\n            <div class=\"lower\">\n\n                <ion-button expand=\"full\" color=\"#7c46ce\">\n                    <h5>\n                        <ion-icon name=\"construct-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Settings\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\">\n                    <h5>\n                        <ion-icon name=\"log-out-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Logout\n                    </h5>\n                </ion-button>\n\n            </div>\n        </ion-menu-toggle>\n    </ion-menu>\n\n\n\n    <div class=\"ion-page\" id=\"main-content\">\n        <ion-header *ngIf=\"getIsTabVisible\">\n            <ion-toolbar>\n                <ion-buttons slot=\"start\">\n                    <ion-menu-button>\n                        <ion-icon name=\"menu\"></ion-icon>\n                    </ion-menu-button>\n                </ion-buttons>\n\n            </ion-toolbar>\n        </ion-header>\n        <ion-router-outlet></ion-router-outlet>\n    </div>\n\n\n\n\n</ion-app>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-app>\n\n\n    <ion-menu side=\"start\" content-id=\"main-content\" swipe-gesture=\"true\">\n        <ion-menu-toggle>\n\n            <ion-card color=\"transparent\">\n                <img src=\"../../../assets/img/avatar.jpg\" alt=\"Avatar\">\n                <ion-card-header>\n                    <ion-card-subtitle color=\"light\">Role</ion-card-subtitle>\n                    <ion-card-title color=\"light\">UserName</ion-card-title>\n                </ion-card-header>\n            </ion-card>\n\n            <div class=\"higher\">\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToProjects()\">\n                    <h5>\n                        <ion-icon name=\"bar-chart-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Projects\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToprofile()\">\n                    <h5>\n                        <ion-icon name=\"person-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; My profile\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToprofile()\">\n                    <h5>\n                        <ion-icon name=\"notifications-outline\"></ion-icon> &nbsp; &nbsp; &nbsp; &nbsp;\n                        Notifications\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\">\n                    <h5>\n                        <ion-icon name=\"pie-chart-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Statistics\n                    </h5>\n                </ion-button>\n\n            </div>\n\n\n            <div class=\"lower\">\n\n                <ion-button expand=\"full\" color=\"#7c46ce\">\n                    <h5>\n                        <ion-icon name=\"construct-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Settings\n                    </h5>\n                </ion-button>\n\n\n                <ion-button type=\"submit\" (click)=\"logout()\" expand=\"full\" color=\"#7c46ce\">\n                    <h5>\n                        <ion-icon name=\"log-out-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Logout\n                    </h5>\n                </ion-button>\n\n            </div>\n        </ion-menu-toggle>\n    </ion-menu>\n\n\n\n    <div class=\"ion-page\" id=\"main-content\">\n        <ion-header *ngIf=\"getIsTabVisible\">\n            <ion-toolbar>\n                <ion-buttons slot=\"start\">\n                    <ion-menu-button>\n                        <ion-icon name=\"menu\"></ion-icon>\n                    </ion-menu-button>\n                </ion-buttons>\n\n            </ion-toolbar>\n        </ion-header>\n        <ion-router-outlet></ion-router-outlet>\n    </div>\n\n\n\n\n</ion-app>");
 
 /***/ }),
 
@@ -811,11 +811,11 @@ const routes = [
     },
     {
         path: 'profile',
-        loadChildren: () => Promise.all(/*! import() | pages-profile-profile-module */[__webpack_require__.e("default~feed-tab-tab1-module~pages-profile-profile-module~pages-test-test-module"), __webpack_require__.e("pages-profile-profile-module")]).then(__webpack_require__.bind(null, /*! ./pages/profile/profile.module */ "./src/app/pages/profile/profile.module.ts")).then(m => m.ProfilePageModule)
+        loadChildren: () => Promise.all(/*! import() | pages-profile-profile-module */[__webpack_require__.e("default~feed-tab-tab1-module~pages-profile-profile-module"), __webpack_require__.e("pages-profile-profile-module")]).then(__webpack_require__.bind(null, /*! ./pages/profile/profile.module */ "./src/app/pages/profile/profile.module.ts")).then(m => m.ProfilePageModule)
     },
     {
         path: 'test',
-        loadChildren: () => Promise.all(/*! import() | pages-test-test-module */[__webpack_require__.e("default~feed-tab-tab1-module~pages-profile-profile-module~pages-test-test-module"), __webpack_require__.e("default~feed-tab-tab1-module~pages-test-test-module"), __webpack_require__.e("pages-test-test-module")]).then(__webpack_require__.bind(null, /*! ./pages/test/test.module */ "./src/app/pages/test/test.module.ts")).then(m => m.TestPageModule)
+        loadChildren: () => Promise.all(/*! import() | pages-test-test-module */[__webpack_require__.e("default~feed-tab-tab1-module~pages-test-test-module"), __webpack_require__.e("pages-test-test-module")]).then(__webpack_require__.bind(null, /*! ./pages/test/test.module */ "./src/app/pages/test/test.module.ts")).then(m => m.TestPageModule)
     },
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -862,6 +862,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic-native/splash-screen/ngx */ "./node_modules/@ionic-native/splash-screen/ngx/index.js");
 /* harmony import */ var _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic-native/status-bar/ngx */ "./node_modules/@ionic-native/status-bar/ngx/index.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _shared_authentification_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./shared/authentification-service */ "./src/app/shared/authentification-service.ts");
 
 var AppComponent_1;
 
@@ -869,12 +870,14 @@ var AppComponent_1;
 
 
 
+
 let AppComponent = AppComponent_1 = class AppComponent {
-    constructor(platform, splashScreen, statusBar, router) {
+    constructor(platform, splashScreen, statusBar, router, authService) {
         this.platform = platform;
         this.splashScreen = splashScreen;
         this.statusBar = statusBar;
         this.router = router;
+        this.authService = authService;
         this.initializeApp();
     }
     initializeApp() {
@@ -892,13 +895,17 @@ let AppComponent = AppComponent_1 = class AppComponent {
     navigateToprofile() {
         this.router.navigate(['profile']);
     }
+    logout() {
+        this.authService.SignOut();
+    }
 };
 AppComponent.isTabVisible = false;
 AppComponent.ctorParameters = () => [
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"] },
     { type: _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"] },
     { type: _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] },
+    { type: _shared_authentification_service__WEBPACK_IMPORTED_MODULE_6__["AuthenticationService"] }
 ];
 AppComponent = AppComponent_1 = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -910,7 +917,8 @@ AppComponent = AppComponent_1 = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"],
         _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"],
         _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"],
-        _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
+        _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"],
+        _shared_authentification_service__WEBPACK_IMPORTED_MODULE_6__["AuthenticationService"]])
 ], AppComponent);
 
 
@@ -939,6 +947,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _components_add_project_add_project_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/add-project/add-project.component */ "./src/app/components/add-project/add-project.component.ts");
 /* harmony import */ var _components_add2team_add2team_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/add2team/add2team.component */ "./src/app/components/add2team/add2team.component.ts");
+/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/fesm2015/angular-fire.js");
+/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/fesm2015/angular-fire-auth.js");
+/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/fesm2015/angular-fire-database.js");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/fesm2015/angular-fire-firestore.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
 
 
 
@@ -946,6 +959,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+//firebase related impors
 
 
 
@@ -960,9 +979,12 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["CUSTOM_ELEMENTS_SCHEMA"]
         ],
         entryComponents: [_components_add_project_add_project_component__WEBPACK_IMPORTED_MODULE_10__["AddProjectComponent"], _components_add2team_add2team_component__WEBPACK_IMPORTED_MODULE_11__["Add2teamComponent"]],
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"]],
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"], _angular_fire__WEBPACK_IMPORTED_MODULE_12__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_16__["environment"].firebaseConfig),
+            _angular_fire_auth__WEBPACK_IMPORTED_MODULE_13__["AngularFireAuthModule"],
+            _angular_fire_database__WEBPACK_IMPORTED_MODULE_14__["AngularFireDatabaseModule"],
+            _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_15__["AngularFirestoreModule"]],
         providers: [
-            _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
+            _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_15__["AngularFirestoreModule"],
             _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"],
             { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] }
         ],
@@ -1092,6 +1114,150 @@ Add2teamComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/shared/authentification-service.ts":
+/*!****************************************************!*\
+  !*** ./src/app/shared/authentification-service.ts ***!
+  \****************************************************/
+/*! exports provided: AuthenticationService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthenticationService", function() { return AuthenticationService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebase/app */ "./node_modules/firebase/app/dist/index.cjs.js");
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(firebase_app__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/fesm2015/angular-fire-auth.js");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/fesm2015/angular-fire-firestore.js");
+
+
+
+
+
+
+let AuthenticationService = class AuthenticationService {
+    constructor(afStore, ngFireAuth, router, ngZone) {
+        this.afStore = afStore;
+        this.ngFireAuth = ngFireAuth;
+        this.router = router;
+        this.ngZone = ngZone;
+        this.ngFireAuth.authState.subscribe(user => {
+            if (user) {
+                this.userData = user;
+                localStorage.setItem('user', JSON.stringify(this.userData));
+                JSON.parse(localStorage.getItem('user'));
+            }
+            else {
+                localStorage.setItem('user', null);
+                JSON.parse(localStorage.getItem('user'));
+            }
+        });
+    }
+    // Login in with email/password
+    SignIn(email, password) {
+        return this.ngFireAuth.signInWithEmailAndPassword(email, password);
+    }
+    // Register user with email/password
+    RegisterUser(email, password, role, fullname) {
+        return this.ngFireAuth.createUserWithEmailAndPassword(email, password);
+    }
+    // Email verification when new user register
+    SendVerificationMail() {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            return (yield this.ngFireAuth.currentUser).sendEmailVerification()
+                .then(() => {
+                this.router.navigate(['verify-email']);
+            });
+        });
+    }
+    // Recover password
+    PasswordRecover(passwordResetEmail) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            try {
+                yield this.ngFireAuth.sendPasswordResetEmail(passwordResetEmail);
+                window.alert('Password reset email has been sent, please check your inbox.');
+            }
+            catch (error) {
+                window.alert(error);
+            }
+        });
+    }
+    // Returns true when user is looged in
+    get isLoggedIn() {
+        const user = JSON.parse(localStorage.getItem('user'));
+        return (user !== null && user.emailVerified !== false) ? true : false;
+    }
+    // Returns true when user's email is verified
+    get isEmailVerified() {
+        const user = JSON.parse(localStorage.getItem('user'));
+        return (user.emailVerified !== false) ? true : false;
+    }
+    // Sign in with Gmail
+    GoogleAuth() {
+        return this.AuthLogin(new firebase_app__WEBPACK_IMPORTED_MODULE_2__["auth"].GoogleAuthProvider());
+    }
+    // Auth providers
+    AuthLogin(provider) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            try {
+                const result = yield this.ngFireAuth.signInWithPopup(provider);
+                this.ngZone.run(() => {
+                    this.router.navigate(['dashboard']);
+                });
+                this.SetUserData(result.user);
+            }
+            catch (error) {
+                window.alert(error);
+            }
+        });
+    }
+    // Store user in localStorage
+    SetUserData(user) {
+        const userRef = this.afStore.doc(`users/${user.uid}`);
+        const userData = {
+            role: user.role,
+            fullname: user.fullname,
+            uid: user.uid,
+            email: user.email,
+            displayName: user.displayName,
+            photoURL: user.photoURL,
+            emailVerified: user.emailVerified
+        };
+        return userRef.set(userData, {
+            merge: true
+        });
+    }
+    // Sign-out 
+    SignOut() {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            yield this.ngFireAuth.signOut();
+            localStorage.removeItem('user');
+            this.router.navigate(['login']);
+        });
+    }
+};
+AuthenticationService.ctorParameters = () => [
+    { type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_5__["AngularFirestore"] },
+    { type: _angular_fire_auth__WEBPACK_IMPORTED_MODULE_4__["AngularFireAuth"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"] }
+];
+AuthenticationService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_5__["AngularFirestore"],
+        _angular_fire_auth__WEBPACK_IMPORTED_MODULE_4__["AngularFireAuth"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]])
+], AuthenticationService);
+
+
+
+/***/ }),
+
 /***/ "./src/environments/environment.ts":
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
@@ -1108,7 +1274,17 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 
 const environment = {
-    production: false
+    production: false,
+    firebaseConfig: {
+        apiKey: "AIzaSyDXsyh6L3elZxNYN8bZk0utGnLPEOgw57c",
+        authDomain: "nlinionic.firebaseapp.com",
+        databaseURL: "https://nlinionic.firebaseio.com",
+        projectId: "nlinionic",
+        storageBucket: "nlinionic.appspot.com",
+        messagingSenderId: "956759542409",
+        appId: "1:956759542409:web:d90a5820b12aa0bc2fd458",
+        measurementId: "G-KB7LQ708WG"
+    }
 };
 /*
  * For easier debugging in development mode, you can import the following file

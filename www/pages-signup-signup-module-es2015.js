@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\n  <ion-card color=\"transparent\">\n    <img src=\"../../../assets/img/wide1.png\" />\n    <ion-card-content >\n      <ion-text color=\"light\">\n    <p > ProjectAdmin is an app to help you better organize your data.Lead your team to succes.\n    </p>\n    </ion-text>\n    </ion-card-content>\n\n  </ion-card>\n\n\n    <ion-item color=\"transparent\">\n      <ion-label color=\"light\" id=\"name\" position=\"floating\">\n       <p>\n         <ion-icon name=\"body-outline\"></ion-icon> Full Name\n       </p>\n       </ion-label>\n      <ion-input color=\"transparent\" [(ngModel)]=\"name\"></ion-input>\n    </ion-item>\n\n\n  <ion-item color=\"transparent\">\n    <ion-label position=\"floating\" color=\"light\">\n      <p>\n        <ion-icon name=\"person-circle-outline\"></ion-icon> Email address\n      </p>\n    </ion-label>\n    <ion-input type=\"Email\" [(ngModel)]=\"email\"></ion-input>\n  </ion-item>\n\n  <ion-item color=\"transparent\">\n    <ion-label color=\"light\" position=\"floating\" minlength=\"5\" pattern=\"Password\">\n      <p>\n        <ion-icon name=\"lock-closed-outline\"></ion-icon> Password\n      </p>\n\n    </ion-label>\n    <ion-input color=\"light\" type=\"password\" [(ngModel)]=\"password\"></ion-input>\n  </ion-item>\n\n\n    <ion-radio-group value=\"group\">\n      <ion-list-header>\n        <ion-label color=\"light\">\n          <p>\n            <ion-icon name=\"clipboard-outline\"></ion-icon>&nbsp; &nbsp; ROLE\n          </p>\n        </ion-label>\n      </ion-list-header>\n      <ion-item color=\"transparent\">\n        <ion-label color=\"light\">\n          <p>\n            <ion-icon name=\"person-outline\"></ion-icon>&nbsp; &nbsp;A team leader\n          </p>\n        </ion-label>\n        <ion-radio color=\"transparent\" slot=\"start\" color=\"success\" value=\"teamleader\"></ion-radio>\n      </ion-item>\n\n      <ion-item color=\"transparent\">\n        <ion-label color=\"light\">\n          <p>\n            <ion-icon name=\"people-outline\"></ion-icon>&nbsp; &nbsp; A member\n          </p>\n        </ion-label>\n        <ion-radio color=\"transparent\" slot=\"start\" color=\"tertiary\" value=\"member\"></ion-radio>\n      </ion-item>\n    </ion-radio-group>\n  \n\n  \n    <ion-button color=\"light\" expand=\"block\" (onclick)=\"potsToDb\">\n     <ion-icon name=\"person-add-outline\"></ion-icon>\n     <p> &nbsp; &nbsp;Create account!</p>\n    </ion-button>\n  \n\n  <div>\n\n\n    <ion-button fill=\"clear\" color=\"light\" (click)=\"navigateToLoginPage()\" style=\"margin-left: 133px;\">\n      <ion-icon name=\"log-in-outline\"></ion-icon> &nbsp; &nbsp;Login\n    </ion-button>\n\n\n  </div>\n\n</ion-content>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\n  <ion-card color=\"transparent\">\n    <img src=\"../../../assets/img/wide1.png\" />\n    <ion-card-content >\n      <ion-text color=\"light\">\n    <p > ProjectAdmin is an app to help you better organize your data.Lead your team to succes.\n    </p>\n    </ion-text>\n    </ion-card-content>\n\n  </ion-card>\n\n\n    <ion-item color=\"transparent\">\n      <ion-label color=\"light\" id=\"name\" position=\"floating\">\n       <p>\n         <ion-icon name=\"body-outline\"></ion-icon> Full Name\n       </p>\n       </ion-label>\n      <ion-input color=\"transparent\" #fullname required></ion-input>\n    </ion-item>\n\n\n  <ion-item color=\"transparent\">\n    <ion-label position=\"floating\" color=\"light\">\n      <p>\n        <ion-icon name=\"person-circle-outline\"></ion-icon> Email address\n      </p>\n    </ion-label>\n    <ion-input #email required type=\"Email\"></ion-input>\n  </ion-item>\n\n  <ion-item color=\"transparent\">\n    <ion-label color=\"light\" position=\"floating\" minlength=\"5\" pattern=\"Password\">\n      <p>\n        <ion-icon name=\"lock-closed-outline\"></ion-icon> Password\n      </p>\n\n    </ion-label>\n    <ion-input color=\"light\" type=\"password\" #password required></ion-input>\n  </ion-item>\n\n\n    <ion-radio-group value=\"group\" #role required>\n      <ion-list-header>\n        <ion-label color=\"light\">\n          <p>\n            <ion-icon name=\"clipboard-outline\"></ion-icon>&nbsp; &nbsp; ROLE\n          </p>\n        </ion-label>\n      </ion-list-header>\n      <ion-item color=\"transparent\">\n        <ion-label color=\"light\">\n          <p>\n            <ion-icon name=\"person-outline\"></ion-icon>&nbsp; &nbsp;A team leader\n          </p>\n        </ion-label>\n        <ion-radio color=\"transparent\" slot=\"start\" color=\"success\" value=\"teamleader\"></ion-radio>\n      </ion-item>\n\n      <ion-item color=\"transparent\">\n        <ion-label color=\"light\">\n          <p>\n            <ion-icon name=\"people-outline\"></ion-icon>&nbsp; &nbsp; A member\n          </p>\n        </ion-label>\n        <ion-radio color=\"transparent\" slot=\"start\" color=\"tertiary\" value=\"member\"></ion-radio>\n      </ion-item>\n    </ion-radio-group>\n  \n\n  \n    <ion-button color=\"light\" expand=\"block\" type=\"submit\" (click)=\"signUp(fullname, email, password,role)\" >\n     <ion-icon name=\"person-add-outline\"></ion-icon>\n     <p> &nbsp; &nbsp;Create account!</p>\n    </ion-button>\n  \n\n  <div>\n\n\n    <ion-button fill=\"clear\" color=\"light\" (click)=\"navigateToLoginPage()\" style=\"margin-left: 133px;\">\n      <ion-icon name=\"log-in-outline\"></ion-icon> &nbsp; &nbsp;Login\n    </ion-button>\n\n\n  </div>\n\n</ion-content>\n\n");
 
 /***/ }),
 
@@ -118,22 +118,56 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _shared_authentification_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/authentification-service */ "./src/app/shared/authentification-service.ts");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
+
+
 
 
 
 let SignupPage = class SignupPage {
-    constructor(router) {
+    constructor(toastController, router, authService) {
+        this.toastController = toastController;
         this.router = router;
+        this.authService = authService;
     }
     ngOnInit() {
     }
     navigateToLoginPage() {
         this.router.navigate(['login']);
-        console.log("passed to login");
+        console.log("redirected to login");
+    }
+    signUp(fullname, email, password, role) {
+        this.authService.RegisterUser(email.value, password.value, role.value, fullname.value)
+            .then((res) => tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            this.authService.SendVerificationMail(); //verification email
+            console.log("1st condition");
+            this.router.navigate(['login']);
+            const toast = yield this.toastController.create({
+                animated: true,
+                header: 'Account created successfully!',
+                message: 'Check your inbox for a verification email! Click the button to resend.',
+                duration: 6000,
+                position: 'top',
+                buttons: [{
+                        side: 'end',
+                        icon: 'refresh-circle-outline',
+                        text: 'Resend',
+                        handler: () => {
+                            this.authService.SendVerificationMail();
+                        }
+                    }]
+            });
+            toast.present();
+        })).catch((error) => {
+            window.alert(error.message);
+        });
     }
 };
 SignupPage.ctorParameters = () => [
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["ToastController"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: _shared_authentification_service__WEBPACK_IMPORTED_MODULE_3__["AuthenticationService"] }
 ];
 SignupPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -141,7 +175,7 @@ SignupPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./signup.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/signup/signup.page.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./signup.page.scss */ "./src/app/pages/signup/signup.page.scss")).default]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_4__["ToastController"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _shared_authentification_service__WEBPACK_IMPORTED_MODULE_3__["AuthenticationService"]])
 ], SignupPage);
 
 

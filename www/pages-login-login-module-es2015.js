@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\n\n\n  <ion-card color=\"transparent\">\n    <img src=\"../../../assets/img/logo.png\" />\n\n  </ion-card>\n\n\n\n  <ion-item color=\"transparent\">\n    <ion-label position=\"floating\" color=\"light\">\n      <p>\n        <ion-icon name=\"person-circle-outline\"></ion-icon> Email address\n      </p>\n    </ion-label>\n    <ion-input type=\"Email\" [(ngModel)]=\"email\"></ion-input>\n  </ion-item>\n\n\n  <ion-item color=\"transparent\">\n    <ion-label color=\"light\" position=\"floating\" minlength=\"5\" pattern=\"Password\">\n      <p>\n        <ion-icon name=\"lock-closed-outline\"></ion-icon> Password\n      </p>\n\n    </ion-label>\n    <ion-input color=\"light\" type=\"password\" [(ngModel)]=\"password\"></ion-input>\n  </ion-item>\n\n\n\n  <ion-button color=\"light\" expand=\"block\" (click)=\"navigateToHome()\">\n    <ion-icon name=\"log-in-outline\"></ion-icon>\n    <p>\n      &nbsp; &nbsp;Login\n    </p>\n  </ion-button>\n\n\n  <div>\n\n\n    <ion-button fill=\"clear\" color=\"light\" (click)=\"navigateToSignupPage()\" style=\"margin-left: 133px;\">\n      <ion-icon name=\"person-add-outline\"></ion-icon> &nbsp; &nbsp;Sign up\n    </ion-button>\n\n\n  </div>\n\n\n\n\n\n\n\n</ion-content>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\n\n\n  <ion-card color=\"transparent\">\n    <img src=\"../../../assets/img/logo.png\" />\n\n  </ion-card>\n\n\n\n  <ion-item color=\"transparent\">\n    <ion-label position=\"floating\" color=\"light\">\n      <p>\n        <ion-icon name=\"person-circle-outline\"></ion-icon> Email address\n      </p>\n    </ion-label>\n    <ion-input type=\"text\" #email required></ion-input>\n  </ion-item>\n\n\n  <ion-item color=\"transparent\">\n    <ion-label color=\"light\" position=\"floating\" minlength=\"5\" pattern=\"Password\">\n      <p>\n        <ion-icon name=\"lock-closed-outline\"></ion-icon> Password\n      </p>\n\n    </ion-label>\n    <ion-input color=\"light\" type=\"password\" #password required></ion-input>\n  </ion-item>\n\n\n\n  <ion-button type=\"submit\" color=\"light\" expand=\"block\" (click)=\"logIn(email, password)\">\n    <ion-icon name=\"log-in-outline\"></ion-icon>\n    <p>\n       &nbsp;Login\n    </p>\n  </ion-button>\n\n\n  <div>\n\n\n    <ion-button fill=\"clear\" color=\"light\" (click)=\"navigateToSignupPage()\" style=\"margin-left: 133px;\">\n      <ion-icon name=\"person-add-outline\"></ion-icon>  &nbsp;Sign up\n    </ion-button>\n\n\n  </div>\n\n\n\n\n\n\n\n</ion-content>");
 
 /***/ }),
 
@@ -120,15 +120,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
 /* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/app.component */ "./src/app/app.component.ts");
+/* harmony import */ var src_app_shared_authentification_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/shared/authentification-service */ "./src/app/shared/authentification-service.ts");
+
 
 
 
 
 
 let LoginPage = class LoginPage {
-    constructor(router, toastController) {
+    constructor(router, toastController, authService) {
         this.router = router;
         this.toastController = toastController;
+        this.authService = authService;
     }
     ngOnInit() {
         console.log("DEbug: ProjectspagePage");
@@ -141,23 +144,33 @@ let LoginPage = class LoginPage {
         this.router.navigate(['signup']);
         console.log("Signup pressed");
     }
-    navigateToHome() {
+    logIn(email, password) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            let user = "";
-            let pass = "";
-            console.log("debug _ Login ");
-            this.router.navigate(['projectspage']);
-            const toast = yield this.toastController.create({
-                message: '   You are  Successfully logged in!   ',
-                duration: 2000
+            console.log("in");
+            this.authService.SignIn(email.value, password.value)
+                .then((res) => tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+                if (this.authService.isEmailVerified == true) {
+                    this.router.navigate(['projectspage']);
+                    const toast = yield this.toastController.create({
+                        message: 'Successfully logged in!   ',
+                        duration: 2000
+                    });
+                    toast.present();
+                }
+                else {
+                    window.alert('Email is not verified');
+                    return false;
+                }
+            })).catch((error) => {
+                window.alert(error.message);
             });
-            toast.present();
         });
     }
 };
 LoginPage.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ToastController"] }
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ToastController"] },
+    { type: src_app_shared_authentification_service__WEBPACK_IMPORTED_MODULE_5__["AuthenticationService"] }
 ];
 LoginPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -166,7 +179,8 @@ LoginPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./login.page.scss */ "./src/app/pages/login/login.page.scss")).default]
     }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
-        _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ToastController"]])
+        _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ToastController"],
+        src_app_shared_authentification_service__WEBPACK_IMPORTED_MODULE_5__["AuthenticationService"]])
 ], LoginPage);
 
 

@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-content>\n\n\n  <ion-card color=\"transparent\">\n    <img src=\"../../../assets/img/logo.png\" />\n\n  </ion-card>\n\n\n\n  <ion-item color=\"transparent\">\n    <ion-label position=\"floating\" color=\"light\">\n      <p>\n        <ion-icon name=\"person-circle-outline\"></ion-icon> Email address\n      </p>\n    </ion-label>\n    <ion-input type=\"Email\" [(ngModel)]=\"email\"></ion-input>\n  </ion-item>\n\n\n  <ion-item color=\"transparent\">\n    <ion-label color=\"light\" position=\"floating\" minlength=\"5\" pattern=\"Password\">\n      <p>\n        <ion-icon name=\"lock-closed-outline\"></ion-icon> Password\n      </p>\n\n    </ion-label>\n    <ion-input color=\"light\" type=\"password\" [(ngModel)]=\"password\"></ion-input>\n  </ion-item>\n\n\n\n  <ion-button color=\"light\" expand=\"block\" (click)=\"navigateToHome()\">\n    <ion-icon name=\"log-in-outline\"></ion-icon>\n    <p>\n      &nbsp; &nbsp;Login\n    </p>\n  </ion-button>\n\n\n  <div>\n\n\n    <ion-button fill=\"clear\" color=\"light\" (click)=\"navigateToSignupPage()\" style=\"margin-left: 133px;\">\n      <ion-icon name=\"person-add-outline\"></ion-icon> &nbsp; &nbsp;Sign up\n    </ion-button>\n\n\n  </div>\n\n\n\n\n\n\n\n</ion-content>";
+    __webpack_exports__["default"] = "<ion-content>\n\n\n  <ion-card color=\"transparent\">\n    <img src=\"../../../assets/img/logo.png\" />\n\n  </ion-card>\n\n\n\n  <ion-item color=\"transparent\">\n    <ion-label position=\"floating\" color=\"light\">\n      <p>\n        <ion-icon name=\"person-circle-outline\"></ion-icon> Email address\n      </p>\n    </ion-label>\n    <ion-input type=\"text\" #email required></ion-input>\n  </ion-item>\n\n\n  <ion-item color=\"transparent\">\n    <ion-label color=\"light\" position=\"floating\" minlength=\"5\" pattern=\"Password\">\n      <p>\n        <ion-icon name=\"lock-closed-outline\"></ion-icon> Password\n      </p>\n\n    </ion-label>\n    <ion-input color=\"light\" type=\"password\" #password required></ion-input>\n  </ion-item>\n\n\n\n  <ion-button type=\"submit\" color=\"light\" expand=\"block\" (click)=\"logIn(email, password)\">\n    <ion-icon name=\"log-in-outline\"></ion-icon>\n    <p>\n       &nbsp;Login\n    </p>\n  </ion-button>\n\n\n  <div>\n\n\n    <ion-button fill=\"clear\" color=\"light\" (click)=\"navigateToSignupPage()\" style=\"margin-left: 133px;\">\n      <ion-icon name=\"person-add-outline\"></ion-icon>  &nbsp;Sign up\n    </ion-button>\n\n\n  </div>\n\n\n\n\n\n\n\n</ion-content>";
     /***/
   },
 
@@ -227,13 +227,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var src_app_app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! src/app/app.component */
     "./src/app/app.component.ts");
+    /* harmony import */
+
+
+    var src_app_shared_authentification_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! src/app/shared/authentification-service */
+    "./src/app/shared/authentification-service.ts");
 
     var LoginPage = /*#__PURE__*/function () {
-      function LoginPage(router, toastController) {
+      function LoginPage(router, toastController, authService) {
         _classCallCheck(this, LoginPage);
 
         this.router = router;
         this.toastController = toastController;
+        this.authService = authService;
       }
 
       _createClass(LoginPage, [{
@@ -254,34 +261,62 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           console.log("Signup pressed");
         }
       }, {
-        key: "navigateToHome",
-        value: function navigateToHome() {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-            var user, pass, toast;
-            return regeneratorRuntime.wrap(function _callee$(_context) {
+        key: "logIn",
+        value: function logIn(email, password) {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+            var _this = this;
+
+            return regeneratorRuntime.wrap(function _callee2$(_context2) {
               while (1) {
-                switch (_context.prev = _context.next) {
+                switch (_context2.prev = _context2.next) {
                   case 0:
-                    user = "";
-                    pass = "";
-                    console.log("debug _ Login ");
-                    this.router.navigate(['projectspage']);
-                    _context.next = 6;
-                    return this.toastController.create({
-                      message: '   You are  Successfully logged in!   ',
-                      duration: 2000
+                    console.log("in");
+                    this.authService.SignIn(email.value, password.value).then(function (res) {
+                      return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+                        var toast;
+                        return regeneratorRuntime.wrap(function _callee$(_context) {
+                          while (1) {
+                            switch (_context.prev = _context.next) {
+                              case 0:
+                                if (!(this.authService.isEmailVerified == true)) {
+                                  _context.next = 8;
+                                  break;
+                                }
+
+                                this.router.navigate(['projectspage']);
+                                _context.next = 4;
+                                return this.toastController.create({
+                                  message: 'Successfully logged in!   ',
+                                  duration: 2000
+                                });
+
+                              case 4:
+                                toast = _context.sent;
+                                toast.present();
+                                _context.next = 10;
+                                break;
+
+                              case 8:
+                                window.alert('Email is not verified');
+                                return _context.abrupt("return", false);
+
+                              case 10:
+                              case "end":
+                                return _context.stop();
+                            }
+                          }
+                        }, _callee, this);
+                      }));
+                    })["catch"](function (error) {
+                      window.alert(error.message);
                     });
 
-                  case 6:
-                    toast = _context.sent;
-                    toast.present();
-
-                  case 8:
+                  case 2:
                   case "end":
-                    return _context.stop();
+                    return _context2.stop();
                 }
               }
-            }, _callee, this);
+            }, _callee2, this);
           }));
         }
       }]);
@@ -294,6 +329,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
       }, {
         type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ToastController"]
+      }, {
+        type: src_app_shared_authentification_service__WEBPACK_IMPORTED_MODULE_5__["AuthenticationService"]
       }];
     };
 
@@ -305,7 +342,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./login.page.scss */
       "./src/app/pages/login/login.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ToastController"]])], LoginPage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ToastController"], src_app_shared_authentification_service__WEBPACK_IMPORTED_MODULE_5__["AuthenticationService"]])], LoginPage);
     /***/
   }
 }]);

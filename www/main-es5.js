@@ -209,7 +209,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-app>\n\n\n    <ion-menu side=\"start\" content-id=\"main-content\" swipe-gesture=\"true\">\n        <ion-menu-toggle>\n\n            <ion-card color=\"transparent\">\n                <img src=\"../../../assets/img/avatar.jpg\" alt=\"Avatar\">\n                <ion-card-header>\n                    <ion-card-subtitle color=\"light\">Role</ion-card-subtitle>\n                    <ion-card-title color=\"light\">UserName</ion-card-title>\n                </ion-card-header>\n            </ion-card>\n\n            <div class=\"higher\">\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToProjects()\">\n                    <h5>\n                        <ion-icon name=\"bar-chart-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Projects\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToprofile()\">\n                    <h5>\n                        <ion-icon name=\"person-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; My profile\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToprofile()\">\n                    <h5>\n                        <ion-icon name=\"notifications-outline\"></ion-icon> &nbsp; &nbsp; &nbsp; &nbsp;\n                        Notifications\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\">\n                    <h5>\n                        <ion-icon name=\"pie-chart-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Statistics\n                    </h5>\n                </ion-button>\n\n            </div>\n\n\n            <div class=\"lower\">\n\n                <ion-button expand=\"full\" color=\"#7c46ce\">\n                    <h5>\n                        <ion-icon name=\"construct-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Settings\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\">\n                    <h5>\n                        <ion-icon name=\"log-out-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Logout\n                    </h5>\n                </ion-button>\n\n            </div>\n        </ion-menu-toggle>\n    </ion-menu>\n\n\n\n    <div class=\"ion-page\" id=\"main-content\">\n        <ion-header *ngIf=\"getIsTabVisible\">\n            <ion-toolbar>\n                <ion-buttons slot=\"start\">\n                    <ion-menu-button>\n                        <ion-icon name=\"menu\"></ion-icon>\n                    </ion-menu-button>\n                </ion-buttons>\n\n            </ion-toolbar>\n        </ion-header>\n        <ion-router-outlet></ion-router-outlet>\n    </div>\n\n\n\n\n</ion-app>";
+    __webpack_exports__["default"] = "<ion-app>\n\n\n    <ion-menu side=\"start\" content-id=\"main-content\" swipe-gesture=\"true\">\n        <ion-menu-toggle>\n\n            <ion-card color=\"transparent\">\n                <img src=\"../../../assets/img/avatar.jpg\" alt=\"Avatar\">\n                <ion-card-header>\n                    <ion-card-subtitle color=\"light\">Role</ion-card-subtitle>\n                    <ion-card-title color=\"light\">UserName</ion-card-title>\n                </ion-card-header>\n            </ion-card>\n\n            <div class=\"higher\">\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToProjects()\">\n                    <h5>\n                        <ion-icon name=\"bar-chart-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Projects\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToprofile()\">\n                    <h5>\n                        <ion-icon name=\"person-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; My profile\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToprofile()\">\n                    <h5>\n                        <ion-icon name=\"notifications-outline\"></ion-icon> &nbsp; &nbsp; &nbsp; &nbsp;\n                        Notifications\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\">\n                    <h5>\n                        <ion-icon name=\"pie-chart-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Statistics\n                    </h5>\n                </ion-button>\n\n            </div>\n\n\n            <div class=\"lower\">\n\n                <ion-button expand=\"full\" color=\"#7c46ce\">\n                    <h5>\n                        <ion-icon name=\"construct-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Settings\n                    </h5>\n                </ion-button>\n\n\n                <ion-button type=\"submit\" (click)=\"logout()\" expand=\"full\" color=\"#7c46ce\">\n                    <h5>\n                        <ion-icon name=\"log-out-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Logout\n                    </h5>\n                </ion-button>\n\n            </div>\n        </ion-menu-toggle>\n    </ion-menu>\n\n\n\n    <div class=\"ion-page\" id=\"main-content\">\n        <ion-header *ngIf=\"getIsTabVisible\">\n            <ion-toolbar>\n                <ion-buttons slot=\"start\">\n                    <ion-menu-button>\n                        <ion-icon name=\"menu\"></ion-icon>\n                    </ion-menu-button>\n                </ion-buttons>\n\n            </ion-toolbar>\n        </ion-header>\n        <ion-router-outlet></ion-router-outlet>\n    </div>\n\n\n\n\n</ion-app>";
     /***/
   },
 
@@ -959,7 +959,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | pages-profile-profile-module */
-        [__webpack_require__.e("default~feed-tab-tab1-module~pages-profile-profile-module~pages-test-test-module"), __webpack_require__.e("pages-profile-profile-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~feed-tab-tab1-module~pages-profile-profile-module"), __webpack_require__.e("pages-profile-profile-module")]).then(__webpack_require__.bind(null,
         /*! ./pages/profile/profile.module */
         "./src/app/pages/profile/profile.module.ts")).then(function (m) {
           return m.ProfilePageModule;
@@ -970,7 +970,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | pages-test-test-module */
-        [__webpack_require__.e("default~feed-tab-tab1-module~pages-profile-profile-module~pages-test-test-module"), __webpack_require__.e("default~feed-tab-tab1-module~pages-test-test-module"), __webpack_require__.e("pages-test-test-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~feed-tab-tab1-module~pages-test-test-module"), __webpack_require__.e("pages-test-test-module")]).then(__webpack_require__.bind(null,
         /*! ./pages/test/test.module */
         "./src/app/pages/test/test.module.ts")).then(function (m) {
           return m.TestPageModule;
@@ -1066,17 +1066,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _shared_authentification_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ./shared/authentification-service */
+    "./src/app/shared/authentification-service.ts");
 
     var AppComponent_1;
 
     var AppComponent = AppComponent_1 = /*#__PURE__*/function () {
-      function AppComponent(platform, splashScreen, statusBar, router) {
+      function AppComponent(platform, splashScreen, statusBar, router, authService) {
         _classCallCheck(this, AppComponent);
 
         this.platform = platform;
         this.splashScreen = splashScreen;
         this.statusBar = statusBar;
         this.router = router;
+        this.authService = authService;
         this.initializeApp();
       }
 
@@ -1102,6 +1109,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.router.navigate(['profile']);
         }
       }, {
+        key: "logout",
+        value: function logout() {
+          this.authService.SignOut();
+        }
+      }, {
         key: "getIsTabVisible",
         get: function get() {
           return AppComponent_1.isTabVisible;
@@ -1122,6 +1134,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"]
       }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]
+      }, {
+        type: _shared_authentification_service__WEBPACK_IMPORTED_MODULE_6__["AuthenticationService"]
       }];
     };
 
@@ -1133,7 +1147,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./app.component.scss */
       "./src/app/app.component.scss"))["default"]]
-    }), Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"], _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])], AppComponent);
+    }), Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"], _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], _shared_authentification_service__WEBPACK_IMPORTED_MODULE_6__["AuthenticationService"]])], AppComponent);
     /***/
   },
 
@@ -1228,6 +1242,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _components_add2team_add2team_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
     /*! ./components/add2team/add2team.component */
     "./src/app/components/add2team/add2team.component.ts");
+    /* harmony import */
+
+
+    var _angular_fire__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    /*! @angular/fire */
+    "./node_modules/@angular/fire/fesm2015/angular-fire.js");
+    /* harmony import */
+
+
+    var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+    /*! @angular/fire/auth */
+    "./node_modules/@angular/fire/fesm2015/angular-fire-auth.js");
+    /* harmony import */
+
+
+    var _angular_fire_database__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+    /*! @angular/fire/database */
+    "./node_modules/@angular/fire/fesm2015/angular-fire-database.js");
+    /* harmony import */
+
+
+    var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+    /*! @angular/fire/firestore */
+    "./node_modules/@angular/fire/fesm2015/angular-fire-firestore.js");
+    /* harmony import */
+
+
+    var _environments_environment__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+    /*! ../environments/environment */
+    "./src/environments/environment.ts"); //firebase related impors
+
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
@@ -1237,8 +1282,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"], _components_add_project_add_project_component__WEBPACK_IMPORTED_MODULE_10__["AddProjectComponent"], _components_add2team_add2team_component__WEBPACK_IMPORTED_MODULE_11__["Add2teamComponent"]],
       schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["CUSTOM_ELEMENTS_SCHEMA"]],
       entryComponents: [_components_add_project_add_project_component__WEBPACK_IMPORTED_MODULE_10__["AddProjectComponent"], _components_add2team_add2team_component__WEBPACK_IMPORTED_MODULE_11__["Add2teamComponent"]],
-      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"]],
-      providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], {
+      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"], _angular_fire__WEBPACK_IMPORTED_MODULE_12__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_16__["environment"].firebaseConfig), _angular_fire_auth__WEBPACK_IMPORTED_MODULE_13__["AngularFireAuthModule"], _angular_fire_database__WEBPACK_IMPORTED_MODULE_14__["AngularFireDatabaseModule"], _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_15__["AngularFirestoreModule"]],
+      providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_15__["AngularFirestoreModule"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], {
         provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"],
         useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"]
       }],
@@ -1454,6 +1499,281 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./src/app/shared/authentification-service.ts":
+  /*!****************************************************!*\
+    !*** ./src/app/shared/authentification-service.ts ***!
+    \****************************************************/
+
+  /*! exports provided: AuthenticationService */
+
+  /***/
+  function srcAppSharedAuthentificationServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AuthenticationService", function () {
+      return AuthenticationService;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var firebase_app__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! firebase/app */
+    "./node_modules/firebase/app/dist/index.cjs.js");
+    /* harmony import */
+
+
+    var firebase_app__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(firebase_app__WEBPACK_IMPORTED_MODULE_2__);
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @angular/fire/auth */
+    "./node_modules/@angular/fire/fesm2015/angular-fire-auth.js");
+    /* harmony import */
+
+
+    var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @angular/fire/firestore */
+    "./node_modules/@angular/fire/fesm2015/angular-fire-firestore.js");
+
+    var AuthenticationService = /*#__PURE__*/function () {
+      function AuthenticationService(afStore, ngFireAuth, router, ngZone) {
+        var _this2 = this;
+
+        _classCallCheck(this, AuthenticationService);
+
+        this.afStore = afStore;
+        this.ngFireAuth = ngFireAuth;
+        this.router = router;
+        this.ngZone = ngZone;
+        this.ngFireAuth.authState.subscribe(function (user) {
+          if (user) {
+            _this2.userData = user;
+            localStorage.setItem('user', JSON.stringify(_this2.userData));
+            JSON.parse(localStorage.getItem('user'));
+          } else {
+            localStorage.setItem('user', null);
+            JSON.parse(localStorage.getItem('user'));
+          }
+        });
+      } // Login in with email/password
+
+
+      _createClass(AuthenticationService, [{
+        key: "SignIn",
+        value: function SignIn(email, password) {
+          return this.ngFireAuth.signInWithEmailAndPassword(email, password);
+        } // Register user with email/password
+
+      }, {
+        key: "RegisterUser",
+        value: function RegisterUser(email, password, role, fullname) {
+          return this.ngFireAuth.createUserWithEmailAndPassword(email, password);
+        } // Email verification when new user register
+
+      }, {
+        key: "SendVerificationMail",
+        value: function SendVerificationMail() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+            var _this3 = this;
+
+            return regeneratorRuntime.wrap(function _callee$(_context) {
+              while (1) {
+                switch (_context.prev = _context.next) {
+                  case 0:
+                    _context.next = 2;
+                    return this.ngFireAuth.currentUser;
+
+                  case 2:
+                    return _context.abrupt("return", _context.sent.sendEmailVerification().then(function () {
+                      _this3.router.navigate(['verify-email']);
+                    }));
+
+                  case 3:
+                  case "end":
+                    return _context.stop();
+                }
+              }
+            }, _callee, this);
+          }));
+        } // Recover password
+
+      }, {
+        key: "PasswordRecover",
+        value: function PasswordRecover(passwordResetEmail) {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+            return regeneratorRuntime.wrap(function _callee2$(_context2) {
+              while (1) {
+                switch (_context2.prev = _context2.next) {
+                  case 0:
+                    _context2.prev = 0;
+                    _context2.next = 3;
+                    return this.ngFireAuth.sendPasswordResetEmail(passwordResetEmail);
+
+                  case 3:
+                    window.alert('Password reset email has been sent, please check your inbox.');
+                    _context2.next = 9;
+                    break;
+
+                  case 6:
+                    _context2.prev = 6;
+                    _context2.t0 = _context2["catch"](0);
+                    window.alert(_context2.t0);
+
+                  case 9:
+                  case "end":
+                    return _context2.stop();
+                }
+              }
+            }, _callee2, this, [[0, 6]]);
+          }));
+        } // Returns true when user is looged in
+
+      }, {
+        key: "GoogleAuth",
+        // Sign in with Gmail
+        value: function GoogleAuth() {
+          return this.AuthLogin(new firebase_app__WEBPACK_IMPORTED_MODULE_2__["auth"].GoogleAuthProvider());
+        } // Auth providers
+
+      }, {
+        key: "AuthLogin",
+        value: function AuthLogin(provider) {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+            var _this4 = this;
+
+            var result;
+            return regeneratorRuntime.wrap(function _callee3$(_context3) {
+              while (1) {
+                switch (_context3.prev = _context3.next) {
+                  case 0:
+                    _context3.prev = 0;
+                    _context3.next = 3;
+                    return this.ngFireAuth.signInWithPopup(provider);
+
+                  case 3:
+                    result = _context3.sent;
+                    this.ngZone.run(function () {
+                      _this4.router.navigate(['dashboard']);
+                    });
+                    this.SetUserData(result.user);
+                    _context3.next = 11;
+                    break;
+
+                  case 8:
+                    _context3.prev = 8;
+                    _context3.t0 = _context3["catch"](0);
+                    window.alert(_context3.t0);
+
+                  case 11:
+                  case "end":
+                    return _context3.stop();
+                }
+              }
+            }, _callee3, this, [[0, 8]]);
+          }));
+        } // Store user in localStorage
+
+      }, {
+        key: "SetUserData",
+        value: function SetUserData(user) {
+          var userRef = this.afStore.doc("users/".concat(user.uid));
+          var userData = {
+            role: user.role,
+            fullname: user.fullname,
+            uid: user.uid,
+            email: user.email,
+            displayName: user.displayName,
+            photoURL: user.photoURL,
+            emailVerified: user.emailVerified
+          };
+          return userRef.set(userData, {
+            merge: true
+          });
+        } // Sign-out 
+
+      }, {
+        key: "SignOut",
+        value: function SignOut() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
+            return regeneratorRuntime.wrap(function _callee4$(_context4) {
+              while (1) {
+                switch (_context4.prev = _context4.next) {
+                  case 0:
+                    _context4.next = 2;
+                    return this.ngFireAuth.signOut();
+
+                  case 2:
+                    localStorage.removeItem('user');
+                    this.router.navigate(['login']);
+
+                  case 4:
+                  case "end":
+                    return _context4.stop();
+                }
+              }
+            }, _callee4, this);
+          }));
+        }
+      }, {
+        key: "isLoggedIn",
+        get: function get() {
+          var user = JSON.parse(localStorage.getItem('user'));
+          return user !== null && user.emailVerified !== false ? true : false;
+        } // Returns true when user's email is verified
+
+      }, {
+        key: "isEmailVerified",
+        get: function get() {
+          var user = JSON.parse(localStorage.getItem('user'));
+          return user.emailVerified !== false ? true : false;
+        }
+      }]);
+
+      return AuthenticationService;
+    }();
+
+    AuthenticationService.ctorParameters = function () {
+      return [{
+        type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_5__["AngularFirestore"]
+      }, {
+        type: _angular_fire_auth__WEBPACK_IMPORTED_MODULE_4__["AngularFireAuth"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+      }, {
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+      }];
+    };
+
+    AuthenticationService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+      providedIn: 'root'
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_5__["AngularFirestore"], _angular_fire_auth__WEBPACK_IMPORTED_MODULE_4__["AngularFireAuth"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]])], AuthenticationService);
+    /***/
+  },
+
+  /***/
   "./src/environments/environment.ts":
   /*!*****************************************!*\
     !*** ./src/environments/environment.ts ***!
@@ -1483,7 +1803,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var environment = {
-      production: false
+      production: false,
+      firebaseConfig: {
+        apiKey: "AIzaSyDXsyh6L3elZxNYN8bZk0utGnLPEOgw57c",
+        authDomain: "nlinionic.firebaseapp.com",
+        databaseURL: "https://nlinionic.firebaseio.com",
+        projectId: "nlinionic",
+        storageBucket: "nlinionic.appspot.com",
+        messagingSenderId: "956759542409",
+        appId: "1:956759542409:web:d90a5820b12aa0bc2fd458",
+        measurementId: "G-KB7LQ708WG"
+      }
     };
     /*
      * For easier debugging in development mode, you can import the following file

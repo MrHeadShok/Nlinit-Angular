@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-content>\n  <ion-card color=\"transparent\">\n    <img src=\"../../../assets/img/wide1.png\" />\n    <ion-card-content >\n      <ion-text color=\"light\">\n    <p > ProjectAdmin is an app to help you better organize your data.Lead your team to succes.\n    </p>\n    </ion-text>\n    </ion-card-content>\n\n  </ion-card>\n\n\n    <ion-item color=\"transparent\">\n      <ion-label color=\"light\" id=\"name\" position=\"floating\">\n       <p>\n         <ion-icon name=\"body-outline\"></ion-icon> Full Name\n       </p>\n       </ion-label>\n      <ion-input color=\"transparent\" [(ngModel)]=\"name\"></ion-input>\n    </ion-item>\n\n\n  <ion-item color=\"transparent\">\n    <ion-label position=\"floating\" color=\"light\">\n      <p>\n        <ion-icon name=\"person-circle-outline\"></ion-icon> Email address\n      </p>\n    </ion-label>\n    <ion-input type=\"Email\" [(ngModel)]=\"email\"></ion-input>\n  </ion-item>\n\n  <ion-item color=\"transparent\">\n    <ion-label color=\"light\" position=\"floating\" minlength=\"5\" pattern=\"Password\">\n      <p>\n        <ion-icon name=\"lock-closed-outline\"></ion-icon> Password\n      </p>\n\n    </ion-label>\n    <ion-input color=\"light\" type=\"password\" [(ngModel)]=\"password\"></ion-input>\n  </ion-item>\n\n\n    <ion-radio-group value=\"group\">\n      <ion-list-header>\n        <ion-label color=\"light\">\n          <p>\n            <ion-icon name=\"clipboard-outline\"></ion-icon>&nbsp; &nbsp; ROLE\n          </p>\n        </ion-label>\n      </ion-list-header>\n      <ion-item color=\"transparent\">\n        <ion-label color=\"light\">\n          <p>\n            <ion-icon name=\"person-outline\"></ion-icon>&nbsp; &nbsp;A team leader\n          </p>\n        </ion-label>\n        <ion-radio color=\"transparent\" slot=\"start\" color=\"success\" value=\"teamleader\"></ion-radio>\n      </ion-item>\n\n      <ion-item color=\"transparent\">\n        <ion-label color=\"light\">\n          <p>\n            <ion-icon name=\"people-outline\"></ion-icon>&nbsp; &nbsp; A member\n          </p>\n        </ion-label>\n        <ion-radio color=\"transparent\" slot=\"start\" color=\"tertiary\" value=\"member\"></ion-radio>\n      </ion-item>\n    </ion-radio-group>\n  \n\n  \n    <ion-button color=\"light\" expand=\"block\" (onclick)=\"potsToDb\">\n     <ion-icon name=\"person-add-outline\"></ion-icon>\n     <p> &nbsp; &nbsp;Create account!</p>\n    </ion-button>\n  \n\n  <div>\n\n\n    <ion-button fill=\"clear\" color=\"light\" (click)=\"navigateToLoginPage()\" style=\"margin-left: 133px;\">\n      <ion-icon name=\"log-in-outline\"></ion-icon> &nbsp; &nbsp;Login\n    </ion-button>\n\n\n  </div>\n\n</ion-content>\n\n";
+    __webpack_exports__["default"] = "<ion-content>\n  <ion-card color=\"transparent\">\n    <img src=\"../../../assets/img/wide1.png\" />\n    <ion-card-content >\n      <ion-text color=\"light\">\n    <p > ProjectAdmin is an app to help you better organize your data.Lead your team to succes.\n    </p>\n    </ion-text>\n    </ion-card-content>\n\n  </ion-card>\n\n\n    <ion-item color=\"transparent\">\n      <ion-label color=\"light\" id=\"name\" position=\"floating\">\n       <p>\n         <ion-icon name=\"body-outline\"></ion-icon> Full Name\n       </p>\n       </ion-label>\n      <ion-input color=\"transparent\" #fullname required></ion-input>\n    </ion-item>\n\n\n  <ion-item color=\"transparent\">\n    <ion-label position=\"floating\" color=\"light\">\n      <p>\n        <ion-icon name=\"person-circle-outline\"></ion-icon> Email address\n      </p>\n    </ion-label>\n    <ion-input #email required type=\"Email\"></ion-input>\n  </ion-item>\n\n  <ion-item color=\"transparent\">\n    <ion-label color=\"light\" position=\"floating\" minlength=\"5\" pattern=\"Password\">\n      <p>\n        <ion-icon name=\"lock-closed-outline\"></ion-icon> Password\n      </p>\n\n    </ion-label>\n    <ion-input color=\"light\" type=\"password\" #password required></ion-input>\n  </ion-item>\n\n\n    <ion-radio-group value=\"group\" #role required>\n      <ion-list-header>\n        <ion-label color=\"light\">\n          <p>\n            <ion-icon name=\"clipboard-outline\"></ion-icon>&nbsp; &nbsp; ROLE\n          </p>\n        </ion-label>\n      </ion-list-header>\n      <ion-item color=\"transparent\">\n        <ion-label color=\"light\">\n          <p>\n            <ion-icon name=\"person-outline\"></ion-icon>&nbsp; &nbsp;A team leader\n          </p>\n        </ion-label>\n        <ion-radio color=\"transparent\" slot=\"start\" color=\"success\" value=\"teamleader\"></ion-radio>\n      </ion-item>\n\n      <ion-item color=\"transparent\">\n        <ion-label color=\"light\">\n          <p>\n            <ion-icon name=\"people-outline\"></ion-icon>&nbsp; &nbsp; A member\n          </p>\n        </ion-label>\n        <ion-radio color=\"transparent\" slot=\"start\" color=\"tertiary\" value=\"member\"></ion-radio>\n      </ion-item>\n    </ion-radio-group>\n  \n\n  \n    <ion-button color=\"light\" expand=\"block\" type=\"submit\" (click)=\"signUp(fullname, email, password,role)\" >\n     <ion-icon name=\"person-add-outline\"></ion-icon>\n     <p> &nbsp; &nbsp;Create account!</p>\n    </ion-button>\n  \n\n  <div>\n\n\n    <ion-button fill=\"clear\" color=\"light\" (click)=\"navigateToLoginPage()\" style=\"margin-left: 133px;\">\n      <ion-icon name=\"log-in-outline\"></ion-icon> &nbsp; &nbsp;Login\n    </ion-button>\n\n\n  </div>\n\n</ion-content>\n\n";
     /***/
   },
 
@@ -215,12 +215,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _shared_authentification_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../../shared/authentification-service */
+    "./src/app/shared/authentification-service.ts");
+    /* harmony import */
+
+
+    var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @ionic/angular */
+    "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
 
     var SignupPage = /*#__PURE__*/function () {
-      function SignupPage(router) {
+      function SignupPage(toastController, router, authService) {
         _classCallCheck(this, SignupPage);
 
+        this.toastController = toastController;
         this.router = router;
+        this.authService = authService;
       }
 
       _createClass(SignupPage, [{
@@ -230,7 +244,57 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "navigateToLoginPage",
         value: function navigateToLoginPage() {
           this.router.navigate(['login']);
-          console.log("passed to login");
+          console.log("redirected to login");
+        }
+      }, {
+        key: "signUp",
+        value: function signUp(fullname, email, password, role) {
+          var _this = this;
+
+          this.authService.RegisterUser(email.value, password.value, role.value, fullname.value).then(function (res) {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+              var _this2 = this;
+
+              var toast;
+              return regeneratorRuntime.wrap(function _callee$(_context) {
+                while (1) {
+                  switch (_context.prev = _context.next) {
+                    case 0:
+                      this.authService.SendVerificationMail(); //verification email
+
+                      console.log("1st condition");
+                      this.router.navigate(['login']);
+                      _context.next = 5;
+                      return this.toastController.create({
+                        animated: true,
+                        header: 'Account created successfully!',
+                        message: 'Check your inbox for a verification email! Click the button to resend.',
+                        duration: 6000,
+                        position: 'top',
+                        buttons: [{
+                          side: 'end',
+                          icon: 'refresh-circle-outline',
+                          text: 'Resend',
+                          handler: function handler() {
+                            _this2.authService.SendVerificationMail();
+                          }
+                        }]
+                      });
+
+                    case 5:
+                      toast = _context.sent;
+                      toast.present();
+
+                    case 7:
+                    case "end":
+                      return _context.stop();
+                  }
+                }
+              }, _callee, this);
+            }));
+          })["catch"](function (error) {
+            window.alert(error.message);
+          });
         }
       }]);
 
@@ -239,7 +303,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     SignupPage.ctorParameters = function () {
       return [{
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["ToastController"]
+      }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
+      }, {
+        type: _shared_authentification_service__WEBPACK_IMPORTED_MODULE_3__["AuthenticationService"]
       }];
     };
 
@@ -251,7 +319,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./signup.page.scss */
       "./src/app/pages/signup/signup.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])], SignupPage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_4__["ToastController"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _shared_authentification_service__WEBPACK_IMPORTED_MODULE_3__["AuthenticationService"]])], SignupPage);
     /***/
   }
 }]);

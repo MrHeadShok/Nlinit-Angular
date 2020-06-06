@@ -88,7 +88,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | feed-tab-tab1-module */
-          [__webpack_require__.e("default~feed-tab-tab1-module~pages-profile-profile-module~pages-test-test-module"), __webpack_require__.e("default~feed-tab-tab1-module~pages-test-test-module"), __webpack_require__.e("common"), __webpack_require__.e("feed-tab-tab1-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~feed-tab-tab1-module~pages-test-test-module"), __webpack_require__.e("default~feed-tab-tab1-module~pages-profile-profile-module"), __webpack_require__.e("common"), __webpack_require__.e("feed-tab-tab1-module")]).then(__webpack_require__.bind(null,
           /*! ../feed-tab/tab1.module */
           "./src/app/pages/feed-tab/tab1.module.ts")).then(function (m) {
             return m.Tab1PageModule;
