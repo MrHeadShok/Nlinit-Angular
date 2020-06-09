@@ -239,7 +239,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "ngOnInit",
         value: function ngOnInit() {
-          this.doughnutChartMethod();
+          this.doughnutChartMethod(); //to be displayed when your page is loaded
         }
       }, {
         key: "doughnutChartMethod",

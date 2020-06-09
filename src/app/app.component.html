@@ -1,7 +1,7 @@
 <ion-app>
 
 
-    <ion-menu side="start" content-id="main-content" swipe-gesture="true">
+    <ion-menu class="menu" side="start" content-id="main-content" swipe-gesture="true">
         <ion-menu-toggle>
 
             <ion-card color="transparent">
@@ -36,7 +36,7 @@
                 </ion-button>
 
 
-                <ion-button expand="full" color="#7c46ce">
+                <ion-button expand="full" color="#7c46ce" (click)="navigateToStats()">
                     <h5>
                         <ion-icon name="pie-chart-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Statistics
                     </h5>

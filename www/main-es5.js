@@ -209,7 +209,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-app>\n\n\n    <ion-menu side=\"start\" content-id=\"main-content\" swipe-gesture=\"true\">\n        <ion-menu-toggle>\n\n            <ion-card color=\"transparent\">\n                <img src=\"../../../assets/img/avatar.jpg\" alt=\"Avatar\">\n                <ion-card-header>\n                    <ion-card-subtitle color=\"light\">Role</ion-card-subtitle>\n                    <ion-card-title color=\"light\">UserName</ion-card-title>\n                </ion-card-header>\n            </ion-card>\n\n            <div class=\"higher\">\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToProjects()\">\n                    <h5>\n                        <ion-icon name=\"bar-chart-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Projects\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToprofile()\">\n                    <h5>\n                        <ion-icon name=\"person-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; My profile\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToprofile()\">\n                    <h5>\n                        <ion-icon name=\"notifications-outline\"></ion-icon> &nbsp; &nbsp; &nbsp; &nbsp;\n                        Notifications\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\">\n                    <h5>\n                        <ion-icon name=\"pie-chart-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Statistics\n                    </h5>\n                </ion-button>\n\n            </div>\n\n\n            <div class=\"lower\">\n\n                <ion-button expand=\"full\" color=\"#7c46ce\">\n                    <h5>\n                        <ion-icon name=\"construct-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Settings\n                    </h5>\n                </ion-button>\n\n\n                <ion-button type=\"submit\" (click)=\"logout()\" expand=\"full\" color=\"#7c46ce\">\n                    <h5>\n                        <ion-icon name=\"log-out-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Logout\n                    </h5>\n                </ion-button>\n\n            </div>\n        </ion-menu-toggle>\n    </ion-menu>\n\n\n\n    <div class=\"ion-page\" id=\"main-content\">\n        <ion-header *ngIf=\"getIsTabVisible\">\n            <ion-toolbar>\n                <ion-buttons slot=\"start\">\n                    <ion-menu-button>\n                        <ion-icon name=\"menu\"></ion-icon>\n                    </ion-menu-button>\n                </ion-buttons>\n\n            </ion-toolbar>\n        </ion-header>\n        <ion-router-outlet></ion-router-outlet>\n    </div>\n\n\n\n\n</ion-app>";
+    __webpack_exports__["default"] = "<ion-app>\n\n\n    <ion-menu class=\"menu\" side=\"start\" content-id=\"main-content\" swipe-gesture=\"true\">\n        <ion-menu-toggle>\n\n            <ion-card color=\"transparent\">\n                <img src=\"../../../assets/img/avatar.jpg\" alt=\"Avatar\">\n                <ion-card-header>\n                    <ion-card-subtitle color=\"light\">Role</ion-card-subtitle>\n                    <ion-card-title color=\"light\">UserName</ion-card-title>\n                </ion-card-header>\n            </ion-card>\n\n            <div class=\"higher\">\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToProjects()\">\n                    <h5>\n                        <ion-icon name=\"bar-chart-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Projects\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToprofile()\">\n                    <h5>\n                        <ion-icon name=\"person-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; My profile\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToprofile()\">\n                    <h5>\n                        <ion-icon name=\"notifications-outline\"></ion-icon> &nbsp; &nbsp; &nbsp; &nbsp;\n                        Notifications\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToStats()\">\n                    <h5>\n                        <ion-icon name=\"pie-chart-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Statistics\n                    </h5>\n                </ion-button>\n\n            </div>\n\n\n            <div class=\"lower\">\n\n                <ion-button expand=\"full\" color=\"#7c46ce\">\n                    <h5>\n                        <ion-icon name=\"construct-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Settings\n                    </h5>\n                </ion-button>\n\n\n                <ion-button type=\"submit\" (click)=\"logout()\" expand=\"full\" color=\"#7c46ce\">\n                    <h5>\n                        <ion-icon name=\"log-out-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Logout\n                    </h5>\n                </ion-button>\n\n            </div>\n        </ion-menu-toggle>\n    </ion-menu>\n\n\n\n    <div class=\"ion-page\" id=\"main-content\">\n        <ion-header *ngIf=\"getIsTabVisible\">\n            <ion-toolbar>\n                <ion-buttons slot=\"start\">\n                    <ion-menu-button>\n                        <ion-icon name=\"menu\"></ion-icon>\n                    </ion-menu-button>\n                </ion-buttons>\n\n            </ion-toolbar>\n        </ion-header>\n        <ion-router-outlet></ion-router-outlet>\n    </div>\n\n\n\n\n</ion-app>";
     /***/
   },
 
@@ -250,6 +250,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     __webpack_exports__["default"] = "<div>\n\n  <ion-list-header color=\"success\" >\n    <ion-label >\n       Request sent!\n    </ion-label>\n  </ion-list-header>\n\n  <ion-content color=\"medium\">\n<h5>Request is sent! <br> Once accepted you'll be able to contact each other!</h5>\n  </ion-content>\n     \n     </div>";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/components/verificationmod/verificationmod.component.html":
+  /*!*****************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/verificationmod/verificationmod.component.html ***!
+    \*****************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppComponentsVerificationmodVerificationmodComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n\n<ion-content>\n  <ion-grid>\n    <ion-row>\n      <ion-card>\n      <ion-card-title>\n      <h2>Account created successfully!</h2>\n      </ion-card-title>\n\n      <p>\n        Kindly note that you won't be able to access your account unless it's verified! We handle important Data that needs to be treated with full attention and care.\n      </p>\n       \n      <h3>\n        Please make sure you confirm your address before trying to log-in.\n       </h3>\n       </ion-card>\n      <ion-button type=\"submit\" (click)=\"this.authService.SendVerificationMail()\" expand=\"block\">\n        <ion-icon name=\"mail-outline\"></ion-icon>&nbsp; &nbsp;\n        Resend Verification Email\n      </ion-button>\n\n            <ion-button type=\"submit\" (click)=\"dismissModal()\" expand=\"block\" color=\"danger\">\n              <ion-icon name=\"close-circle-outline\"></ion-icon>&nbsp; &nbsp;\n              Close\n            </ion-button>\n\n    </ion-row>\n  </ion-grid>\n</ion-content>\n\n<div>\n  <img src=\"../../../assets/img/sent.jpg\" />\n\n</div>";
     /***/
   },
 
@@ -976,6 +996,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return m.TestPageModule;
         });
       }
+    }, {
+      path: 'statpage',
+      loadChildren: function loadChildren() {
+        return __webpack_require__.e(
+        /*! import() | pages-statpage-statpage-module */
+        "pages-statpage-statpage-module").then(__webpack_require__.bind(null,
+        /*! ./pages/statpage/statpage.module */
+        "./src/app/pages/statpage/statpage.module.ts")).then(function (m) {
+          return m.StatpagePageModule;
+        });
+      }
     }];
 
     var AppRoutingModule = function AppRoutingModule() {
@@ -1007,7 +1038,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "img {\n  border-radius: 50%;\n  border: 1px solid #ddd;\n  padding: 5px;\n  left: initial;\n  width: 150px;\n  margin-left: 60px;\n}\n\nion-card {\n  margin-bottom: 10px;\n  margin-top: 11px;\n  position: relative;\n}\n\nion-menu,\nion-menu-toggle {\n  --background: linear-gradient(315deg, #7d5abee5 0%, #09203ffa 74%);\n}\n\nion-button {\n  margin-bottom: 7px;\n}\n\n.higher {\n  margin-top: 35px;\n  position: relative;\n}\n\n.lower {\n  margin-top: 197px;\n  position: relative;\n}\n\n.my-custom-menu {\n  --width: 500px;\n}\n\nion-toolbar {\n  --background: linear-gradient(315deg, #0e2c41 0%, #0d324d 74%);\n  background-color: #7f5a83;\n}\n\n.ion-page {\n  background: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQzpcXFVzZXJzXFxUQWllYlxcRG9jdW1lbnRzXFxHaXRIdWJcXE5saW5pdC1Bbmd1bGFyL3NyY1xcYXBwXFxhcHAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtCQUFBO0VBQ0Esc0JBQUE7RUFDQSxZQUFBO0VBQ0EsYUFBQTtFQUNBLFlBQUE7RUFDQSxpQkFBQTtBQ0NKOztBREVBO0VBQ0ksbUJBQUE7RUFDQSxnQkFBQTtFQUNBLGtCQUFBO0FDQ0o7O0FER0E7O0VBSUksa0VBQUE7QUNGSjs7QURNQTtFQUNJLGtCQUFBO0FDSEo7O0FETUE7RUFDSSxnQkFBQTtFQUNBLGtCQUFBO0FDSEo7O0FETUE7RUFDSSxpQkFBQTtFQUNBLGtCQUFBO0FDSEo7O0FET0E7RUFDSSxjQUFBO0FDSko7O0FET0E7RUFDSSw4REFBQTtFQUNBLHlCQUFBO0FDSko7O0FET0E7RUFDSSw0REFBQTtBQ0pKIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW1nIHtcclxuICAgIGJvcmRlci1yYWRpdXM6IDUwJTtcclxuICAgIGJvcmRlcjogMXB4IHNvbGlkICNkZGQ7XHJcbiAgICBwYWRkaW5nOiA1cHg7XHJcbiAgICBsZWZ0OiBpbml0aWFsO1xyXG4gICAgd2lkdGg6IDE1MHB4O1xyXG4gICAgbWFyZ2luLWxlZnQ6IDYwcHg7XHJcbn1cclxuXHJcbmlvbi1jYXJkIHtcclxuICAgIG1hcmdpbi1ib3R0b206IDEwcHg7XHJcbiAgICBtYXJnaW4tdG9wOiAxMXB4O1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG5cclxufVxyXG5cclxuaW9uLW1lbnUsXHJcbmlvbi1tZW51LXRvZ2dsZSB7XHJcblxyXG5cclxuICAgIC0tYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDMxNWRlZywgIzdkNWFiZWU1IDAlLCAjMDkyMDNmZmEgNzQlKTtcclxuXHJcbn1cclxuXHJcbmlvbi1idXR0b24ge1xyXG4gICAgbWFyZ2luLWJvdHRvbTogN3B4O1xyXG59XHJcblxyXG4uaGlnaGVye1xyXG4gICAgbWFyZ2luLXRvcDozNXB4IDtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxufVxyXG5cclxuLmxvd2VyIHtcclxuICAgIG1hcmdpbi10b3A6IDE5N3B4O1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG59XHJcblxyXG5cclxuLm15LWN1c3RvbS1tZW51IHtcclxuICAgIC0td2lkdGg6IDUwMHB4O1xyXG59XHJcblxyXG5pb24tdG9vbGJhciB7XHJcbiAgICAtLWJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgzMTVkZWcsICMwZTJjNDEgMCUsICMwZDMyNGQgNzQlKTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICM3ZjVhODM7XHJcbn1cclxuXHJcbi5pb24tcGFnZSB7XHJcbiAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMzE1ZGVnLCAjN2Y1YTgzIDAlLCAjMGQzMjRkIDc0JSk7XHJcblxyXG59IiwiaW1nIHtcbiAgYm9yZGVyLXJhZGl1czogNTAlO1xuICBib3JkZXI6IDFweCBzb2xpZCAjZGRkO1xuICBwYWRkaW5nOiA1cHg7XG4gIGxlZnQ6IGluaXRpYWw7XG4gIHdpZHRoOiAxNTBweDtcbiAgbWFyZ2luLWxlZnQ6IDYwcHg7XG59XG5cbmlvbi1jYXJkIHtcbiAgbWFyZ2luLWJvdHRvbTogMTBweDtcbiAgbWFyZ2luLXRvcDogMTFweDtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xufVxuXG5pb24tbWVudSxcbmlvbi1tZW51LXRvZ2dsZSB7XG4gIC0tYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDMxNWRlZywgIzdkNWFiZWU1IDAlLCAjMDkyMDNmZmEgNzQlKTtcbn1cblxuaW9uLWJ1dHRvbiB7XG4gIG1hcmdpbi1ib3R0b206IDdweDtcbn1cblxuLmhpZ2hlciB7XG4gIG1hcmdpbi10b3A6IDM1cHg7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cblxuLmxvd2VyIHtcbiAgbWFyZ2luLXRvcDogMTk3cHg7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cblxuLm15LWN1c3RvbS1tZW51IHtcbiAgLS13aWR0aDogNTAwcHg7XG59XG5cbmlvbi10b29sYmFyIHtcbiAgLS1iYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMzE1ZGVnLCAjMGUyYzQxIDAlLCAjMGQzMjRkIDc0JSk7XG4gIGJhY2tncm91bmQtY29sb3I6ICM3ZjVhODM7XG59XG5cbi5pb24tcGFnZSB7XG4gIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgzMTVkZWcsICM3ZjVhODMgMCUsICMwZDMyNGQgNzQlKTtcbn0iXX0= */";
+    __webpack_exports__["default"] = "img {\n  border-radius: 50%;\n  border: 1px solid #ddd;\n  padding: 5px;\n  left: initial;\n  width: 150px;\n  margin-left: 60px;\n}\n\nion-card {\n  margin-bottom: 10px;\n  margin-top: 11px;\n  position: relative;\n}\n\nion-menu,\nion-menu-toggle {\n  --background: linear-gradient(315deg, #7d5abee5 0%, #09203ffa 74%);\n}\n\nion-button {\n  margin-bottom: 7px;\n}\n\n.higher {\n  margin-top: 35px;\n  position: relative;\n}\n\n.lower {\n  margin-top: 197px;\n  position: relative;\n}\n\n.my-custom-menu {\n  --width: 500px;\n}\n\nion-toolbar {\n  --background: linear-gradient(315deg, #0e2c41 0%, #0d324d 74%);\n  background-color: #7f5a83;\n}\n\n.ion-page {\n  background: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);\n}\n\n.menu {\n  transition: transform 1500ms ease;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQzpcXFVzZXJzXFxUQWllYlxcRG9jdW1lbnRzXFxHaXRIdWJcXE5saW5pdC1Bbmd1bGFyL3NyY1xcYXBwXFxhcHAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtCQUFBO0VBQ0Esc0JBQUE7RUFDQSxZQUFBO0VBQ0EsYUFBQTtFQUNBLFlBQUE7RUFDQSxpQkFBQTtBQ0NKOztBREVBO0VBQ0ksbUJBQUE7RUFDQSxnQkFBQTtFQUNBLGtCQUFBO0FDQ0o7O0FER0E7O0VBR1ksa0VBQUE7QUNEWjs7QURLQTtFQUNJLGtCQUFBO0FDRko7O0FES0E7RUFDSSxnQkFBQTtFQUNBLGtCQUFBO0FDRko7O0FES0E7RUFDSSxpQkFBQTtFQUNBLGtCQUFBO0FDRko7O0FETUE7RUFDSSxjQUFBO0FDSEo7O0FETUE7RUFDSSw4REFBQTtFQUNBLHlCQUFBO0FDSEo7O0FETUE7RUFDSSw0REFBQTtBQ0hKOztBRE9BO0VBR0ksaUNBQUE7QUNKSiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImltZyB7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjZGRkO1xyXG4gICAgcGFkZGluZzogNXB4O1xyXG4gICAgbGVmdDogaW5pdGlhbDtcclxuICAgIHdpZHRoOiAxNTBweDtcclxuICAgIG1hcmdpbi1sZWZ0OiA2MHB4O1xyXG59XHJcblxyXG5pb24tY2FyZCB7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAxMHB4O1xyXG4gICAgbWFyZ2luLXRvcDogMTFweDtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuXHJcbn1cclxuXHJcbmlvbi1tZW51LFxyXG5pb24tbWVudS10b2dnbGUge1xyXG5cclxuICAgICAgICAgICAgLS1iYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMzE1ZGVnLCAjN2Q1YWJlZTUgMCUsICMwOTIwM2ZmYSA3NCUpO1xyXG5cclxufVxyXG5cclxuaW9uLWJ1dHRvbiB7XHJcbiAgICBtYXJnaW4tYm90dG9tOiA3cHg7XHJcbn1cclxuXHJcbi5oaWdoZXJ7XHJcbiAgICBtYXJnaW4tdG9wOjM1cHggO1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG59XHJcblxyXG4ubG93ZXIge1xyXG4gICAgbWFyZ2luLXRvcDogMTk3cHg7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbn1cclxuXHJcblxyXG4ubXktY3VzdG9tLW1lbnUge1xyXG4gICAgLS13aWR0aDogNTAwcHg7XHJcbn1cclxuXHJcbmlvbi10b29sYmFyIHtcclxuICAgIC0tYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDMxNWRlZywgIzBlMmM0MSAwJSwgIzBkMzI0ZCA3NCUpO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzdmNWE4MztcclxufVxyXG5cclxuLmlvbi1wYWdlIHtcclxuICAgIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgzMTVkZWcsICM3ZjVhODMgMCUsICMwZDMyNGQgNzQlKTtcclxuXHJcbn1cclxuXHJcbi5tZW51e1xyXG4gICAgLXdlYmtpdC10cmFuc2l0aW9uOiAtd2Via2l0LXRyYW5zZm9ybSAxNTAwbXMgZWFzZTtcclxuICAgIC1tb3otdHJhbnNpdGlvbjogLW1vei10cmFuc2Zvcm0gMTUwMG1zIGVhc2U7XHJcbiAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMTUwMG1zIGVhc2U7XHJcbn0iLCJpbWcge1xuICBib3JkZXItcmFkaXVzOiA1MCU7XG4gIGJvcmRlcjogMXB4IHNvbGlkICNkZGQ7XG4gIHBhZGRpbmc6IDVweDtcbiAgbGVmdDogaW5pdGlhbDtcbiAgd2lkdGg6IDE1MHB4O1xuICBtYXJnaW4tbGVmdDogNjBweDtcbn1cblxuaW9uLWNhcmQge1xuICBtYXJnaW4tYm90dG9tOiAxMHB4O1xuICBtYXJnaW4tdG9wOiAxMXB4O1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG5cbmlvbi1tZW51LFxuaW9uLW1lbnUtdG9nZ2xlIHtcbiAgLS1iYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMzE1ZGVnLCAjN2Q1YWJlZTUgMCUsICMwOTIwM2ZmYSA3NCUpO1xufVxuXG5pb24tYnV0dG9uIHtcbiAgbWFyZ2luLWJvdHRvbTogN3B4O1xufVxuXG4uaGlnaGVyIHtcbiAgbWFyZ2luLXRvcDogMzVweDtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xufVxuXG4ubG93ZXIge1xuICBtYXJnaW4tdG9wOiAxOTdweDtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xufVxuXG4ubXktY3VzdG9tLW1lbnUge1xuICAtLXdpZHRoOiA1MDBweDtcbn1cblxuaW9uLXRvb2xiYXIge1xuICAtLWJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgzMTVkZWcsICMwZTJjNDEgMCUsICMwZDMyNGQgNzQlKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzdmNWE4Mztcbn1cblxuLmlvbi1wYWdlIHtcbiAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDMxNWRlZywgIzdmNWE4MyAwJSwgIzBkMzI0ZCA3NCUpO1xufVxuXG4ubWVudSB7XG4gIC13ZWJraXQtdHJhbnNpdGlvbjogLXdlYmtpdC10cmFuc2Zvcm0gMTUwMG1zIGVhc2U7XG4gIC1tb3otdHJhbnNpdGlvbjogLW1vei10cmFuc2Zvcm0gMTUwMG1zIGVhc2U7XG4gIHRyYW5zaXRpb246IHRyYW5zZm9ybSAxNTAwbXMgZWFzZTtcbn0iXX0= */";
     /***/
   },
 
@@ -1076,7 +1107,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AppComponent_1;
 
     var AppComponent = AppComponent_1 = /*#__PURE__*/function () {
-      function AppComponent(platform, splashScreen, statusBar, router, authService) {
+      function AppComponent(platform, splashScreen, statusBar, router, authService, navCtrl) {
         _classCallCheck(this, AppComponent);
 
         this.platform = platform;
@@ -1084,6 +1115,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.statusBar = statusBar;
         this.router = router;
         this.authService = authService;
+        this.navCtrl = navCtrl;
         this.initializeApp();
       }
 
@@ -1111,7 +1143,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "logout",
         value: function logout() {
-          this.authService.SignOut();
+          var _this2 = this;
+
+          this.authService.logoutUser().then(function (res) {
+            console.log(res);
+
+            _this2.navCtrl.navigateBack('login');
+          })["catch"](function (error) {
+            console.log(error);
+          });
+        }
+      }, {
+        key: "navigateToStats",
+        value: function navigateToStats() {
+          this.router.navigate(['statpage']);
         }
       }, {
         key: "getIsTabVisible",
@@ -1136,6 +1181,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]
       }, {
         type: _shared_authentification_service__WEBPACK_IMPORTED_MODULE_6__["AuthenticationService"]
+      }, {
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"]
       }];
     };
 
@@ -1147,7 +1194,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./app.component.scss */
       "./src/app/app.component.scss"))["default"]]
-    }), Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"], _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], _shared_authentification_service__WEBPACK_IMPORTED_MODULE_6__["AuthenticationService"]])], AppComponent);
+    }), Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"], _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], _shared_authentification_service__WEBPACK_IMPORTED_MODULE_6__["AuthenticationService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"]])], AppComponent);
     /***/
   },
 
@@ -1245,33 +1292,40 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _angular_fire__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    var _components_verificationmod_verificationmod_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    /*! ./components/verificationmod/verificationmod.component */
+    "./src/app/components/verificationmod/verificationmod.component.ts");
+    /* harmony import */
+
+
+    var _angular_fire__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
     /*! @angular/fire */
     "./node_modules/@angular/fire/fesm2015/angular-fire.js");
     /* harmony import */
 
 
-    var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+    var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
     /*! @angular/fire/auth */
     "./node_modules/@angular/fire/fesm2015/angular-fire-auth.js");
     /* harmony import */
 
 
-    var _angular_fire_database__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+    var _angular_fire_database__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
     /*! @angular/fire/database */
     "./node_modules/@angular/fire/fesm2015/angular-fire-database.js");
     /* harmony import */
 
 
-    var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+    var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
     /*! @angular/fire/firestore */
     "./node_modules/@angular/fire/fesm2015/angular-fire-firestore.js");
     /* harmony import */
 
 
-    var _environments_environment__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+    var _environments_environment__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
     /*! ../environments/environment */
-    "./src/environments/environment.ts"); //firebase related impors
+    "./src/environments/environment.ts"); //created componenets
+    //firebase related impors
 
 
     var AppModule = function AppModule() {
@@ -1279,11 +1333,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     };
 
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"], _components_add_project_add_project_component__WEBPACK_IMPORTED_MODULE_10__["AddProjectComponent"], _components_add2team_add2team_component__WEBPACK_IMPORTED_MODULE_11__["Add2teamComponent"]],
+      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"], _components_add_project_add_project_component__WEBPACK_IMPORTED_MODULE_10__["AddProjectComponent"], _components_add2team_add2team_component__WEBPACK_IMPORTED_MODULE_11__["Add2teamComponent"], _components_verificationmod_verificationmod_component__WEBPACK_IMPORTED_MODULE_12__["VerificationmodComponent"]],
       schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["CUSTOM_ELEMENTS_SCHEMA"]],
-      entryComponents: [_components_add_project_add_project_component__WEBPACK_IMPORTED_MODULE_10__["AddProjectComponent"], _components_add2team_add2team_component__WEBPACK_IMPORTED_MODULE_11__["Add2teamComponent"]],
-      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"], _angular_fire__WEBPACK_IMPORTED_MODULE_12__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_16__["environment"].firebaseConfig), _angular_fire_auth__WEBPACK_IMPORTED_MODULE_13__["AngularFireAuthModule"], _angular_fire_database__WEBPACK_IMPORTED_MODULE_14__["AngularFireDatabaseModule"], _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_15__["AngularFirestoreModule"]],
-      providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_15__["AngularFirestoreModule"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], {
+      entryComponents: [_components_add_project_add_project_component__WEBPACK_IMPORTED_MODULE_10__["AddProjectComponent"], _components_add2team_add2team_component__WEBPACK_IMPORTED_MODULE_11__["Add2teamComponent"], _components_verificationmod_verificationmod_component__WEBPACK_IMPORTED_MODULE_12__["VerificationmodComponent"]],
+      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"], _angular_fire__WEBPACK_IMPORTED_MODULE_13__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_17__["environment"].firebaseConfig), _angular_fire_auth__WEBPACK_IMPORTED_MODULE_14__["AngularFireAuthModule"], _angular_fire_database__WEBPACK_IMPORTED_MODULE_15__["AngularFireDatabaseModule"], _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_16__["AngularFirestoreModule"]],
+      providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_16__["AngularFirestoreModule"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], {
         provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"],
         useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"]
       }],
@@ -1499,6 +1553,124 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./src/app/components/verificationmod/verificationmod.component.scss":
+  /*!***************************************************************************!*\
+    !*** ./src/app/components/verificationmod/verificationmod.component.scss ***!
+    \***************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppComponentsVerificationmodVerificationmodComponentScss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "h2, p, h3 {\n  margin-left: 8px;\n  margin-right: 3px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy92ZXJpZmljYXRpb25tb2QvQzpcXFVzZXJzXFxUQWllYlxcRG9jdW1lbnRzXFxHaXRIdWJcXE5saW5pdC1Bbmd1bGFyL3NyY1xcYXBwXFxjb21wb25lbnRzXFx2ZXJpZmljYXRpb25tb2RcXHZlcmlmaWNhdGlvbm1vZC5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvY29tcG9uZW50cy92ZXJpZmljYXRpb25tb2QvdmVyaWZpY2F0aW9ubW9kLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksZ0JBQUE7RUFDQSxpQkFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy92ZXJpZmljYXRpb25tb2QvdmVyaWZpY2F0aW9ubW9kLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaDIscCxoM3tcclxuICAgIG1hcmdpbi1sZWZ0OiA4cHg7XHJcbiAgICBtYXJnaW4tcmlnaHQ6IDNweDtcclxuXHJcbn0iLCJoMiwgcCwgaDMge1xuICBtYXJnaW4tbGVmdDogOHB4O1xuICBtYXJnaW4tcmlnaHQ6IDNweDtcbn0iXX0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/components/verificationmod/verificationmod.component.ts":
+  /*!*************************************************************************!*\
+    !*** ./src/app/components/verificationmod/verificationmod.component.ts ***!
+    \*************************************************************************/
+
+  /*! exports provided: VerificationmodComponent */
+
+  /***/
+  function srcAppComponentsVerificationmodVerificationmodComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "VerificationmodComponent", function () {
+      return VerificationmodComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var src_app_shared_authentification_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! src/app/shared/authentification-service */
+    "./src/app/shared/authentification-service.ts");
+    /* harmony import */
+
+
+    var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @ionic/angular */
+    "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
+
+    var VerificationmodComponent = /*#__PURE__*/function () {
+      function VerificationmodComponent(authService, modalController, router) {
+        _classCallCheck(this, VerificationmodComponent);
+
+        this.authService = authService;
+        this.modalController = modalController;
+        this.router = router;
+      }
+
+      _createClass(VerificationmodComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }, {
+        key: "dismissModal",
+        value: function dismissModal() {
+          this.modalController.dismiss({
+            'dismissed': true
+          });
+          console.log("debugghere");
+          this.router.navigate(['login']);
+        }
+      }]);
+
+      return VerificationmodComponent;
+    }();
+
+    VerificationmodComponent.ctorParameters = function () {
+      return [{
+        type: src_app_shared_authentification_service__WEBPACK_IMPORTED_MODULE_2__["AuthenticationService"]
+      }, {
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ModalController"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]
+      }];
+    };
+
+    VerificationmodComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-verificationmod',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./verificationmod.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/components/verificationmod/verificationmod.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./verificationmod.component.scss */
+      "./src/app/components/verificationmod/verificationmod.component.scss"))["default"]]
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_shared_authentification_service__WEBPACK_IMPORTED_MODULE_2__["AuthenticationService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ModalController"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])], VerificationmodComponent);
+    /***/
+  },
+
+  /***/
   "./src/app/shared/authentification-service.ts":
   /*!****************************************************!*\
     !*** ./src/app/shared/authentification-service.ts ***!
@@ -1532,223 +1704,63 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var firebase_app__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! firebase/app */
-    "./node_modules/firebase/app/dist/index.cjs.js");
-    /* harmony import */
-
-
-    var firebase_app__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(firebase_app__WEBPACK_IMPORTED_MODULE_2__);
-    /* harmony import */
-
-
-    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
-    /* harmony import */
-
-
-    var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/fire/auth */
     "./node_modules/@angular/fire/fesm2015/angular-fire-auth.js");
-    /* harmony import */
-
-
-    var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-    /*! @angular/fire/firestore */
-    "./node_modules/@angular/fire/fesm2015/angular-fire-firestore.js");
 
     var AuthenticationService = /*#__PURE__*/function () {
-      function AuthenticationService(afStore, ngFireAuth, router, ngZone) {
-        var _this2 = this;
-
+      function AuthenticationService(afAuth) {
         _classCallCheck(this, AuthenticationService);
 
-        this.afStore = afStore;
-        this.ngFireAuth = ngFireAuth;
-        this.router = router;
-        this.ngZone = ngZone;
-        this.ngFireAuth.authState.subscribe(function (user) {
-          if (user) {
-            _this2.userData = user;
-            localStorage.setItem('user', JSON.stringify(_this2.userData));
-            JSON.parse(localStorage.getItem('user'));
-          } else {
-            localStorage.setItem('user', null);
-            JSON.parse(localStorage.getItem('user'));
-          }
-        });
-      } // Login in with email/password
-
+        this.afAuth = afAuth;
+      }
 
       _createClass(AuthenticationService, [{
-        key: "SignIn",
-        value: function SignIn(email, password) {
-          return this.ngFireAuth.signInWithEmailAndPassword(email, password);
-        } // Register user with email/password
+        key: "registerUser",
+        value: function registerUser(value) {
+          var _this3 = this;
 
-      }, {
-        key: "RegisterUser",
-        value: function RegisterUser(email, password, role, fullname) {
-          return this.ngFireAuth.createUserWithEmailAndPassword(email, password);
-        } // Email verification when new user register
-
-      }, {
-        key: "SendVerificationMail",
-        value: function SendVerificationMail() {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-            var _this3 = this;
-
-            return regeneratorRuntime.wrap(function _callee$(_context) {
-              while (1) {
-                switch (_context.prev = _context.next) {
-                  case 0:
-                    _context.next = 2;
-                    return this.ngFireAuth.currentUser;
-
-                  case 2:
-                    return _context.abrupt("return", _context.sent.sendEmailVerification().then(function () {
-                      _this3.router.navigate(['verify-email']);
-                    }));
-
-                  case 3:
-                  case "end":
-                    return _context.stop();
-                }
-              }
-            }, _callee, this);
-          }));
-        } // Recover password
-
-      }, {
-        key: "PasswordRecover",
-        value: function PasswordRecover(passwordResetEmail) {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
-            return regeneratorRuntime.wrap(function _callee2$(_context2) {
-              while (1) {
-                switch (_context2.prev = _context2.next) {
-                  case 0:
-                    _context2.prev = 0;
-                    _context2.next = 3;
-                    return this.ngFireAuth.sendPasswordResetEmail(passwordResetEmail);
-
-                  case 3:
-                    window.alert('Password reset email has been sent, please check your inbox.');
-                    _context2.next = 9;
-                    break;
-
-                  case 6:
-                    _context2.prev = 6;
-                    _context2.t0 = _context2["catch"](0);
-                    window.alert(_context2.t0);
-
-                  case 9:
-                  case "end":
-                    return _context2.stop();
-                }
-              }
-            }, _callee2, this, [[0, 6]]);
-          }));
-        } // Returns true when user is looged in
-
-      }, {
-        key: "GoogleAuth",
-        // Sign in with Gmail
-        value: function GoogleAuth() {
-          return this.AuthLogin(new firebase_app__WEBPACK_IMPORTED_MODULE_2__["auth"].GoogleAuthProvider());
-        } // Auth providers
-
-      }, {
-        key: "AuthLogin",
-        value: function AuthLogin(provider) {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
-            var _this4 = this;
-
-            var result;
-            return regeneratorRuntime.wrap(function _callee3$(_context3) {
-              while (1) {
-                switch (_context3.prev = _context3.next) {
-                  case 0:
-                    _context3.prev = 0;
-                    _context3.next = 3;
-                    return this.ngFireAuth.signInWithPopup(provider);
-
-                  case 3:
-                    result = _context3.sent;
-                    this.ngZone.run(function () {
-                      _this4.router.navigate(['dashboard']);
-                    });
-                    this.SetUserData(result.user);
-                    _context3.next = 11;
-                    break;
-
-                  case 8:
-                    _context3.prev = 8;
-                    _context3.t0 = _context3["catch"](0);
-                    window.alert(_context3.t0);
-
-                  case 11:
-                  case "end":
-                    return _context3.stop();
-                }
-              }
-            }, _callee3, this, [[0, 8]]);
-          }));
-        } // Store user in localStorage
-
-      }, {
-        key: "SetUserData",
-        value: function SetUserData(user) {
-          var userRef = this.afStore.doc("users/".concat(user.uid));
-          var userData = {
-            role: user.role,
-            fullname: user.fullname,
-            uid: user.uid,
-            email: user.email,
-            displayName: user.displayName,
-            photoURL: user.photoURL,
-            emailVerified: user.emailVerified
-          };
-          return userRef.set(userData, {
-            merge: true
+          return new Promise(function (resolve, reject) {
+            _this3.afAuth.createUserWithEmailAndPassword(value.email, value.password).then(function (res) {
+              return resolve(res);
+            }, function (err) {
+              return reject(err);
+            });
           });
-        } // Sign-out 
-
-      }, {
-        key: "SignOut",
-        value: function SignOut() {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
-            return regeneratorRuntime.wrap(function _callee4$(_context4) {
-              while (1) {
-                switch (_context4.prev = _context4.next) {
-                  case 0:
-                    _context4.next = 2;
-                    return this.ngFireAuth.signOut();
-
-                  case 2:
-                    localStorage.removeItem('user');
-                    this.router.navigate(['login']);
-
-                  case 4:
-                  case "end":
-                    return _context4.stop();
-                }
-              }
-            }, _callee4, this);
-          }));
         }
       }, {
-        key: "isLoggedIn",
-        get: function get() {
-          var user = JSON.parse(localStorage.getItem('user'));
-          return user !== null && user.emailVerified !== false ? true : false;
-        } // Returns true when user's email is verified
+        key: "loginUser",
+        value: function loginUser(value) {
+          var _this4 = this;
 
+          return new Promise(function (resolve, reject) {
+            _this4.afAuth.signInWithEmailAndPassword(value.email, value.password).then(function (res) {
+              return resolve(res);
+            }, function (err) {
+              return reject(err);
+            });
+          });
+        }
       }, {
-        key: "isEmailVerified",
-        get: function get() {
-          var user = JSON.parse(localStorage.getItem('user'));
-          return user.emailVerified !== false ? true : false;
+        key: "logoutUser",
+        value: function logoutUser() {
+          var _this5 = this;
+
+          return new Promise(function (resolve, reject) {
+            if (_this5.afAuth.currentUser) {
+              _this5.afAuth.signOut().then(function () {
+                console.log("LOG Out");
+                resolve();
+              })["catch"](function (error) {
+                reject();
+              });
+            }
+          });
+        }
+      }, {
+        key: "userDetails",
+        value: function userDetails() {
+          return this.afAuth.user;
         }
       }]);
 
@@ -1757,19 +1769,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     AuthenticationService.ctorParameters = function () {
       return [{
-        type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_5__["AngularFirestore"]
-      }, {
-        type: _angular_fire_auth__WEBPACK_IMPORTED_MODULE_4__["AngularFireAuth"]
-      }, {
-        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
-      }, {
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+        type: _angular_fire_auth__WEBPACK_IMPORTED_MODULE_2__["AngularFireAuth"]
       }];
     };
 
     AuthenticationService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
       providedIn: 'root'
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_5__["AngularFirestore"], _angular_fire_auth__WEBPACK_IMPORTED_MODULE_4__["AngularFireAuth"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]])], AuthenticationService);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_auth__WEBPACK_IMPORTED_MODULE_2__["AngularFireAuth"]])], AuthenticationService);
     /***/
   },
 

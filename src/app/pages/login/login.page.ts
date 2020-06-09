@@ -1,9 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ToastController } from '@ionic/angular';
+import { ToastController, NavController } from '@ionic/angular';
 import { AppComponent } from 'src/app/app.component';
 
+
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { AuthenticationService } from 'src/app/shared/authentification-service';
+//import { AngularFireAuth } from '@angular/fire/auth/auth';
+
+
+
 
 
 @Component({
@@ -13,48 +19,57 @@ import { AuthenticationService } from 'src/app/shared/authentification-service';
 })
 export class LoginPage implements OnInit {
 
-  constructor(private router: Router,
-    public toastController: ToastController,
-    public authService: AuthenticationService) { }
-  
+  validations_form: FormGroup;
+  errorMessage: string = '';
+
+  constructor(
+
+    private navCtrl: NavController,
+    private authService: AuthenticationService,
+    private formBuilder: FormBuilder
+
+  ) { }
 
   ngOnInit() {
-    console.log("DEbug: ProjectspagePage");
+
+    this.validations_form = this.formBuilder.group({
+      email: new FormControl('', Validators.compose([
+        Validators.required,
+        Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
+      ])),
+      password: new FormControl('', Validators.compose([
+        Validators.minLength(5),
+        Validators.required
+      ])),
+    });
   }
 
-  ionViewWillEnter() {
-    AppComponent.isTabVisible = false;
-    console.log("debug  ionViewWillEnter")
-  }
 
-  navigateToSignupPage(){
-    this.router.navigate(['signup'])
-    console.log("Signup pressed")
-  }
+  validation_messages = {
+    'email': [
+      { type: 'required', message: 'Email is required.' },
+      { type: 'pattern', message: 'Please enter a valid email.' }
+    ],
+    'password': [
+      { type: 'required', message: 'Password is required.' },
+      { type: 'minlength', message: 'Password must be at least 5 characters long.' }
+    ]
+  };
 
 
-  async logIn(email, password) {
-    console.log("in")
-    
-    this.authService.SignIn(email.value, password.value)
-      .then(async (res) => {
-        if (this.authService.isEmailVerified==true) {
-          this.router.navigate(['projectspage'])
-          const toast = await this.toastController.create({
-            message: 'Successfully logged in!   ',
-            duration: 2000
-          });
-          toast.present();
-        } else {
-          window.alert('Email is not verified')
-          return false;
-        }
-      }).catch((error) => {
-        window.alert(error.message)
+  loginUser(value) {
+    this.authService.loginUser(value)
+      .then(res => {
+        console.log(res);
+        this.errorMessage = "";
+        this.navCtrl.navigateForward('/projectspage');
+      }, err => {
+        this.errorMessage = err.message;
       })
+  }
 
-    
-   
+  navigateToSignupPage() {
+    this.navCtrl.navigateForward('/signup');
   }
 
 }

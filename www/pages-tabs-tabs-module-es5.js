@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-tabs>\n\n\n\n  <ion-tab-bar slot=\"bottom\">\n    <ion-tab-button tab=\"tab1\">\n      <ion-icon name=\"pulse-outline\"></ion-icon>\n      <ion-label>Workflow</ion-label>\n    </ion-tab-button>\n\n    <ion-tab-button tab=\"messages\">\n      <ion-icon name=\"people-circle-outline\"></ion-icon>\n      <ion-label>Team</ion-label>\n    </ion-tab-button>\n\n    <ion-tab-button tab=\"tab2\">\n      <ion-icon name=\"image-outline\"></ion-icon>\n      <ion-label>Photos</ion-label>\n    </ion-tab-button>\n\n\n    <ion-tab-button tab=\"tab3\">\n      <ion-icon name=\"search-circle-outline\"></ion-icon>\n      <ion-label>Search</ion-label>\n    </ion-tab-button>\n\n  </ion-tab-bar>\n\n\n\n\n</ion-tabs>";
+    __webpack_exports__["default"] = "<ion-tabs>\n\n\n\n  <ion-tab-bar slot=\"bottom\">\n    <ion-tab-button tab=\"tab1\">\n      <ion-icon name=\"pulse-outline\"></ion-icon>\n      <ion-label>Workflow</ion-label>\n    </ion-tab-button>\n\n    <ion-tab-button tab=\"messages\">\n      <ion-icon name=\"people-circle-outline\"></ion-icon>\n      <ion-label>Team</ion-label>\n    </ion-tab-button>\n\n    <ion-tab-button tab=\"tab2\">\n      <ion-icon name=\"image-outline\"></ion-icon>\n      <ion-label>Photos</ion-label>\n    </ion-tab-button>\n\n\n    <ion-tab-button tab=\"tab3\" >\n      <ion-icon name=\"search-circle-outline\"></ion-icon>\n      <ion-label>Search</ion-label>\n    </ion-tab-button>\n\n  </ion-tab-bar>\n\n\n\n\n</ion-tabs>";
     /***/
   },
 

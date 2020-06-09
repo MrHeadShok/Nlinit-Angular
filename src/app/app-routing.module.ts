@@ -33,8 +33,10 @@ const routes: Routes = [
     path: 'test',
     loadChildren: () => import('./pages/test/test.module').then( m => m.TestPageModule)
   },
-
-
+  {
+    path: 'statpage',
+    loadChildren: () => import('./pages/statpage/statpage.module').then( m => m.StatpagePageModule)
+  },
 
 ];
 @NgModule({

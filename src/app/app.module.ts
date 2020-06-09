@@ -10,9 +10,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 
-
+//created componenets
 import { AddProjectComponent } from './components/add-project/add-project.component';
 import { Add2teamComponent } from './components/add2team/add2team.component';
+import { VerificationmodComponent } from './components/verificationmod/verificationmod.component';
+
 
 
 //firebase related impors
@@ -29,11 +31,11 @@ import { environment } from '../environments/environment';
 
 
 @NgModule({
-  declarations: [AppComponent, AddProjectComponent, Add2teamComponent],
+  declarations: [AppComponent, AddProjectComponent, Add2teamComponent, VerificationmodComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-  entryComponents: [AddProjectComponent, Add2teamComponent],
+  entryComponents: [AddProjectComponent, Add2teamComponent, VerificationmodComponent],
   imports: [BrowserModule, FormsModule, IonicModule.forRoot(), AppRoutingModule, AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFireDatabaseModule,

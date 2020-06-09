@@ -1,44 +1,62 @@
 <ion-content>
   <ion-card color="transparent">
     <img src="../../../assets/img/wide1.png" />
-    <ion-card-content >
+    <ion-card-content>
       <ion-text color="light">
-    <p > ProjectAdmin is an app to help you better organize your data.Lead your team to succes.
-    </p>
-    </ion-text>
+        <p> ProjectAdmin is an app to help you better organize your data.Lead your team to succes.
+        </p>
+      </ion-text>
     </ion-card-content>
 
   </ion-card>
 
-
+  <form class="form" [formGroup]="validations_form" (ngSubmit)="tryRegister(validations_form.value)">
     <ion-item color="transparent">
       <ion-label color="light" id="name" position="floating">
-       <p>
-         <ion-icon name="body-outline"></ion-icon> Full Name
-       </p>
-       </ion-label>
-      <ion-input color="transparent" #fullname required></ion-input>
+        <p>
+          <ion-icon name="body-outline"></ion-icon> Full Name
+        </p>
+      </ion-label>
+      <ion-input color="light" #fullname required></ion-input>
     </ion-item>
 
 
-  <ion-item color="transparent">
-    <ion-label position="floating" color="light">
-      <p>
-        <ion-icon name="person-circle-outline"></ion-icon> Email address
-      </p>
-    </ion-label>
-    <ion-input #email required type="Email"></ion-input>
-  </ion-item>
+    <ion-item color="transparent">
+      <ion-label position="floating" color="light">
+        <p>
+          <ion-icon name="person-circle-outline"></ion-icon> Email address
+        </p>
+      </ion-label>
+      <ion-input formControlName="email" type="Email"></ion-input>
+    </ion-item>
 
-  <ion-item color="transparent">
-    <ion-label color="light" position="floating" minlength="5" pattern="Password">
-      <p>
-        <ion-icon name="lock-closed-outline"></ion-icon> Password
-      </p>
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of validation_messages.email">
+        <div class="error-message"
+          *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
 
-    </ion-label>
-    <ion-input color="light" type="password" #password required></ion-input>
-  </ion-item>
+    <ion-item color="transparent">
+      <ion-label color="light" position="floating" minlength="5" pattern="Password">
+        <p>
+          <ion-icon name="lock-closed-outline"></ion-icon> Password
+        </p>
+
+      </ion-label>
+      <ion-input color="light" type="password" formControlName="password" required></ion-input>
+    </ion-item>
+
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of validation_messages.password">
+        <div class="error-message"
+          *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
 
 
     <ion-radio-group value="group" #role required>
@@ -67,15 +85,18 @@
         <ion-radio color="transparent" slot="start" color="tertiary" value="member"></ion-radio>
       </ion-item>
     </ion-radio-group>
-  
 
-  
-    <ion-button color="light" expand="block" type="submit" (click)="signUp(fullname, email, password,role)" >
-     <ion-icon name="person-add-outline"></ion-icon>
-     <p> &nbsp; &nbsp;Create account!</p>
+
+
+    <ion-button color="light" expand="block" type="submit">
+      <ion-icon name="person-add-outline"></ion-icon>
+      <p> &nbsp; &nbsp;Create account!</p>
     </ion-button>
-  
 
+    <label class="error-message">{{errorMessage}}</label>
+    <label class="success-message">{{successMessage}}</label>
+
+  </form>
   <div>
 
 
@@ -87,4 +108,3 @@
   </div>
 
 </ion-content>
-

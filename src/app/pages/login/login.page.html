@@ -1,5 +1,10 @@
 <ion-content>
 
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="chevron-down-circle-outline" pullingText="Pull to refresh"
+      refreshingSpinner="circles" refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
 
   <ion-card color="transparent">
     <img src="../../../assets/img/logo.png" />
@@ -7,42 +12,61 @@
   </ion-card>
 
 
+  <form class="form" [formGroup]="validations_form" (ngSubmit)="loginUser(validations_form.value)">
+    <ion-item color="transparent">
+      <ion-label position="floating" color="light">
+        <p>
+          <ion-icon name="person-circle-outline"></ion-icon> Email address
+        </p>
+      </ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
 
-  <ion-item color="transparent">
-    <ion-label position="floating" color="light">
+      <div class="validation-errors">
+        <ng-container *ngFor="let validation of validation_messages.email">
+          <div class="error-message"
+            *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
+            {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+
+
+    <ion-item color="transparent">
+      <ion-label color="light" position="floating" minlength="5" pattern="Password">
+        <p>
+          <ion-icon name="lock-closed-outline"></ion-icon> Password
+        </p>
+
+      </ion-label>
+      <ion-input color="light" type="password" formControlName="password" required></ion-input>
+    </ion-item>
+
+      <div class="validation-errors">
+        <ng-container *ngFor="let validation of validation_messages.password">
+          <div class="error-message"
+            *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+            {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+
+
+
+    <ion-button type="submit" color="light" expand="block" >
+      <ion-icon name="log-in-outline"></ion-icon>
       <p>
-        <ion-icon name="person-circle-outline"></ion-icon> Email address
+        &nbsp;Login
       </p>
-    </ion-label>
-    <ion-input type="text" #email required></ion-input>
-  </ion-item>
+    </ion-button>
+    <label class="error-message">{{errorMessage}}</label>
 
-
-  <ion-item color="transparent">
-    <ion-label color="light" position="floating" minlength="5" pattern="Password">
-      <p>
-        <ion-icon name="lock-closed-outline"></ion-icon> Password
-      </p>
-
-    </ion-label>
-    <ion-input color="light" type="password" #password required></ion-input>
-  </ion-item>
-
-
-
-  <ion-button type="submit" color="light" expand="block" (click)="logIn(email, password)">
-    <ion-icon name="log-in-outline"></ion-icon>
-    <p>
-       &nbsp;Login
-    </p>
-  </ion-button>
-
-
+  </form>
   <div>
 
 
     <ion-button fill="clear" color="light" (click)="navigateToSignupPage()" style="margin-left: 133px;">
-      <ion-icon name="person-add-outline"></ion-icon>  &nbsp;Sign up
+      <ion-icon name="person-add-outline"></ion-icon> &nbsp;Sign up
     </ion-button>
 
 

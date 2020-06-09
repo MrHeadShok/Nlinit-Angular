@@ -131,7 +131,7 @@ let ProfilePage = class ProfilePage {
         src_app_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"].isTabVisible = true;
     }
     ngOnInit() {
-        this.doughnutChartMethod();
+        this.doughnutChartMethod(); //to be displayed when your page is loaded
     }
     doughnutChartMethod() {
         this.doughnutChart = new chart_js__WEBPACK_IMPORTED_MODULE_3__["Chart"](this.doughnutCanvas.nativeElement, {

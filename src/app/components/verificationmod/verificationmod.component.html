@@ -1,0 +1,36 @@
+
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-card>
+      <ion-card-title>
+      <h2>Account created successfully!</h2>
+      </ion-card-title>
+
+      <p>
+        Kindly note that you won't be able to access your account unless it's verified! We handle important Data that needs to be treated with full attention and care.
+      </p>
+       
+      <h3>
+        Please make sure you confirm your address before trying to log-in.
+       </h3>
+       </ion-card>
+      <ion-button type="submit" (click)="this.authService.SendVerificationMail()" expand="block">
+        <ion-icon name="mail-outline"></ion-icon>&nbsp; &nbsp;
+        Resend Verification Email
+      </ion-button>
+
+            <ion-button type="submit" (click)="dismissModal()" expand="block" color="danger">
+              <ion-icon name="close-circle-outline"></ion-icon>&nbsp; &nbsp;
+              Close
+            </ion-button>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<div>
+  <img src="../../../assets/img/sent.jpg" />
+
+</div>

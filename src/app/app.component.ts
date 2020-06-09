@@ -1,6 +1,6 @@
 import { Component, Injectable } from '@angular/core';
 
-import { Platform } from '@ionic/angular';
+import { Platform, NavController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Router } from '@angular/router';
@@ -20,7 +20,8 @@ export class AppComponent {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private router: Router,
-    public authService: AuthenticationService
+    public authService: AuthenticationService,
+    private navCtrl: NavController,
   ) {
     this.initializeApp();
   }
@@ -45,7 +46,18 @@ export class AppComponent {
   }
 
   logout() {
-    this.authService.SignOut()
+    this.authService.logoutUser()
+      .then(res => {
+        console.log(res);
+        this.navCtrl.navigateBack('login');
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  }
+
+  navigateToStats() {
+    this.router.navigate(['statpage']);
   }
 
 }

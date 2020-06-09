@@ -17,8 +17,7 @@ ion-card {
 ion-menu,
 ion-menu-toggle {
 
-
-    --background: linear-gradient(315deg, #7d5abee5 0%, #09203ffa 74%);
+            --background: linear-gradient(315deg, #7d5abee5 0%, #09203ffa 74%);
 
 }
 
@@ -49,4 +48,10 @@ ion-toolbar {
 .ion-page {
     background: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
 
+}
+
+.menu{
+    -webkit-transition: -webkit-transform 1500ms ease;
+    -moz-transition: -moz-transform 1500ms ease;
+    transition: transform 1500ms ease;
 }

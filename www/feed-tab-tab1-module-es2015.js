@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\r\n    <ion-card class=\"topC\">\r\n        <div echarts [options]=\"chartOption\" class=\"demo-chart\"></div>\r\n    </ion-card>\r\n    <ion-card>\r\n        <div echarts [options]=\"options\" [theme]=\"theme\" class=\"demo-chart\"></div>\r\n    </ion-card>\r\n\r\n    <ion-card>\r\n        <canvas #doughnutCanvas></canvas>\r\n    </ion-card>\r\n\r\n</ion-content>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\r\n    \r\n    <ion-card class=\"topC\">\r\n        <div echarts [options]=\"chartOption\" class=\"demo-chart\"></div>\r\n    </ion-card>\r\n    <ion-card>\r\n        <div echarts [options]=\"options\" [theme]=\"theme\" class=\"demo-chart\"></div>\r\n    </ion-card>\r\n\r\n    <ion-card>\r\n        <canvas #doughnutCanvas></canvas>\r\n    </ion-card>\r\n\r\n</ion-content>");
 
 /***/ }),
 
