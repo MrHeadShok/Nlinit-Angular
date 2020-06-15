@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+ 
 import { BrowserModule } from '@angular/platform-browser';
 
 import { IonicModule } from '@ionic/angular';
@@ -18,7 +19,8 @@ import * as echarts from 'echarts';
     CommonModule,
     FormsModule,
     IonicModule,
-    TestPageRoutingModule
+    TestPageRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [TestPage]
 })

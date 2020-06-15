@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { ToastController, NavController } from '@ionic/angular';
+import {  NavController } from '@ionic/angular';
 import { AppComponent } from 'src/app/app.component';
 
 
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { AuthenticationService } from 'src/app/shared/authentification-service';
-//import { AngularFireAuth } from '@angular/fire/auth/auth';
 
 
 
@@ -29,6 +27,11 @@ export class LoginPage implements OnInit {
     private formBuilder: FormBuilder
 
   ) { }
+
+  ionViewWillEnter() {
+    AppComponent.isTabVisible = false;
+
+  }
 
   ngOnInit() {
 

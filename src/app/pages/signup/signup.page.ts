@@ -1,12 +1,19 @@
-import { Component, OnInit, Injectable } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 
 
 import { AuthenticationService } from "../../shared/authentification-service";
-import { ToastController, ModalController, NavController } from '@ionic/angular';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { AppComponent } from 'src/app/app.component';
+import { UserfirestoreService } from 'src/app/services/userstore/userfirestore.service';
+import { error } from 'console';
 
+interface user{
+  fullname: string;
+  role: string;
+
+}
 
 @Component({
   selector: 'app-signup',
@@ -33,7 +40,14 @@ export class SignupPage implements OnInit {
     ]
   };
 
+  userlist = [];
+  userdata: user;
+  userform: FormGroup;
+
+  
+
   constructor(
+    public userservice :UserfirestoreService,
     private router: Router,
     private authService: AuthenticationService,
     private formBuilder: FormBuilder
@@ -50,7 +64,46 @@ export class SignupPage implements OnInit {
         Validators.required
       ])),
     });
+
+    this.userform = this.formBuilder.group({
+      fullname:['',[Validators.required]],
+      role:['',[Validators.required]]
+
+    })
+
+    this.userservice.read_user().subscribe(data => {
+      this.userlist = data.map(e => {
+        return {
+          id: e.payload.doc.id,
+          isEdit: false,
+          fullname: e.payload.doc.data()['Fullname'],
+          role: e.payload.doc.data()['role'],
+        };
+      })
+      console.log(this.userlist);
+    })
+
   }
+
+  addUser() {
+    console.log(this.userform.value);
+    this.userservice.create_user(this.userform.value).then(resp => {
+      this.userform.reset();
+    })
+      .catch(error => {
+        console.log(error);
+      });
+  }
+
+  
+
+
+  ionViewWillEnter() {
+    AppComponent.isTabVisible = false;
+
+  }
+
+
 
   tryRegister(value) {
     this.authService.registerUser(value)
