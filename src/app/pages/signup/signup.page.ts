@@ -7,12 +7,11 @@ import { AuthenticationService } from "../../shared/authentification-service";
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { AppComponent } from 'src/app/app.component';
 import { UserfirestoreService } from 'src/app/services/userstore/userfirestore.service';
-import { error } from 'console';
 
-interface user{
+
+interface User{
   fullname: string;
   role: string;
-
 }
 
 @Component({
@@ -24,10 +23,18 @@ interface user{
 
 
 export class SignupPage implements OnInit {
-
+//authentication
   validations_form: FormGroup;
   errorMessage: string = '';
   successMessage: string = '';
+
+  //userInfo
+  userList = [];
+  userData: User;
+  
+
+
+
 
   validation_messages = {
     'email': [
@@ -40,9 +47,7 @@ export class SignupPage implements OnInit {
     ]
   };
 
-  userlist = [];
-  userdata: user;
-  userform: FormGroup;
+
 
   
 
@@ -51,7 +56,9 @@ export class SignupPage implements OnInit {
     private router: Router,
     private authService: AuthenticationService,
     private formBuilder: FormBuilder
-  ) { }
+  ) {
+    this.userData = {} as User;
+  }
 
   ngOnInit() {
     this.validations_form = this.formBuilder.group({
@@ -63,40 +70,24 @@ export class SignupPage implements OnInit {
         Validators.minLength(5),
         Validators.required
       ])),
+
+      fullname: ['', [Validators.required]],
     });
 
-    this.userform = this.formBuilder.group({
-      fullname:['',[Validators.required]],
-      role:['',[Validators.required]]
-
-    })
-
     this.userservice.read_user().subscribe(data => {
-      this.userlist = data.map(e => {
+      this.userList = data.map(e => {
         return {
           id: e.payload.doc.id,
           isEdit: false,
-          fullname: e.payload.doc.data()['Fullname'],
-          role: e.payload.doc.data()['role'],
+          fullname: e.payload.doc.data()['fullname'],
         };
       })
-      console.log(this.userlist);
-    })
+      console.log(this.userList);
+})
 
-  }
 
-  addUser() {
-    console.log(this.userform.value);
-    this.userservice.create_user(this.userform.value).then(resp => {
-      this.userform.reset();
-    })
-      .catch(error => {
-        console.log(error);
-      });
-  }
 
-  
-
+    }
 
   ionViewWillEnter() {
     AppComponent.isTabVisible = false;
@@ -104,6 +95,15 @@ export class SignupPage implements OnInit {
   }
 
 
+  addUser() {
+    console.log(this.validations_form.value);
+    this.userservice.create_user(this.validations_form.value).then(resp => {
+      this.validations_form.reset();
+    })
+      .catch(error => {
+        console.log(error);
+      });
+}
 
   tryRegister(value) {
     this.authService.registerUser(value)
@@ -111,6 +111,15 @@ export class SignupPage implements OnInit {
         console.log(res);
         this.errorMessage = "";
         this.successMessage = "Your account has been created. Please log in.";
+
+        console.log(this.validations_form.value);
+        this.userservice.create_user(this.validations_form.value).then(resp => {
+          this.validations_form.reset();
+        })
+          .catch(error => {
+            console.log(error);
+          });
+
       }, err => {
         console.log(err);
         this.errorMessage = err.message;
@@ -123,4 +132,16 @@ export class SignupPage implements OnInit {
   }
 
 
-}
+  }
+
+  
+
+  
+
+
+ 
+
+
+
+
+

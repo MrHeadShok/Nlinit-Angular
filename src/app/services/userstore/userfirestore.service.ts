@@ -10,7 +10,7 @@ export class UserfirestoreService {
 
   collectioname = "user";
 
-  constructor(public firestore: AngularFirestore) { }
+  constructor(private firestore: AngularFirestore) { }
 
   
 
