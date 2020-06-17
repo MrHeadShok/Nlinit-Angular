@@ -59,7 +59,7 @@
     </div>
 
 
-    <ion-radio-group value="group" #role required>
+    <ion-radio-group formControlName="role" value="group" #role required>
       <ion-list-header>
         <ion-label color="light">
           <p>
@@ -73,7 +73,8 @@
             <ion-icon name="person-outline"></ion-icon>&nbsp; &nbsp;A team leader
           </p>
         </ion-label>
-        <ion-radio color="transparent" slot="start" color="success" value="teamleader"></ion-radio>
+        <ion-radio value="Team_Leader"  color="transparent" slot="start" color="success" >
+        </ion-radio>
       </ion-item>
 
       <ion-item color="transparent">
@@ -82,13 +83,14 @@
             <ion-icon name="people-outline"></ion-icon>&nbsp; &nbsp; A member
           </p>
         </ion-label>
-        <ion-radio color="transparent" slot="start" color="tertiary" value="member"></ion-radio>
+        <ion-radio value="Team_Member" color="transparent" slot="start" color="tertiary" >
+        </ion-radio>
       </ion-item>
     </ion-radio-group>
 
 
 
-    <ion-button color="light" expand="block" type="submit" >
+    <ion-button color="light" expand="block" type="submit">
       <ion-icon name="person-add-outline"></ion-icon>
       <p> &nbsp; &nbsp;Create account!</p>
     </ion-button>

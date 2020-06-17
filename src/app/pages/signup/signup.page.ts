@@ -72,6 +72,7 @@ export class SignupPage implements OnInit {
       ])),
 
       fullname: ['', [Validators.required]],
+      role: ['', [Validators.required]]
     });
 
     this.userservice.read_user().subscribe(data => {
@@ -80,6 +81,7 @@ export class SignupPage implements OnInit {
           id: e.payload.doc.id,
           isEdit: false,
           fullname: e.payload.doc.data()['fullname'],
+          role: e.payload.doc.data()['role'],
         };
       })
       console.log(this.userList);
@@ -119,7 +121,7 @@ export class SignupPage implements OnInit {
           .catch(error => {
             console.log(error);
           });
-
+        this.router.navigate(['login']);
       }, err => {
         console.log(err);
         this.errorMessage = err.message;

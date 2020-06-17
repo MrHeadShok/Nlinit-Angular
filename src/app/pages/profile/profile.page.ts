@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef  } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
 import { Chart } from 'chart.js';
-
+ 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.page.html',
@@ -9,11 +9,13 @@ import { Chart } from 'chart.js';
 })
 export class ProfilePage implements OnInit {
 
+ 
+
   @ViewChild('doughnutCanvas', { static: true }) doughnutCanvas; //add to viewchild
   
   doughnutChart: any; //add your doghnut :)
   
-  constructor() {
+  constructor( ) {
     
    }
   
@@ -25,6 +27,7 @@ export class ProfilePage implements OnInit {
   ngOnInit() { 
     this.doughnutChartMethod(); //to be displayed when your page is loaded
 
+ 
 
   }
 
