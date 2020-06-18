@@ -218,16 +218,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var src_app_app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! src/app/app.component */
+    "./src/app/app.component.ts");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @angular/forms */
     "./node_modules/@angular/forms/fesm2015/forms.js");
     /* harmony import */
 
 
-    var src_app_shared_authentification_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var src_app_shared_authentification_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! src/app/shared/authentification-service */
-    "./src/app/shared/authentification-service.ts"); //import { AngularFireAuth } from '@angular/fire/auth/auth';
-
+    "./src/app/shared/authentification-service.ts");
 
     var LoginPage = /*#__PURE__*/function () {
       function LoginPage(navCtrl, authService, formBuilder) {
@@ -256,11 +261,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       _createClass(LoginPage, [{
+        key: "ionViewWillEnter",
+        value: function ionViewWillEnter() {
+          src_app_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"].isTabVisible = false;
+        }
+      }, {
         key: "ngOnInit",
         value: function ngOnInit() {
           this.validations_form = this.formBuilder.group({
-            email: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')])),
-            password: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(5), _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]))
+            email: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')])),
+            password: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].minLength(5), _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]))
           });
         }
       }, {
@@ -291,9 +301,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return [{
         type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"]
       }, {
-        type: src_app_shared_authentification_service__WEBPACK_IMPORTED_MODULE_4__["AuthenticationService"]
+        type: src_app_shared_authentification_service__WEBPACK_IMPORTED_MODULE_5__["AuthenticationService"]
       }, {
-        type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]
       }];
     };
 
@@ -305,7 +315,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./login.page.scss */
       "./src/app/pages/login/login.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"], src_app_shared_authentification_service__WEBPACK_IMPORTED_MODULE_4__["AuthenticationService"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])], LoginPage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"], src_app_shared_authentification_service__WEBPACK_IMPORTED_MODULE_5__["AuthenticationService"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])], LoginPage);
     /***/
   }
 }]);

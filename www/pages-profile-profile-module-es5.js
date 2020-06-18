@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-content>\n\n  <div class=\"credentials\">\n    <div style=\"float:left;\">\n      <img src=\"../../../assets/img/avatar.jpg\" alt=\"Avatar\" style=\"float: left;\">\n    </div>\n    <div class=\"user\">\n      <p>Username</p>\n    </div>\n    <div style=\"clear: left;\"></div>\n  </div>\n\n\n\n  <ion-card fullscreen>\n    <ion-card-header color=\"danger\">\n      <ion-card-title color=\"light\"> Information</ion-card-title>\n    </ion-card-header>\n    <ion-card-header color=\"medium\">\n      <ion-card-subtitle color=\"dark\">\n        Full name\n      </ion-card-subtitle>\n    </ion-card-header>\n\n    <ion-card-header color=\"light\">\n      <ion-card-subtitle color=\"dark\">\n        Role\n      </ion-card-subtitle>\n    </ion-card-header>\n\n    <ion-card-header color=\"medium\">\n      <ion-card-subtitle color=\"dark\">\n        Email Adress\n      </ion-card-subtitle>\n    </ion-card-header>\n\n    <ion-card-header color=\"light\">\n      <ion-card-subtitle color=\"dark\">\n        Password\n      </ion-card-subtitle>\n    </ion-card-header>\n\n\n\n\n\n  </ion-card>\n\n\n  <ion-card fullscreen style=\"margin-top: 21px;\">\n    <ion-card-header color=\"danger\">\n      <ion-card-title color=\"light\"> Contributions</ion-card-title>\n    </ion-card-header>\n\n    <ion-card-content>\n\n      <canvas #doughnutCanvas></canvas>\n\n    </ion-card-content>\n\n\n  </ion-card>\n\n\n\n</ion-content>";
+    __webpack_exports__["default"] = "<ion-content>\n\n  <div class=\"credentials\">\n    <div style=\"float:left;\">\n      <img src=\"../../../assets/img/avatar.jpg\" alt=\"Avatar\" style=\"float: left;\">\n    </div>\n\n    <div *ngIf=\"userData != null\" class=\"user\">\n      <p>{{userData.fullname}}  </p>\n      <p></p>\n    </div>\n    <div style=\"clear: left;\"></div>\n  </div>\n\n\n\n  <ion-card fullscreen>\n    <ion-card-header color=\"danger\">\n      <ion-card-title color=\"light\"> Information</ion-card-title>\n    </ion-card-header>\n    <ion-card-header color=\"medium\">\n      <ion-card-subtitle color=\"dark\">\n        Full name\n      </ion-card-subtitle>\n    </ion-card-header>\n\n    <ion-card-header color=\"light\">\n      <ion-card-subtitle color=\"dark\">\n        Role\n      </ion-card-subtitle>\n    </ion-card-header>\n\n    <ion-card-header color=\"medium\">\n      <ion-card-subtitle color=\"dark\">\n        Email Adress\n      </ion-card-subtitle>\n    </ion-card-header>\n\n    <ion-card-header color=\"light\">\n      <ion-card-subtitle color=\"dark\">\n        Password\n      </ion-card-subtitle>\n    </ion-card-header>\n\n\n\n\n\n  </ion-card>\n\n\n  <ion-card fullscreen style=\"margin-top: 21px;\">\n    <ion-card-header color=\"danger\">\n      <ion-card-title color=\"light\"> Contributions</ion-card-title>\n    </ion-card-header>\n\n    <ion-card-content>\n\n      <canvas #doughnutCanvas></canvas>\n\n    </ion-card-content>\n\n\n  </ion-card>\n\n\n\n</ion-content>";
     /***/
   },
 
@@ -225,10 +225,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var chart_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(chart_js__WEBPACK_IMPORTED_MODULE_3__);
+    /* harmony import */
+
+
+    var src_app_services_userstore_userfirestore_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! src/app/services/userstore/userfirestore.service */
+    "./src/app/services/userstore/userfirestore.service.ts");
+
+    var User = function User(id, isEdit, fullname, role) {
+      _classCallCheck(this, User);
+
+      this.id = id;
+      this.isEdit = isEdit;
+      this.fullname = fullname;
+      this.role = role;
+    };
 
     var ProfilePage = /*#__PURE__*/function () {
-      function ProfilePage() {
+      function ProfilePage(userService) {
         _classCallCheck(this, ProfilePage);
+
+        this.userService = userService; //userInfo
+
+        this.userList = [];
       }
 
       _createClass(ProfilePage, [{
@@ -239,7 +258,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "ngOnInit",
         value: function ngOnInit() {
+          var _this = this;
+
           this.doughnutChartMethod(); //to be displayed when your page is loaded
+
+          this.userService.read_user().subscribe(function (data) {
+            _this.userList = data.map(function (e) {
+              var id = e.payload.doc.id;
+              var isEdit = false;
+              var fullname = e.payload.doc.data()['fullname'];
+              var role = e.payload.doc.data()['role'];
+              return new User(id, isEdit, fullname, role);
+            });
+
+            if (_this.userList.length > 0) {
+              _this.userData = _this.userList[0];
+            }
+
+            console.log("import data");
+            console.log(_this.userList);
+          });
         }
       }, {
         key: "doughnutChartMethod",
@@ -262,6 +300,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return ProfilePage;
     }();
 
+    ProfilePage.ctorParameters = function () {
+      return [{
+        type: src_app_services_userstore_userfirestore_service__WEBPACK_IMPORTED_MODULE_4__["UserfirestoreService"]
+      }];
+    };
+
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('doughnutCanvas', {
       "static": true
     }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)], ProfilePage.prototype, "doughnutCanvas", void 0);
@@ -273,7 +317,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./profile.page.scss */
       "./src/app/pages/profile/profile.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])], ProfilePage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_userstore_userfirestore_service__WEBPACK_IMPORTED_MODULE_4__["UserfirestoreService"]])], ProfilePage);
     /***/
   }
 }]);

@@ -119,14 +119,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var src_app_shared_authentification_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/shared/authentification-service */ "./src/app/shared/authentification-service.ts");
+/* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var src_app_shared_authentification_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/shared/authentification-service */ "./src/app/shared/authentification-service.ts");
 
 
 
 
 
-//import { AngularFireAuth } from '@angular/fire/auth/auth';
+
 let LoginPage = class LoginPage {
     constructor(navCtrl, authService, formBuilder) {
         this.navCtrl = navCtrl;
@@ -144,15 +145,18 @@ let LoginPage = class LoginPage {
             ]
         };
     }
+    ionViewWillEnter() {
+        src_app_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"].isTabVisible = false;
+    }
     ngOnInit() {
         this.validations_form = this.formBuilder.group({
-            email: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
-                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required,
-                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
+            email: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([
+                _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required,
+                _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
             ])),
-            password: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([
-                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(5),
-                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required
+            password: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([
+                _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].minLength(5),
+                _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required
             ])),
         });
     }
@@ -172,8 +176,8 @@ let LoginPage = class LoginPage {
 };
 LoginPage.ctorParameters = () => [
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"] },
-    { type: src_app_shared_authentification_service__WEBPACK_IMPORTED_MODULE_4__["AuthenticationService"] },
-    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"] }
+    { type: src_app_shared_authentification_service__WEBPACK_IMPORTED_MODULE_5__["AuthenticationService"] },
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] }
 ];
 LoginPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -182,8 +186,8 @@ LoginPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./login.page.scss */ "./src/app/pages/login/login.page.scss")).default]
     }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"],
-        src_app_shared_authentification_service__WEBPACK_IMPORTED_MODULE_4__["AuthenticationService"],
-        _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])
+        src_app_shared_authentification_service__WEBPACK_IMPORTED_MODULE_5__["AuthenticationService"],
+        _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])
 ], LoginPage);
 
 

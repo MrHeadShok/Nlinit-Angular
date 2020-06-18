@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\n\n  <div class=\"credentials\">\n    <div style=\"float:left;\">\n      <img src=\"../../../assets/img/avatar.jpg\" alt=\"Avatar\" style=\"float: left;\">\n    </div>\n    <div class=\"user\">\n      <p>Username</p>\n    </div>\n    <div style=\"clear: left;\"></div>\n  </div>\n\n\n\n  <ion-card fullscreen>\n    <ion-card-header color=\"danger\">\n      <ion-card-title color=\"light\"> Information</ion-card-title>\n    </ion-card-header>\n    <ion-card-header color=\"medium\">\n      <ion-card-subtitle color=\"dark\">\n        Full name\n      </ion-card-subtitle>\n    </ion-card-header>\n\n    <ion-card-header color=\"light\">\n      <ion-card-subtitle color=\"dark\">\n        Role\n      </ion-card-subtitle>\n    </ion-card-header>\n\n    <ion-card-header color=\"medium\">\n      <ion-card-subtitle color=\"dark\">\n        Email Adress\n      </ion-card-subtitle>\n    </ion-card-header>\n\n    <ion-card-header color=\"light\">\n      <ion-card-subtitle color=\"dark\">\n        Password\n      </ion-card-subtitle>\n    </ion-card-header>\n\n\n\n\n\n  </ion-card>\n\n\n  <ion-card fullscreen style=\"margin-top: 21px;\">\n    <ion-card-header color=\"danger\">\n      <ion-card-title color=\"light\"> Contributions</ion-card-title>\n    </ion-card-header>\n\n    <ion-card-content>\n\n      <canvas #doughnutCanvas></canvas>\n\n    </ion-card-content>\n\n\n  </ion-card>\n\n\n\n</ion-content>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\n\n  <div class=\"credentials\">\n    <div style=\"float:left;\">\n      <img src=\"../../../assets/img/avatar.jpg\" alt=\"Avatar\" style=\"float: left;\">\n    </div>\n\n    <div *ngIf=\"userData != null\" class=\"user\">\n      <p>{{userData.fullname}}  </p>\n      <p></p>\n    </div>\n    <div style=\"clear: left;\"></div>\n  </div>\n\n\n\n  <ion-card fullscreen>\n    <ion-card-header color=\"danger\">\n      <ion-card-title color=\"light\"> Information</ion-card-title>\n    </ion-card-header>\n    <ion-card-header color=\"medium\">\n      <ion-card-subtitle color=\"dark\">\n        Full name\n      </ion-card-subtitle>\n    </ion-card-header>\n\n    <ion-card-header color=\"light\">\n      <ion-card-subtitle color=\"dark\">\n        Role\n      </ion-card-subtitle>\n    </ion-card-header>\n\n    <ion-card-header color=\"medium\">\n      <ion-card-subtitle color=\"dark\">\n        Email Adress\n      </ion-card-subtitle>\n    </ion-card-header>\n\n    <ion-card-header color=\"light\">\n      <ion-card-subtitle color=\"dark\">\n        Password\n      </ion-card-subtitle>\n    </ion-card-header>\n\n\n\n\n\n  </ion-card>\n\n\n  <ion-card fullscreen style=\"margin-top: 21px;\">\n    <ion-card-header color=\"danger\">\n      <ion-card-title color=\"light\"> Contributions</ion-card-title>\n    </ion-card-header>\n\n    <ion-card-content>\n\n      <canvas #doughnutCanvas></canvas>\n\n    </ion-card-content>\n\n\n  </ion-card>\n\n\n\n</ion-content>");
 
 /***/ }),
 
@@ -120,18 +120,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/app.component */ "./src/app/app.component.ts");
 /* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! chart.js */ "./node_modules/chart.js/dist/Chart.js");
 /* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(chart_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var src_app_services_userstore_userfirestore_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/userstore/userfirestore.service */ "./src/app/services/userstore/userfirestore.service.ts");
 
 
 
 
+
+class User {
+    constructor(id, isEdit, fullname, role) {
+        this.id = id;
+        this.isEdit = isEdit;
+        this.fullname = fullname;
+        this.role = role;
+    }
+}
 let ProfilePage = class ProfilePage {
-    constructor() {
+    constructor(userService) {
+        this.userService = userService;
+        //userInfo
+        this.userList = [];
     }
     ionViewWillEnter() {
         src_app_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"].isTabVisible = true;
     }
     ngOnInit() {
         this.doughnutChartMethod(); //to be displayed when your page is loaded
+        this.userService.read_user().subscribe(data => {
+            this.userList = data.map(e => {
+                let id = e.payload.doc.id;
+                let isEdit = false;
+                let fullname = e.payload.doc.data()['fullname'];
+                let role = e.payload.doc.data()['role'];
+                return new User(id, isEdit, fullname, role);
+            });
+            if (this.userList.length > 0) {
+                this.userData = this.userList[0];
+            }
+            console.log("import data");
+            console.log(this.userList);
+        });
     }
     doughnutChartMethod() {
         this.doughnutChart = new chart_js__WEBPACK_IMPORTED_MODULE_3__["Chart"](this.doughnutCanvas.nativeElement, {
@@ -154,6 +181,9 @@ let ProfilePage = class ProfilePage {
         });
     }
 };
+ProfilePage.ctorParameters = () => [
+    { type: src_app_services_userstore_userfirestore_service__WEBPACK_IMPORTED_MODULE_4__["UserfirestoreService"] }
+];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('doughnutCanvas', { static: true }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
@@ -164,7 +194,7 @@ ProfilePage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./profile.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/profile/profile.page.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./profile.page.scss */ "./src/app/pages/profile/profile.page.scss")).default]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_userstore_userfirestore_service__WEBPACK_IMPORTED_MODULE_4__["UserfirestoreService"]])
 ], ProfilePage);
 
 

@@ -4,8 +4,10 @@
     <div style="float:left;">
       <img src="../../../assets/img/avatar.jpg" alt="Avatar" style="float: left;">
     </div>
-    <div class="user">
-      <p>name</p>
+
+    <div *ngIf="userData != null" class="user">
+      <p>{{userData.fullname}}  </p>
+      <p></p>
     </div>
     <div style="clear: left;"></div>
   </div>

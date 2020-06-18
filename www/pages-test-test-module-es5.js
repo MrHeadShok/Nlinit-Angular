@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-back-button></ion-back-button>\n    </ion-buttons>\n    <ion-title>Register User</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <form>\n    <ion-item lines=\"full\">\n      <ion-label position=\"floating\">Email</ion-label>\n      <ion-input type=\"text\" #email required></ion-input>\n    </ion-item>\n\n    <ion-item lines=\"full\">\n      <ion-label position=\"floating\">Password</ion-label>\n      <ion-input type=\"password\" #password required></ion-input>\n    </ion-item>\n\n    <ion-row>\n      <ion-col>\n        <ion-button type=\"submit\" (click)=\"signUp(email, password)\" expand=\"block\">Register</ion-button>\n      </ion-col>\n    </ion-row>\n  </form>\n</ion-content>";
+    __webpack_exports__["default"] = "<ion-header [translucent]=\"true\">\n  <ion-toolbar color=\"warning\">\n    <ion-title>\n      Student Register\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content [fullscreen]=\"true\" class=\"ion-padding\">\n\n  <form [formGroup]=\"studentForm\" (ngSubmit)=\"CreateRecord()\">\n\n    <ion-item>\n      <ion-label position=\"floating\">Name</ion-label>\n      <ion-input formControlName=\"Name\"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label position=\"floating\">Age</ion-label>\n      <ion-input formControlName=\"Age\"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label position=\"floating\">Address</ion-label>\n      <ion-input formControlName=\"Address\"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-button (click)=\"CreateRecord()\" [disabled]=\"studentForm.invalid\">\n        <ion-icon size=\"small\" slot=\"icon-only\" name=\"add\"></ion-icon>\n        &nbsp;Create Record\n      </ion-button>\n    </ion-item>\n\n  </form>\n\n\n  <ion-card *ngFor=\"let item of studentList\" color=\"primary\">\n    <span *ngIf=\"!item.isEdit; else elseBlock\">\n      <ion-card-header>\n        <ion-card-title>{{item.Name}} of {{item.Age}} years</ion-card-title>\n        <ion-card-subtitle>From: {{item.Address}}</ion-card-subtitle>\n      </ion-card-header>\n      <ion-card-content>\n\n        <ion-button shape=\"round\" color=\"secondary\" size=\"small\" (click)=\"EditRecord(item)\">\n          <ion-icon size=\"small\" slot=\"icon-only\" name=\"create\"></ion-icon>\n\n        </ion-button>\n        <ion-button shape=\"round\" color=\"danger\" size=\"small\" (click)=\"RemoveRecord(item.id)\">\n          <ion-icon size=\"small\" slot=\"icon-only\" name=\"trash\"></ion-icon>\n\n        </ion-button>\n      </ion-card-content>\n    </span>\n    <ng-template #elseBlock>\n      <ion-card-header>\n        <ion-card-title>\n          <ion-grid>\n            <ion-row>\n              <ion-col>\n                Edit\n              </ion-col>\n              <ion-col>\n                <ion-button fill=\"solid\" color=\"medium\" size=\"small\" (click)=\"item.isEdit = false\">\n                  Cancel\n                </ion-button>\n              </ion-col>\n              <ion-col>\n                <ion-button fill=\"solid\" color=\"success\" size=\"small\" (click)=\"UpdateRecord(item)\">\n                  Update\n                </ion-button>\n              </ion-col>\n            </ion-row>\n          </ion-grid>\n        </ion-card-title>\n      </ion-card-header>\n      <ion-card-content>\n        <ion-item>\n          <ion-label><strong>Name</strong></ion-label>\n          <ion-input type=\"text\" [(ngModel)]=\"item.EditName\"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label><strong>Age</strong></ion-label>\n          <ion-input type=\"text\" [(ngModel)]=\"item.EditAge\"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label><strong>Address</strong></ion-label>\n          <ion-input type=\"text\" [(ngModel)]=\"item.EditAddress\"></ion-input>\n        </ion-item>\n      </ion-card-content>\n    </ng-template>\n  </ion-card>\n\n</ion-content>";
     /***/
   },
 
@@ -170,7 +170,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     TestPageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
       imports: [ngx_echarts__WEBPACK_IMPORTED_MODULE_7__["NgxEchartsModule"].forRoot({
         echarts: echarts__WEBPACK_IMPORTED_MODULE_8__
-      }), _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _test_routing_module__WEBPACK_IMPORTED_MODULE_5__["TestPageRoutingModule"]],
+      }), _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _test_routing_module__WEBPACK_IMPORTED_MODULE_5__["TestPageRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"]],
       declarations: [_test_page__WEBPACK_IMPORTED_MODULE_6__["TestPage"]]
     })], TestPageModule);
     /***/
@@ -236,22 +236,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
     /* harmony import */
 
 
-    var _shared_authentification_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! ../../shared/authentification-service */
-    "./src/app/shared/authentification-service.ts");
+    var src_app_services_firebasestore_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! src/app/services/firebasestore.service */
+    "./src/app/services/firebasestore.service.ts");
 
     var TestPage = /*#__PURE__*/function () {
-      function TestPage(authService, router) {
+      function TestPage(firebaseService, fb) {
         _classCallCheck(this, TestPage);
 
-        this.authService = authService;
-        this.router = router;
+        this.firebaseService = firebaseService;
+        this.fb = fb;
+        this.studentList = [];
+        this.studentData = {};
       }
 
       _createClass(TestPage, [{
@@ -261,7 +263,62 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       }, {
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          var _this = this;
+
+          this.studentForm = this.fb.group({
+            Name: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]],
+            Age: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]],
+            Address: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]]
+          });
+          this.firebaseService.read_students().subscribe(function (data) {
+            _this.studentList = data.map(function (e) {
+              return {
+                id: e.payload.doc.id,
+                isEdit: false,
+                Name: e.payload.doc.data()['Name'],
+                Age: e.payload.doc.data()['Age'],
+                Address: e.payload.doc.data()['Address']
+              };
+            });
+            console.log(_this.studentList);
+          });
+        }
+      }, {
+        key: "CreateRecord",
+        value: function CreateRecord() {
+          var _this2 = this;
+
+          console.log(this.studentForm.value);
+          this.firebaseService.create_student(this.studentForm.value).then(function (resp) {
+            _this2.studentForm.reset();
+          })["catch"](function (error) {
+            console.log(error);
+          });
+        }
+      }, {
+        key: "RemoveRecord",
+        value: function RemoveRecord(rowID) {
+          this.firebaseService.delete_student(rowID);
+        }
+      }, {
+        key: "EditRecord",
+        value: function EditRecord(record) {
+          record.isEdit = true;
+          record.EditName = record.Name;
+          record.EditAge = record.Age;
+          record.EditAddress = record.Address;
+        }
+      }, {
+        key: "UpdateRecord",
+        value: function UpdateRecord(recordRow) {
+          var record = {};
+          record['Name'] = recordRow.EditName;
+          record['Age'] = recordRow.EditAge;
+          record['Address'] = recordRow.EditAddress;
+          this.firebaseService.update_student(recordRow.id, record);
+          recordRow.isEdit = false;
+        }
       }]);
 
       return TestPage;
@@ -269,15 +326,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     TestPage.ctorParameters = function () {
       return [{
-        type: _shared_authentification_service__WEBPACK_IMPORTED_MODULE_4__["AuthenticationService"]
+        type: src_app_services_firebasestore_service__WEBPACK_IMPORTED_MODULE_4__["FirebasestoreService"]
       }, {
-        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]
       }];
     };
 
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('doughnutCanvas', {
-      "static": true
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)], TestPage.prototype, "doughnutCanvas", void 0);
     TestPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-test',
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
@@ -286,7 +340,90 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./test.page.scss */
       "./src/app/pages/test/test.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_authentification_service__WEBPACK_IMPORTED_MODULE_4__["AuthenticationService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])], TestPage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_firebasestore_service__WEBPACK_IMPORTED_MODULE_4__["FirebasestoreService"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]])], TestPage);
+    /***/
+  },
+
+  /***/
+  "./src/app/services/firebasestore.service.ts":
+  /*!***************************************************!*\
+    !*** ./src/app/services/firebasestore.service.ts ***!
+    \***************************************************/
+
+  /*! exports provided: FirebasestoreService */
+
+  /***/
+  function srcAppServicesFirebasestoreServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "FirebasestoreService", function () {
+      return FirebasestoreService;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/fire/firestore */
+    "./node_modules/@angular/fire/fesm2015/angular-fire-firestore.js");
+
+    var FirebasestoreService = /*#__PURE__*/function () {
+      function FirebasestoreService(firestore) {
+        _classCallCheck(this, FirebasestoreService);
+
+        this.firestore = firestore;
+        this.collectionName = 'Students';
+      }
+
+      _createClass(FirebasestoreService, [{
+        key: "create_student",
+        value: function create_student(record) {
+          return this.firestore.collection(this.collectionName).add(record);
+        }
+      }, {
+        key: "read_students",
+        value: function read_students() {
+          return this.firestore.collection(this.collectionName).snapshotChanges();
+        }
+      }, {
+        key: "update_student",
+        value: function update_student(recordID, record) {
+          this.firestore.doc(this.collectionName + '/' + recordID).update(record);
+        }
+      }, {
+        key: "delete_student",
+        value: function delete_student(record_id) {
+          this.firestore.doc(this.collectionName + '/' + record_id)["delete"]();
+        }
+      }]);
+
+      return FirebasestoreService;
+    }();
+
+    FirebasestoreService.ctorParameters = function () {
+      return [{
+        type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"]
+      }];
+    };
+
+    FirebasestoreService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+      providedIn: 'root'
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"]])], FirebasestoreService);
     /***/
   }
 }]);
