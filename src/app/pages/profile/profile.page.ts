@@ -11,7 +11,9 @@ class User {
   constructor (public id: string,
     public isEdit: boolean,
     public fullname: string,
-    public role: string) {
+    public role: string,
+    public email: string,
+  public password: string) {
     }
   
 }
@@ -55,8 +57,10 @@ export class ProfilePage implements OnInit {
         let isEdit = false;
         let fullname = e.payload.doc.data()['fullname'];
         let role = e.payload.doc.data()['role'];
+        let email = e.payload.doc.data()['email'];
+        let password = e.payload.doc.data()['password'];
         
-        return new User(id, isEdit, fullname, role);
+        return new User(id, isEdit, fullname, role,email,password);
 
       })
       if (this.userList.length > 0){

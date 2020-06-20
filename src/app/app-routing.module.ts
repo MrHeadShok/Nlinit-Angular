@@ -37,6 +37,18 @@ const routes: Routes = [
     path: 'statpage',
     loadChildren: () => import('./pages/statpage/statpage.module').then( m => m.StatpagePageModule)
   },
+  {
+    path: 'settings',
+    loadChildren: () => import('./pages/settings/settings.module').then( m => m.SettingsPageModule)
+  },
+  {
+    path: 'stats',
+    loadChildren: () => import('./pages/stats/stats.module').then( m => m.StatsPageModule)
+  },
+  {
+    path: 'messages',
+    loadChildren: () => import('./pages/messages/messages.module').then( m => m.MessagesPageModule)
+  },
 
 ];
 @NgModule({

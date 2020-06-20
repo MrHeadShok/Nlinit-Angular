@@ -13,40 +13,37 @@
   </div>
 
 
-
+<div *ngIf="userData != null" >
   <ion-card fullscreen>
     <ion-card-header color="danger">
       <ion-card-title color="light"> Information</ion-card-title>
     </ion-card-header>
     <ion-card-header color="medium">
       <ion-card-subtitle color="dark">
-        Full name
+        Full name {{userData.fullname}}
       </ion-card-subtitle>
     </ion-card-header>
 
     <ion-card-header color="light">
       <ion-card-subtitle color="dark">
-        Role
+        Role {{userData.role}}
       </ion-card-subtitle>
     </ion-card-header>
 
     <ion-card-header color="medium">
       <ion-card-subtitle color="dark">
-        Email Adress
+        Email Adress {{userData.email}}
       </ion-card-subtitle>
     </ion-card-header>
 
     <ion-card-header color="light">
       <ion-card-subtitle color="dark">
-        Password
+        Password {{userData.password}}
       </ion-card-subtitle>
     </ion-card-header>
 
-
-
-
-
   </ion-card>
+  </div>
 
 
   <ion-card fullscreen style="margin-top: 21px;">

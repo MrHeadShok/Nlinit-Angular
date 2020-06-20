@@ -43,6 +43,9 @@ ion-button {
 ion-toolbar {
     --background: linear-gradient(315deg, #0e2c41 0%, #0d324d 74%);
     background-color: #7f5a83;
+    height: 44px;
+    border-color: transparent !important;
+    
 }
 
 .ion-page {

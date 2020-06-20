@@ -1,16 +1,18 @@
 <ion-app>
 
 
-    <ion-menu class="menu" side="start" content-id="main-content" swipe-gesture="true">
+    <ion-menu type="push" class="menu" side="start" content-id="main-content" swipe-gesture="true">
         <ion-menu-toggle>
 
-            <ion-card color="transparent">
-                <img src="../../../assets/img/avatar.jpg" alt="Avatar">
-                <ion-card-header>
-                    <ion-card-subtitle color="light">Role</ion-card-subtitle>
-                    <ion-card-title color="light">UserName</ion-card-title>
-                </ion-card-header>
-            </ion-card>
+            <div *ngIf="userData!=null">
+                <ion-card color="transparent">
+                    <img src="../../../assets/img/avatar.jpg" alt="Avatar">
+                    <ion-card-header>
+                        <ion-card-subtitle color="light">{{userData.role}}</ion-card-subtitle>
+                        <ion-card-title color="light">{{userData.fullname}}</ion-card-title>
+                    </ion-card-header>
+                </ion-card>
+            </div>
 
             <div class="higher">
 
@@ -28,10 +30,10 @@
                 </ion-button>
 
 
-                <ion-button expand="full" color="#7c46ce" (click)="navigateToprofile()">
+                <ion-button expand="full" color="#7c46ce" (click)="navigateToMessages()">
                     <h5>
-                        <ion-icon name="notifications-outline"></ion-icon> &nbsp; &nbsp; 
-                        Notifications
+                        <ion-icon name="mail-outline"></ion-icon> &nbsp; &nbsp; &nbsp;
+                        Messages
                     </h5>
                 </ion-button>
 
@@ -47,7 +49,7 @@
 
             <div class="lower">
 
-                <ion-button expand="full" color="#7c46ce">
+                <ion-button expand="full" color="#7c46ce" (click)="navigateToSettings()">
                     <h5>
                         <ion-icon name="construct-outline"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Settings
                     </h5>
@@ -69,20 +71,28 @@
     <div class="ion-page" id="main-content">
         <ion-header *ngIf="getIsTabVisible">
 
-            
-           <!--ToAddARefresher     <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+
+            <!--ToAddARefresher     <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
                     <ion-refresher-content pullingIcon="chevron-down-circle-outline" pullingText="Pull to refresh"
                         refreshingSpinner="circles" refreshingText="Refreshing...">
                     </ion-refresher-content>
                 </ion-refresher> -->
-           
 
-            <ion-toolbar>
+
+            <ion-toolbar >
+
                 <ion-buttons slot="start">
                     <ion-menu-button>
-                        <ion-icon name="menu"></ion-icon>
+                        <ion-icon color="primary" name="menu"></ion-icon>
                     </ion-menu-button>
                 </ion-buttons>
+
+
+                <ion-button slot="end" color="transparent" (click)="presentPopover()">
+                    <ion-icon color="danger" name="notifications-outline"></ion-icon>
+                </ion-button>
+
+
 
             </ion-toolbar>
         </ion-header>
