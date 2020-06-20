@@ -209,7 +209,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-app>\n\n\n    <ion-menu class=\"menu\" side=\"start\" content-id=\"main-content\" swipe-gesture=\"true\">\n        <ion-menu-toggle>\n\n            <ion-card color=\"transparent\">\n                <img src=\"../../../assets/img/avatar.jpg\" alt=\"Avatar\">\n                <ion-card-header>\n                    <ion-card-subtitle color=\"light\">Role</ion-card-subtitle>\n                    <ion-card-title color=\"light\">UserName</ion-card-title>\n                </ion-card-header>\n            </ion-card>\n\n            <div class=\"higher\">\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToProjects()\">\n                    <h5>\n                        <ion-icon name=\"bar-chart-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Projects\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToprofile()\">\n                    <h5>\n                        <ion-icon name=\"person-outline\"></ion-icon> &nbsp; &nbsp; &nbsp; &nbsp; My profile\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToprofile()\">\n                    <h5>\n                        <ion-icon name=\"notifications-outline\"></ion-icon> &nbsp; &nbsp; \n                        Notifications\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToStats()\">\n                    <h5>\n                        <ion-icon name=\"pie-chart-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Statistics\n                    </h5>\n                </ion-button>\n\n            </div>\n\n\n            <div class=\"lower\">\n\n                <ion-button expand=\"full\" color=\"#7c46ce\">\n                    <h5>\n                        <ion-icon name=\"construct-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Settings\n                    </h5>\n                </ion-button>\n\n\n                <ion-button type=\"submit\" (click)=\"logout()\" expand=\"full\" color=\"#7c46ce\">\n                    <h5>\n                        <ion-icon name=\"log-out-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Logout\n                    </h5>\n                </ion-button>\n\n            </div>\n        </ion-menu-toggle>\n    </ion-menu>\n\n\n\n    <div class=\"ion-page\" id=\"main-content\">\n        <ion-header *ngIf=\"getIsTabVisible\">\n\n            \n           <!--ToAddARefresher     <ion-refresher slot=\"fixed\" (ionRefresh)=\"doRefresh($event)\">\n                    <ion-refresher-content pullingIcon=\"chevron-down-circle-outline\" pullingText=\"Pull to refresh\"\n                        refreshingSpinner=\"circles\" refreshingText=\"Refreshing...\">\n                    </ion-refresher-content>\n                </ion-refresher> -->\n           \n\n            <ion-toolbar>\n                <ion-buttons slot=\"start\">\n                    <ion-menu-button>\n                        <ion-icon name=\"menu\"></ion-icon>\n                    </ion-menu-button>\n                </ion-buttons>\n\n            </ion-toolbar>\n        </ion-header>\n        <ion-router-outlet></ion-router-outlet>\n    </div>\n\n\n\n\n</ion-app>";
+    __webpack_exports__["default"] = "<ion-app>\n\n\n    <ion-menu type=\"push\" class=\"menu\" side=\"start\" content-id=\"main-content\" swipe-gesture=\"true\">\n        <ion-menu-toggle>\n\n            <div *ngIf=\"userData!=null\">\n                <ion-card color=\"transparent\">\n                    <img src=\"../../../assets/img/avatar.jpg\" alt=\"Avatar\">\n                    <ion-card-header>\n                        <ion-card-subtitle color=\"light\">{{userData.role}}</ion-card-subtitle>\n                        <ion-card-title color=\"light\">{{userData.fullname}}</ion-card-title>\n                    </ion-card-header>\n                </ion-card>\n            </div>\n\n            <div class=\"higher\">\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToProjects()\">\n                    <h5>\n                        <ion-icon name=\"bar-chart-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Projects\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToprofile()\">\n                    <h5>\n                        <ion-icon name=\"person-outline\"></ion-icon> &nbsp; &nbsp; &nbsp; &nbsp; My profile\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToMessages()\">\n                    <h5>\n                        <ion-icon name=\"mail-outline\"></ion-icon> &nbsp; &nbsp; &nbsp;\n                        Messages\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToStats()\">\n                    <h5>\n                        <ion-icon name=\"pie-chart-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Statistics\n                    </h5>\n                </ion-button>\n\n            </div>\n\n\n            <div class=\"lower\">\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToSettings()\">\n                    <h5>\n                        <ion-icon name=\"construct-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Settings\n                    </h5>\n                </ion-button>\n\n\n                <ion-button type=\"submit\" (click)=\"logout()\" expand=\"full\" color=\"#7c46ce\">\n                    <h5>\n                        <ion-icon name=\"log-out-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Logout\n                    </h5>\n                </ion-button>\n\n            </div>\n        </ion-menu-toggle>\n    </ion-menu>\n\n\n\n    <div class=\"ion-page\" id=\"main-content\">\n        <ion-header *ngIf=\"getIsTabVisible\">\n\n\n            <!--ToAddARefresher     <ion-refresher slot=\"fixed\" (ionRefresh)=\"doRefresh($event)\">\n                    <ion-refresher-content pullingIcon=\"chevron-down-circle-outline\" pullingText=\"Pull to refresh\"\n                        refreshingSpinner=\"circles\" refreshingText=\"Refreshing...\">\n                    </ion-refresher-content>\n                </ion-refresher> -->\n\n\n            <ion-toolbar >\n\n                <ion-buttons slot=\"start\">\n                    <ion-menu-button>\n                        <ion-icon color=\"primary\" name=\"menu\"></ion-icon>\n                    </ion-menu-button>\n                </ion-buttons>\n\n\n                <ion-button slot=\"end\" color=\"transparent\" (click)=\"presentPopover()\">\n                    <ion-icon color=\"danger\" name=\"notifications-outline\"></ion-icon>\n                </ion-button>\n\n\n\n            </ion-toolbar>\n        </ion-header>\n        <ion-router-outlet></ion-router-outlet>\n    </div>\n\n\n\n\n</ion-app>";
     /***/
   },
 
@@ -250,6 +250,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     __webpack_exports__["default"] = "<div>\n\n  <ion-list-header color=\"success\" >\n    <ion-label >\n       Request sent!\n    </ion-label>\n  </ion-list-header>\n\n  <ion-content color=\"medium\">\n<h5>Request is sent! <br> Once accepted you'll be able to contact each other!</h5>\n  </ion-content>\n     \n     </div>";
+    /***/
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/components/notifications/notifications.component.html":
+  /*!*************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/notifications/notifications.component.html ***!
+    \*************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppComponentsNotificationsNotificationsComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<p>\n  notifications works!\n</p>\n";
     /***/
   },
 
@@ -933,9 +953,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       path: 'signup',
       loadChildren: function loadChildren() {
-        return Promise.all(
+        return __webpack_require__.e(
         /*! import() | pages-signup-signup-module */
-        [__webpack_require__.e("common"), __webpack_require__.e("pages-signup-signup-module")]).then(__webpack_require__.bind(null,
+        "pages-signup-signup-module").then(__webpack_require__.bind(null,
         /*! ./pages/signup/signup.module */
         "./src/app/pages/signup/signup.module.ts")).then(function (m) {
           return m.SignupPageModule;
@@ -979,7 +999,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | pages-profile-profile-module */
-        [__webpack_require__.e("default~feed-tab-tab1-module~pages-profile-profile-module"), __webpack_require__.e("common"), __webpack_require__.e("pages-profile-profile-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~feed-tab-tab1-module~pages-profile-profile-module"), __webpack_require__.e("pages-profile-profile-module")]).then(__webpack_require__.bind(null,
         /*! ./pages/profile/profile.module */
         "./src/app/pages/profile/profile.module.ts")).then(function (m) {
           return m.ProfilePageModule;
@@ -1005,6 +1025,39 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /*! ./pages/statpage/statpage.module */
         "./src/app/pages/statpage/statpage.module.ts")).then(function (m) {
           return m.StatpagePageModule;
+        });
+      }
+    }, {
+      path: 'settings',
+      loadChildren: function loadChildren() {
+        return __webpack_require__.e(
+        /*! import() | pages-settings-settings-module */
+        "pages-settings-settings-module").then(__webpack_require__.bind(null,
+        /*! ./pages/settings/settings.module */
+        "./src/app/pages/settings/settings.module.ts")).then(function (m) {
+          return m.SettingsPageModule;
+        });
+      }
+    }, {
+      path: 'stats',
+      loadChildren: function loadChildren() {
+        return __webpack_require__.e(
+        /*! import() | pages-stats-stats-module */
+        "pages-stats-stats-module").then(__webpack_require__.bind(null,
+        /*! ./pages/stats/stats.module */
+        "./src/app/pages/stats/stats.module.ts")).then(function (m) {
+          return m.StatsPageModule;
+        });
+      }
+    }, {
+      path: 'messages',
+      loadChildren: function loadChildren() {
+        return __webpack_require__.e(
+        /*! import() | pages-messages-messages-module */
+        "pages-messages-messages-module").then(__webpack_require__.bind(null,
+        /*! ./pages/messages/messages.module */
+        "./src/app/pages/messages/messages.module.ts")).then(function (m) {
+          return m.MessagesPageModule;
         });
       }
     }];
@@ -1038,7 +1091,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "img {\n  border-radius: 50%;\n  border: 1px solid #ddd;\n  padding: 5px;\n  left: initial;\n  width: 150px;\n  margin-left: 60px;\n}\n\nion-card {\n  margin-bottom: 10px;\n  margin-top: 11px;\n  position: relative;\n}\n\nion-menu,\nion-menu-toggle {\n  --background: linear-gradient(315deg, #7d5abee5 0%, #09203ffa 74%);\n}\n\nion-button {\n  margin-bottom: 7px;\n}\n\n.higher {\n  margin-top: 35px;\n  position: relative;\n}\n\n.lower {\n  margin-top: 197px;\n  position: relative;\n}\n\n.my-custom-menu {\n  --width: 500px;\n}\n\nion-toolbar {\n  --background: linear-gradient(315deg, #0e2c41 0%, #0d324d 74%);\n  background-color: #7f5a83;\n}\n\n.ion-page {\n  background: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);\n}\n\n.menu {\n  transition: transform 1500ms ease;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQzpcXFVzZXJzXFxUQWllYlxcRG9jdW1lbnRzXFxHaXRIdWJcXE5saW5pdC1Bbmd1bGFyL3NyY1xcYXBwXFxhcHAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtCQUFBO0VBQ0Esc0JBQUE7RUFDQSxZQUFBO0VBQ0EsYUFBQTtFQUNBLFlBQUE7RUFDQSxpQkFBQTtBQ0NKOztBREVBO0VBQ0ksbUJBQUE7RUFDQSxnQkFBQTtFQUNBLGtCQUFBO0FDQ0o7O0FER0E7O0VBR1ksa0VBQUE7QUNEWjs7QURLQTtFQUNJLGtCQUFBO0FDRko7O0FES0E7RUFDSSxnQkFBQTtFQUNBLGtCQUFBO0FDRko7O0FES0E7RUFDSSxpQkFBQTtFQUNBLGtCQUFBO0FDRko7O0FETUE7RUFDSSxjQUFBO0FDSEo7O0FETUE7RUFDSSw4REFBQTtFQUNBLHlCQUFBO0FDSEo7O0FETUE7RUFDSSw0REFBQTtBQ0hKOztBRE9BO0VBR0ksaUNBQUE7QUNKSiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImltZyB7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjZGRkO1xyXG4gICAgcGFkZGluZzogNXB4O1xyXG4gICAgbGVmdDogaW5pdGlhbDtcclxuICAgIHdpZHRoOiAxNTBweDtcclxuICAgIG1hcmdpbi1sZWZ0OiA2MHB4O1xyXG59XHJcblxyXG5pb24tY2FyZCB7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAxMHB4O1xyXG4gICAgbWFyZ2luLXRvcDogMTFweDtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuXHJcbn1cclxuXHJcbmlvbi1tZW51LFxyXG5pb24tbWVudS10b2dnbGUge1xyXG5cclxuICAgICAgICAgICAgLS1iYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMzE1ZGVnLCAjN2Q1YWJlZTUgMCUsICMwOTIwM2ZmYSA3NCUpO1xyXG5cclxufVxyXG5cclxuaW9uLWJ1dHRvbiB7XHJcbiAgICBtYXJnaW4tYm90dG9tOiA3cHg7XHJcbn1cclxuXHJcbi5oaWdoZXJ7XHJcbiAgICBtYXJnaW4tdG9wOjM1cHggO1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG59XHJcblxyXG4ubG93ZXIge1xyXG4gICAgbWFyZ2luLXRvcDogMTk3cHg7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbn1cclxuXHJcblxyXG4ubXktY3VzdG9tLW1lbnUge1xyXG4gICAgLS13aWR0aDogNTAwcHg7XHJcbn1cclxuXHJcbmlvbi10b29sYmFyIHtcclxuICAgIC0tYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDMxNWRlZywgIzBlMmM0MSAwJSwgIzBkMzI0ZCA3NCUpO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzdmNWE4MztcclxufVxyXG5cclxuLmlvbi1wYWdlIHtcclxuICAgIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgzMTVkZWcsICM3ZjVhODMgMCUsICMwZDMyNGQgNzQlKTtcclxuXHJcbn1cclxuXHJcbi5tZW51e1xyXG4gICAgLXdlYmtpdC10cmFuc2l0aW9uOiAtd2Via2l0LXRyYW5zZm9ybSAxNTAwbXMgZWFzZTtcclxuICAgIC1tb3otdHJhbnNpdGlvbjogLW1vei10cmFuc2Zvcm0gMTUwMG1zIGVhc2U7XHJcbiAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMTUwMG1zIGVhc2U7XHJcbn0iLCJpbWcge1xuICBib3JkZXItcmFkaXVzOiA1MCU7XG4gIGJvcmRlcjogMXB4IHNvbGlkICNkZGQ7XG4gIHBhZGRpbmc6IDVweDtcbiAgbGVmdDogaW5pdGlhbDtcbiAgd2lkdGg6IDE1MHB4O1xuICBtYXJnaW4tbGVmdDogNjBweDtcbn1cblxuaW9uLWNhcmQge1xuICBtYXJnaW4tYm90dG9tOiAxMHB4O1xuICBtYXJnaW4tdG9wOiAxMXB4O1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG5cbmlvbi1tZW51LFxuaW9uLW1lbnUtdG9nZ2xlIHtcbiAgLS1iYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMzE1ZGVnLCAjN2Q1YWJlZTUgMCUsICMwOTIwM2ZmYSA3NCUpO1xufVxuXG5pb24tYnV0dG9uIHtcbiAgbWFyZ2luLWJvdHRvbTogN3B4O1xufVxuXG4uaGlnaGVyIHtcbiAgbWFyZ2luLXRvcDogMzVweDtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xufVxuXG4ubG93ZXIge1xuICBtYXJnaW4tdG9wOiAxOTdweDtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xufVxuXG4ubXktY3VzdG9tLW1lbnUge1xuICAtLXdpZHRoOiA1MDBweDtcbn1cblxuaW9uLXRvb2xiYXIge1xuICAtLWJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgzMTVkZWcsICMwZTJjNDEgMCUsICMwZDMyNGQgNzQlKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzdmNWE4Mztcbn1cblxuLmlvbi1wYWdlIHtcbiAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDMxNWRlZywgIzdmNWE4MyAwJSwgIzBkMzI0ZCA3NCUpO1xufVxuXG4ubWVudSB7XG4gIC13ZWJraXQtdHJhbnNpdGlvbjogLXdlYmtpdC10cmFuc2Zvcm0gMTUwMG1zIGVhc2U7XG4gIC1tb3otdHJhbnNpdGlvbjogLW1vei10cmFuc2Zvcm0gMTUwMG1zIGVhc2U7XG4gIHRyYW5zaXRpb246IHRyYW5zZm9ybSAxNTAwbXMgZWFzZTtcbn0iXX0= */";
+    __webpack_exports__["default"] = "img {\n  border-radius: 50%;\n  border: 1px solid #ddd;\n  padding: 5px;\n  left: initial;\n  width: 150px;\n  margin-left: 60px;\n}\n\nion-card {\n  margin-bottom: 10px;\n  margin-top: 11px;\n  position: relative;\n}\n\nion-menu,\nion-menu-toggle {\n  --background: linear-gradient(315deg, #7d5abee5 0%, #09203ffa 74%);\n}\n\nion-button {\n  margin-bottom: 7px;\n}\n\n.higher {\n  margin-top: 35px;\n  position: relative;\n}\n\n.lower {\n  margin-top: 197px;\n  position: relative;\n}\n\n.my-custom-menu {\n  --width: 500px;\n}\n\nion-toolbar {\n  --background: linear-gradient(315deg, #0e2c41 0%, #0d324d 74%);\n  background-color: #7f5a83;\n  height: 44px;\n  border-color: transparent !important;\n}\n\n.ion-page {\n  background: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);\n}\n\n.menu {\n  transition: transform 1500ms ease;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQzpcXFVzZXJzXFxUQWllYlxcRG9jdW1lbnRzXFxHaXRIdWJcXE5saW5pdC1Bbmd1bGFyL3NyY1xcYXBwXFxhcHAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtCQUFBO0VBQ0Esc0JBQUE7RUFDQSxZQUFBO0VBQ0EsYUFBQTtFQUNBLFlBQUE7RUFDQSxpQkFBQTtBQ0NKOztBREVBO0VBQ0ksbUJBQUE7RUFDQSxnQkFBQTtFQUNBLGtCQUFBO0FDQ0o7O0FER0E7O0VBR1ksa0VBQUE7QUNEWjs7QURLQTtFQUNJLGtCQUFBO0FDRko7O0FES0E7RUFDSSxnQkFBQTtFQUNBLGtCQUFBO0FDRko7O0FES0E7RUFDSSxpQkFBQTtFQUNBLGtCQUFBO0FDRko7O0FETUE7RUFDSSxjQUFBO0FDSEo7O0FETUE7RUFDSSw4REFBQTtFQUNBLHlCQUFBO0VBQ0EsWUFBQTtFQUNBLG9DQUFBO0FDSEo7O0FET0E7RUFDSSw0REFBQTtBQ0pKOztBRFFBO0VBR0ksaUNBQUE7QUNMSiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImltZyB7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjZGRkO1xyXG4gICAgcGFkZGluZzogNXB4O1xyXG4gICAgbGVmdDogaW5pdGlhbDtcclxuICAgIHdpZHRoOiAxNTBweDtcclxuICAgIG1hcmdpbi1sZWZ0OiA2MHB4O1xyXG59XHJcblxyXG5pb24tY2FyZCB7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAxMHB4O1xyXG4gICAgbWFyZ2luLXRvcDogMTFweDtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuXHJcbn1cclxuXHJcbmlvbi1tZW51LFxyXG5pb24tbWVudS10b2dnbGUge1xyXG5cclxuICAgICAgICAgICAgLS1iYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMzE1ZGVnLCAjN2Q1YWJlZTUgMCUsICMwOTIwM2ZmYSA3NCUpO1xyXG5cclxufVxyXG5cclxuaW9uLWJ1dHRvbiB7XHJcbiAgICBtYXJnaW4tYm90dG9tOiA3cHg7XHJcbn1cclxuXHJcbi5oaWdoZXJ7XHJcbiAgICBtYXJnaW4tdG9wOjM1cHggO1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG59XHJcblxyXG4ubG93ZXIge1xyXG4gICAgbWFyZ2luLXRvcDogMTk3cHg7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbn1cclxuXHJcblxyXG4ubXktY3VzdG9tLW1lbnUge1xyXG4gICAgLS13aWR0aDogNTAwcHg7XHJcbn1cclxuXHJcbmlvbi10b29sYmFyIHtcclxuICAgIC0tYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDMxNWRlZywgIzBlMmM0MSAwJSwgIzBkMzI0ZCA3NCUpO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzdmNWE4MztcclxuICAgIGhlaWdodDogNDRweDtcclxuICAgIGJvcmRlci1jb2xvcjogdHJhbnNwYXJlbnQgIWltcG9ydGFudDtcclxuICAgIFxyXG59XHJcblxyXG4uaW9uLXBhZ2Uge1xyXG4gICAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDMxNWRlZywgIzdmNWE4MyAwJSwgIzBkMzI0ZCA3NCUpO1xyXG5cclxufVxyXG5cclxuLm1lbnV7XHJcbiAgICAtd2Via2l0LXRyYW5zaXRpb246IC13ZWJraXQtdHJhbnNmb3JtIDE1MDBtcyBlYXNlO1xyXG4gICAgLW1vei10cmFuc2l0aW9uOiAtbW96LXRyYW5zZm9ybSAxNTAwbXMgZWFzZTtcclxuICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAxNTAwbXMgZWFzZTtcclxufSIsImltZyB7XG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcbiAgYm9yZGVyOiAxcHggc29saWQgI2RkZDtcbiAgcGFkZGluZzogNXB4O1xuICBsZWZ0OiBpbml0aWFsO1xuICB3aWR0aDogMTUwcHg7XG4gIG1hcmdpbi1sZWZ0OiA2MHB4O1xufVxuXG5pb24tY2FyZCB7XG4gIG1hcmdpbi1ib3R0b206IDEwcHg7XG4gIG1hcmdpbi10b3A6IDExcHg7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cblxuaW9uLW1lbnUsXG5pb24tbWVudS10b2dnbGUge1xuICAtLWJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgzMTVkZWcsICM3ZDVhYmVlNSAwJSwgIzA5MjAzZmZhIDc0JSk7XG59XG5cbmlvbi1idXR0b24ge1xuICBtYXJnaW4tYm90dG9tOiA3cHg7XG59XG5cbi5oaWdoZXIge1xuICBtYXJnaW4tdG9wOiAzNXB4O1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG5cbi5sb3dlciB7XG4gIG1hcmdpbi10b3A6IDE5N3B4O1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG5cbi5teS1jdXN0b20tbWVudSB7XG4gIC0td2lkdGg6IDUwMHB4O1xufVxuXG5pb24tdG9vbGJhciB7XG4gIC0tYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDMxNWRlZywgIzBlMmM0MSAwJSwgIzBkMzI0ZCA3NCUpO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjN2Y1YTgzO1xuICBoZWlnaHQ6IDQ0cHg7XG4gIGJvcmRlci1jb2xvcjogdHJhbnNwYXJlbnQgIWltcG9ydGFudDtcbn1cblxuLmlvbi1wYWdlIHtcbiAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDMxNWRlZywgIzdmNWE4MyAwJSwgIzBkMzI0ZCA3NCUpO1xufVxuXG4ubWVudSB7XG4gIC13ZWJraXQtdHJhbnNpdGlvbjogLXdlYmtpdC10cmFuc2Zvcm0gMTUwMG1zIGVhc2U7XG4gIC1tb3otdHJhbnNpdGlvbjogLW1vei10cmFuc2Zvcm0gMTUwMG1zIGVhc2U7XG4gIHRyYW5zaXRpb246IHRyYW5zZm9ybSAxNTAwbXMgZWFzZTtcbn0iXX0= */";
     /***/
   },
 
@@ -1103,11 +1156,32 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _shared_authentification_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! ./shared/authentification-service */
     "./src/app/shared/authentification-service.ts");
+    /* harmony import */
+
+
+    var _services_userstore_userfirestore_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ./services/userstore/userfirestore.service */
+    "./src/app/services/userstore/userfirestore.service.ts");
+    /* harmony import */
+
+
+    var _components_notifications_notifications_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    /*! ./components/notifications/notifications.component */
+    "./src/app/components/notifications/notifications.component.ts");
 
     var AppComponent_1;
 
+    var User = function User(id, isEdit, fullname, role) {
+      _classCallCheck(this, User);
+
+      this.id = id;
+      this.isEdit = isEdit;
+      this.fullname = fullname;
+      this.role = role;
+    };
+
     var AppComponent = AppComponent_1 = /*#__PURE__*/function () {
-      function AppComponent(platform, splashScreen, statusBar, router, authService, navCtrl) {
+      function AppComponent(platform, splashScreen, statusBar, router, authService, navCtrl, userService, notification) {
         _classCallCheck(this, AppComponent);
 
         this.platform = platform;
@@ -1116,18 +1190,43 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.router = router;
         this.authService = authService;
         this.navCtrl = navCtrl;
+        this.userService = userService;
+        this.notification = notification;
+        this.userList = [];
         this.initializeApp();
       }
 
       _createClass(AppComponent, [{
-        key: "initializeApp",
-        value: function initializeApp() {
+        key: "ngOnInit",
+        value: function ngOnInit() {
           var _this = this;
 
-          this.platform.ready().then(function () {
-            _this.statusBar.styleDefault();
+          this.userService.read_user().subscribe(function (data) {
+            _this.userList = data.map(function (e) {
+              var id = e.payload.doc.id;
+              var isEdit = false;
+              var fullname = e.payload.doc.data()['fullname'];
+              var role = e.payload.doc.data()['role'];
+              return new User(id, isEdit, fullname, role);
+            });
 
-            _this.splashScreen.hide();
+            if (_this.userList.length > 0) {
+              _this.userData = _this.userList[0];
+            }
+
+            console.log("import data");
+            console.log(_this.userList);
+          });
+        }
+      }, {
+        key: "initializeApp",
+        value: function initializeApp() {
+          var _this2 = this;
+
+          this.platform.ready().then(function () {
+            _this2.statusBar.styleDefault();
+
+            _this2.splashScreen.hide();
           });
         }
       }, {
@@ -1141,22 +1240,32 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.router.navigate(['profile']);
         }
       }, {
-        key: "logout",
-        value: function logout() {
-          var _this2 = this;
-
-          this.authService.logoutUser().then(function (res) {
-            console.log(res);
-
-            _this2.navCtrl.navigateBack('login');
-          })["catch"](function (error) {
-            console.log(error);
-          });
+        key: "navigateToMessages",
+        value: function navigateToMessages() {
+          this.router.navigate(['messages']);
         }
       }, {
         key: "navigateToStats",
         value: function navigateToStats() {
-          this.router.navigate(['statpage']);
+          this.router.navigate(['stats']);
+        }
+      }, {
+        key: "navigateToSettings",
+        value: function navigateToSettings() {
+          this.router.navigate(['settings']);
+        }
+      }, {
+        key: "logout",
+        value: function logout() {
+          var _this3 = this;
+
+          this.authService.logoutUser().then(function (res) {
+            console.log(res);
+
+            _this3.navCtrl.navigateBack('login');
+          })["catch"](function (error) {
+            console.log(error);
+          });
         }
       }, {
         key: "doRefresh",
@@ -1166,6 +1275,39 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             console.log('Async operation has ended');
             event.target.complete();
           }, 2000);
+        }
+      }, {
+        key: "presentPopover",
+        value: function presentPopover(ev) {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+            var popover;
+            return regeneratorRuntime.wrap(function _callee$(_context) {
+              while (1) {
+                switch (_context.prev = _context.next) {
+                  case 0:
+                    _context.next = 2;
+                    return this.notification.create({
+                      component: _components_notifications_notifications_component__WEBPACK_IMPORTED_MODULE_8__["NotificationsComponent"],
+                      cssClass: 'my-custom-class',
+                      event: ev,
+                      translucent: true
+                    });
+
+                  case 2:
+                    popover = _context.sent;
+                    _context.next = 5;
+                    return popover.present();
+
+                  case 5:
+                    return _context.abrupt("return", _context.sent);
+
+                  case 6:
+                  case "end":
+                    return _context.stop();
+                }
+              }
+            }, _callee, this);
+          }));
         }
       }, {
         key: "getIsTabVisible",
@@ -1192,6 +1334,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: _shared_authentification_service__WEBPACK_IMPORTED_MODULE_6__["AuthenticationService"]
       }, {
         type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"]
+      }, {
+        type: _services_userstore_userfirestore_service__WEBPACK_IMPORTED_MODULE_7__["UserfirestoreService"]
+      }, {
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["PopoverController"]
       }];
     };
 
@@ -1203,7 +1349,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./app.component.scss */
       "./src/app/app.component.scss"))["default"]]
-    }), Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"], _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], _shared_authentification_service__WEBPACK_IMPORTED_MODULE_6__["AuthenticationService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"]])], AppComponent);
+    }), Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"], _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], _shared_authentification_service__WEBPACK_IMPORTED_MODULE_6__["AuthenticationService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"], _services_userstore_userfirestore_service__WEBPACK_IMPORTED_MODULE_7__["UserfirestoreService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["PopoverController"]])], AppComponent);
     /***/
   },
 
@@ -1307,31 +1453,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _angular_fire__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+    var _components_notifications_notifications_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+    /*! ./components/notifications/notifications.component */
+    "./src/app/components/notifications/notifications.component.ts");
+    /* harmony import */
+
+
+    var _angular_fire__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
     /*! @angular/fire */
     "./node_modules/@angular/fire/fesm2015/angular-fire.js");
     /* harmony import */
 
 
-    var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+    var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
     /*! @angular/fire/auth */
     "./node_modules/@angular/fire/fesm2015/angular-fire-auth.js");
     /* harmony import */
 
 
-    var _angular_fire_database__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+    var _angular_fire_database__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
     /*! @angular/fire/database */
     "./node_modules/@angular/fire/fesm2015/angular-fire-database.js");
     /* harmony import */
 
 
-    var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+    var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
     /*! @angular/fire/firestore */
     "./node_modules/@angular/fire/fesm2015/angular-fire-firestore.js");
     /* harmony import */
 
 
-    var _environments_environment__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
+    var _environments_environment__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
     /*! ../environments/environment */
     "./src/environments/environment.ts"); //created componenets
     //firebase related impors
@@ -1342,11 +1494,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     };
 
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"], _components_add_project_add_project_component__WEBPACK_IMPORTED_MODULE_10__["AddProjectComponent"], _components_add2team_add2team_component__WEBPACK_IMPORTED_MODULE_11__["Add2teamComponent"], _components_verificationmod_verificationmod_component__WEBPACK_IMPORTED_MODULE_12__["VerificationmodComponent"]],
+      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"], _components_notifications_notifications_component__WEBPACK_IMPORTED_MODULE_13__["NotificationsComponent"], _components_add_project_add_project_component__WEBPACK_IMPORTED_MODULE_10__["AddProjectComponent"], _components_add2team_add2team_component__WEBPACK_IMPORTED_MODULE_11__["Add2teamComponent"], _components_verificationmod_verificationmod_component__WEBPACK_IMPORTED_MODULE_12__["VerificationmodComponent"]],
       schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["CUSTOM_ELEMENTS_SCHEMA"]],
-      entryComponents: [_components_add_project_add_project_component__WEBPACK_IMPORTED_MODULE_10__["AddProjectComponent"], _components_add2team_add2team_component__WEBPACK_IMPORTED_MODULE_11__["Add2teamComponent"], _components_verificationmod_verificationmod_component__WEBPACK_IMPORTED_MODULE_12__["VerificationmodComponent"]],
-      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"], _angular_fire__WEBPACK_IMPORTED_MODULE_13__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_17__["environment"].firebaseConfig), _angular_fire_auth__WEBPACK_IMPORTED_MODULE_14__["AngularFireAuthModule"], _angular_fire_database__WEBPACK_IMPORTED_MODULE_15__["AngularFireDatabaseModule"], _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_16__["AngularFirestoreModule"]],
-      providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_16__["AngularFirestoreModule"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], {
+      entryComponents: [_components_add_project_add_project_component__WEBPACK_IMPORTED_MODULE_10__["AddProjectComponent"], _components_notifications_notifications_component__WEBPACK_IMPORTED_MODULE_13__["NotificationsComponent"], _components_add2team_add2team_component__WEBPACK_IMPORTED_MODULE_11__["Add2teamComponent"], _components_verificationmod_verificationmod_component__WEBPACK_IMPORTED_MODULE_12__["VerificationmodComponent"]],
+      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"], _angular_fire__WEBPACK_IMPORTED_MODULE_14__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_18__["environment"].firebaseConfig), _angular_fire_auth__WEBPACK_IMPORTED_MODULE_15__["AngularFireAuthModule"], _angular_fire_database__WEBPACK_IMPORTED_MODULE_16__["AngularFireDatabaseModule"], _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_17__["AngularFirestoreModule"]],
+      providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_17__["AngularFirestoreModule"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], {
         provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"],
         useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"]
       }],
@@ -1562,6 +1714,83 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./src/app/components/notifications/notifications.component.scss":
+  /*!***********************************************************************!*\
+    !*** ./src/app/components/notifications/notifications.component.scss ***!
+    \***********************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppComponentsNotificationsNotificationsComponentScss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbm90aWZpY2F0aW9ucy9ub3RpZmljYXRpb25zLmNvbXBvbmVudC5zY3NzIn0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/components/notifications/notifications.component.ts":
+  /*!*********************************************************************!*\
+    !*** ./src/app/components/notifications/notifications.component.ts ***!
+    \*********************************************************************/
+
+  /*! exports provided: NotificationsComponent */
+
+  /***/
+  function srcAppComponentsNotificationsNotificationsComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "NotificationsComponent", function () {
+      return NotificationsComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var NotificationsComponent = /*#__PURE__*/function () {
+      function NotificationsComponent() {
+        _classCallCheck(this, NotificationsComponent);
+      }
+
+      _createClass(NotificationsComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return NotificationsComponent;
+    }();
+
+    NotificationsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-notifications',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./notifications.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/components/notifications/notifications.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./notifications.component.scss */
+      "./src/app/components/notifications/notifications.component.scss"))["default"]]
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])], NotificationsComponent);
+    /***/
+  },
+
+  /***/
   "./src/app/components/verificationmod/verificationmod.component.scss":
   /*!***************************************************************************!*\
     !*** ./src/app/components/verificationmod/verificationmod.component.scss ***!
@@ -1680,6 +1909,89 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./src/app/services/userstore/userfirestore.service.ts":
+  /*!*************************************************************!*\
+    !*** ./src/app/services/userstore/userfirestore.service.ts ***!
+    \*************************************************************/
+
+  /*! exports provided: UserfirestoreService */
+
+  /***/
+  function srcAppServicesUserstoreUserfirestoreServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "UserfirestoreService", function () {
+      return UserfirestoreService;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/fire/firestore */
+    "./node_modules/@angular/fire/fesm2015/angular-fire-firestore.js");
+
+    var UserfirestoreService = /*#__PURE__*/function () {
+      function UserfirestoreService(firestore) {
+        _classCallCheck(this, UserfirestoreService);
+
+        this.firestore = firestore;
+        this.collectioname = "user";
+      }
+
+      _createClass(UserfirestoreService, [{
+        key: "create_user",
+        value: function create_user(record) {
+          return this.firestore.collection(this.collectioname).add(record);
+        }
+      }, {
+        key: "read_user",
+        value: function read_user() {
+          return this.firestore.collection(this.collectioname).snapshotChanges();
+        }
+      }, {
+        key: "update_user",
+        value: function update_user(record, recordID) {
+          return this.firestore.doc(this.collectioname + '/' + recordID).update(record);
+        }
+      }, {
+        key: "delete_user",
+        value: function delete_user(record_id) {
+          return this.firestore.doc(this.collectioname + '/' + record_id)["delete"]();
+        }
+      }]);
+
+      return UserfirestoreService;
+    }();
+
+    UserfirestoreService.ctorParameters = function () {
+      return [{
+        type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"]
+      }];
+    };
+
+    UserfirestoreService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+      providedIn: 'root'
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"]])], UserfirestoreService);
+    /***/
+  },
+
+  /***/
   "./src/app/shared/authentification-service.ts":
   /*!****************************************************!*\
     !*** ./src/app/shared/authentification-service.ts ***!
@@ -1727,10 +2039,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(AuthenticationService, [{
         key: "registerUser",
         value: function registerUser(value) {
-          var _this3 = this;
+          var _this4 = this;
 
           return new Promise(function (resolve, reject) {
-            _this3.afAuth.createUserWithEmailAndPassword(value.email, value.password).then(function (res) {
+            _this4.afAuth.createUserWithEmailAndPassword(value.email, value.password).then(function (res) {
               return resolve(res);
             }, function (err) {
               return reject(err);
@@ -1740,10 +2052,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "loginUser",
         value: function loginUser(value) {
-          var _this4 = this;
+          var _this5 = this;
 
           return new Promise(function (resolve, reject) {
-            _this4.afAuth.signInWithEmailAndPassword(value.email, value.password).then(function (res) {
+            _this5.afAuth.signInWithEmailAndPassword(value.email, value.password).then(function (res) {
               return resolve(res);
             }, function (err) {
               return reject(err);
@@ -1753,11 +2065,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "logoutUser",
         value: function logoutUser() {
-          var _this5 = this;
+          var _this6 = this;
 
           return new Promise(function (resolve, reject) {
-            if (_this5.afAuth.currentUser) {
-              _this5.afAuth.signOut().then(function () {
+            if (_this6.afAuth.currentUser) {
+              _this6.afAuth.signOut().then(function () {
                 console.log("LOG Out");
                 resolve();
               })["catch"](function (error) {

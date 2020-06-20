@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\n\n  <div class=\"credentials\">\n    <div style=\"float:left;\">\n      <img src=\"../../../assets/img/avatar.jpg\" alt=\"Avatar\" style=\"float: left;\">\n    </div>\n\n    <div *ngIf=\"userData != null\" class=\"user\">\n      <p>{{userData.fullname}}  </p>\n      <p></p>\n    </div>\n    <div style=\"clear: left;\"></div>\n  </div>\n\n\n\n  <ion-card fullscreen>\n    <ion-card-header color=\"danger\">\n      <ion-card-title color=\"light\"> Information</ion-card-title>\n    </ion-card-header>\n    <ion-card-header color=\"medium\">\n      <ion-card-subtitle color=\"dark\">\n        Full name\n      </ion-card-subtitle>\n    </ion-card-header>\n\n    <ion-card-header color=\"light\">\n      <ion-card-subtitle color=\"dark\">\n        Role\n      </ion-card-subtitle>\n    </ion-card-header>\n\n    <ion-card-header color=\"medium\">\n      <ion-card-subtitle color=\"dark\">\n        Email Adress\n      </ion-card-subtitle>\n    </ion-card-header>\n\n    <ion-card-header color=\"light\">\n      <ion-card-subtitle color=\"dark\">\n        Password\n      </ion-card-subtitle>\n    </ion-card-header>\n\n\n\n\n\n  </ion-card>\n\n\n  <ion-card fullscreen style=\"margin-top: 21px;\">\n    <ion-card-header color=\"danger\">\n      <ion-card-title color=\"light\"> Contributions</ion-card-title>\n    </ion-card-header>\n\n    <ion-card-content>\n\n      <canvas #doughnutCanvas></canvas>\n\n    </ion-card-content>\n\n\n  </ion-card>\n\n\n\n</ion-content>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-content>\n\n  <div class=\"credentials\">\n    <div style=\"float:left;\">\n      <img src=\"../../../assets/img/avatar.jpg\" alt=\"Avatar\" style=\"float: left;\">\n    </div>\n\n    <div *ngIf=\"userData != null\" class=\"user\">\n      <p>{{userData.fullname}}  </p>\n      <p></p>\n    </div>\n    <div style=\"clear: left;\"></div>\n  </div>\n\n\n<div *ngIf=\"userData != null\" >\n  <ion-card fullscreen>\n    <ion-card-header color=\"danger\">\n      <ion-card-title color=\"light\"> Information</ion-card-title>\n    </ion-card-header>\n    <ion-card-header color=\"medium\">\n      <ion-card-subtitle color=\"dark\">\n        Full name {{userData.fullname}}\n      </ion-card-subtitle>\n    </ion-card-header>\n\n    <ion-card-header color=\"light\">\n      <ion-card-subtitle color=\"dark\">\n        Role {{userData.role}}\n      </ion-card-subtitle>\n    </ion-card-header>\n\n    <ion-card-header color=\"medium\">\n      <ion-card-subtitle color=\"dark\">\n        Email Adress {{userData.email}}\n      </ion-card-subtitle>\n    </ion-card-header>\n\n    <ion-card-header color=\"light\">\n      <ion-card-subtitle color=\"dark\">\n        Password {{userData.password}}\n      </ion-card-subtitle>\n    </ion-card-header>\n\n  </ion-card>\n  </div>\n\n\n  <ion-card fullscreen style=\"margin-top: 21px;\">\n    <ion-card-header color=\"danger\">\n      <ion-card-title color=\"light\"> Contributions</ion-card-title>\n    </ion-card-header>\n\n    <ion-card-content>\n\n      <canvas #doughnutCanvas></canvas>\n\n    </ion-card-content>\n\n\n  </ion-card>\n\n\n\n</ion-content>");
 
 /***/ }),
 
@@ -127,11 +127,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class User {
-    constructor(id, isEdit, fullname, role) {
+    constructor(id, isEdit, fullname, role, email, password) {
         this.id = id;
         this.isEdit = isEdit;
         this.fullname = fullname;
         this.role = role;
+        this.email = email;
+        this.password = password;
     }
 }
 let ProfilePage = class ProfilePage {
@@ -151,7 +153,9 @@ let ProfilePage = class ProfilePage {
                 let isEdit = false;
                 let fullname = e.payload.doc.data()['fullname'];
                 let role = e.payload.doc.data()['role'];
-                return new User(id, isEdit, fullname, role);
+                let email = e.payload.doc.data()['email'];
+                let password = e.payload.doc.data()['password'];
+                return new User(id, isEdit, fullname, role, email, password);
             });
             if (this.userList.length > 0) {
                 this.userData = this.userList[0];
