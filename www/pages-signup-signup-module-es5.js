@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-content>\n  <ion-card color=\"transparent\">\n    <img src=\"../../../assets/img/wide1.png\" />\n    <ion-card-content>\n      <ion-text color=\"light\">\n        <p> ProjectAdmin is an app to help you better organize your data.Lead your team to succes.\n        </p>\n      </ion-text>\n    </ion-card-content>\n\n  </ion-card>\n\n  <form class=\"form\" [formGroup]=\"validations_form\" (ngSubmit)=\"tryRegister(validations_form.value)\">\n    <ion-item color=\"transparent\">\n      <ion-label color=\"light\" id=\"name\" position=\"floating\">\n        <p>\n          <ion-icon name=\"body-outline\"></ion-icon> Full Name\n        </p>\n      </ion-label>\n      <ion-input formControlName=\"fullname\" color=\"light\" required></ion-input>\n    </ion-item>\n\n\n    <ion-item color=\"transparent\">\n      <ion-label position=\"floating\" color=\"light\">\n        <p>\n          <ion-icon name=\"person-circle-outline\"></ion-icon> Email address\n        </p>\n      </ion-label>\n      <ion-input formControlName=\"email\" type=\"Email\"></ion-input>\n    </ion-item>\n\n    <div class=\"validation-errors\">\n      <ng-container *ngFor=\"let validation of validation_messages.email\">\n        <div class=\"error-message\"\n          *ngIf=\"validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)\">\n          {{ validation.message }}\n        </div>\n      </ng-container>\n    </div>\n\n    <ion-item color=\"transparent\">\n      <ion-label color=\"light\" position=\"floating\" minlength=\"5\" pattern=\"Password\">\n        <p>\n          <ion-icon name=\"lock-closed-outline\"></ion-icon> Password\n        </p>\n\n      </ion-label>\n      <ion-input color=\"light\" type=\"password\" formControlName=\"password\" required></ion-input>\n    </ion-item>\n\n    <div class=\"validation-errors\">\n      <ng-container *ngFor=\"let validation of validation_messages.password\">\n        <div class=\"error-message\"\n          *ngIf=\"validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)\">\n          {{ validation.message }}\n        </div>\n      </ng-container>\n    </div>\n\n\n    <ion-radio-group formControlName=\"role\" value=\"group\" #role required>\n      <ion-list-header>\n        <ion-label color=\"light\">\n          <p>\n            <ion-icon name=\"clipboard-outline\"></ion-icon>&nbsp; &nbsp; ROLE\n          </p>\n        </ion-label>\n      </ion-list-header>\n      <ion-item color=\"transparent\">\n        <ion-label color=\"light\">\n          <p>\n            <ion-icon name=\"person-outline\"></ion-icon>&nbsp; &nbsp;A team leader\n          </p>\n        </ion-label>\n        <ion-radio value=\"Team_Leader\"  color=\"transparent\" slot=\"start\" color=\"success\" >\n        </ion-radio>\n      </ion-item>\n\n      <ion-item color=\"transparent\">\n        <ion-label color=\"light\">\n          <p>\n            <ion-icon name=\"people-outline\"></ion-icon>&nbsp; &nbsp; A member\n          </p>\n        </ion-label>\n        <ion-radio value=\"Team_Member\" color=\"transparent\" slot=\"start\" color=\"tertiary\" >\n        </ion-radio>\n      </ion-item>\n    </ion-radio-group>\n\n\n\n    <ion-button color=\"light\" expand=\"block\" type=\"submit\">\n      <ion-icon name=\"person-add-outline\"></ion-icon>\n      <p> &nbsp; &nbsp;Create account!</p>\n    </ion-button>\n\n    <label class=\"error-message\">{{errorMessage}}</label>\n    <label class=\"success-message\">{{successMessage}}</label>\n\n  </form>\n  <div>\n\n\n    <ion-button fill=\"clear\" color=\"light\" (click)=\"navigateToLoginPage()\" style=\"margin-left: 133px;\">\n      <ion-icon name=\"log-in-outline\"></ion-icon> &nbsp; &nbsp;Login\n    </ion-button>\n\n\n  </div>\n\n</ion-content>";
+    __webpack_exports__["default"] = "<ion-content>\n  <ion-card color=\"transparent\">\n    <img src=\"../../../assets/img/wide1.png\" />\n    <ion-card-content>\n      <ion-text color=\"light\">\n        <p> ProjectAdmin is an app to help you better organize your data.Lead your team to succes.\n        </p>\n      </ion-text>\n    </ion-card-content>\n\n  </ion-card>\n\n  <form class=\"form\" [formGroup]=\"validations_form\" (ngSubmit)=\"tryRegister(validations_form.value)\">\n    <ion-item color=\"transparent\">\n      <ion-label color=\"light\" id=\"name\" position=\"floating\">\n        <p>\n          <ion-icon name=\"body-outline\"></ion-icon> Full Name\n        </p>\n      </ion-label>\n      <ion-input formControlName=\"fullname\" color=\"light\" required></ion-input>\n    </ion-item>\n\n\n    <ion-item color=\"transparent\">\n      <ion-label position=\"floating\" color=\"light\">\n        <p>\n          <ion-icon name=\"person-circle-outline\"></ion-icon> Email address\n        </p>\n      </ion-label>\n      <ion-input formControlName=\"email\" type=\"Email\"></ion-input>\n    </ion-item>\n\n    <div class=\"validation-errors\">\n      <ng-container *ngFor=\"let validation of validation_messages.email\">\n        <div class=\"error-message\"\n          *ngIf=\"validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)\">\n          {{ validation.message }}\n        </div>\n      </ng-container>\n    </div>\n\n    <ion-item color=\"transparent\">\n      <ion-label color=\"light\" position=\"floating\" minlength=\"5\" pattern=\"Password\">\n        <p>\n          <ion-icon name=\"lock-closed-outline\"></ion-icon> Password\n        </p>\n\n      </ion-label>\n      <ion-input color=\"light\" type=\"password\" formControlName=\"password\" required></ion-input>\n    </ion-item>\n\n    <div class=\"validation-errors\">\n      <ng-container *ngFor=\"let validation of validation_messages.password\">\n        <div class=\"error-message\"\n          *ngIf=\"validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)\">\n          {{ validation.message }}\n        </div>\n      </ng-container>\n    </div>\n\n\n    <ion-radio-group formControlName=\"role\" value=\"group\" #role required>\n      <ion-list-header>\n        <ion-label color=\"light\">\n          <p>\n            <ion-icon name=\"clipboard-outline\"></ion-icon>&nbsp; &nbsp; ROLE\n          </p>\n        </ion-label>\n      </ion-list-header>\n      <ion-item color=\"transparent\">\n        <ion-label color=\"light\">\n          <p>\n            <ion-icon name=\"person-outline\"></ion-icon>&nbsp; &nbsp;A team leader\n          </p>\n        </ion-label>\n        <ion-radio value=\"Team_Leader\" color=\"transparent\" slot=\"start\" color=\"success\">\n        </ion-radio>\n      </ion-item>\n\n      <ion-item color=\"transparent\">\n        <ion-label color=\"light\">\n          <p>\n            <ion-icon name=\"people-outline\"></ion-icon>&nbsp; &nbsp; A member\n          </p>\n        </ion-label>\n        <ion-radio value=\"Team_Member\" color=\"transparent\" slot=\"start\" color=\"tertiary\">\n        </ion-radio>\n      </ion-item>\n    </ion-radio-group>\n\n\n\n    <ion-button color=\"light\" expand=\"block\" type=\"submit\">\n      <ion-icon name=\"person-add-outline\"></ion-icon>\n      <p> &nbsp; &nbsp;Create account!</p>\n    </ion-button>\n\n    <label class=\"error-message\">{{errorMessage}}</label>\n    <label class=\"success-message\">{{successMessage}}</label>\n\n  </form>\n  <div>\n\n\n    <ion-button fill=\"clear\" color=\"light\" (click)=\"navigateToLoginPage()\" style=\"margin-left: 133px;\">\n      <ion-icon name=\"log-in-outline\"></ion-icon> &nbsp; &nbsp;Login\n    </ion-button>\n\n\n  </div>\n\n</ion-content>";
     /***/
   },
 
@@ -218,21 +218,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _shared_authentification_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var src_app_app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! src/app/app.component */
+    "./src/app/app.component.ts");
+    /* harmony import */
+
+
+    var _shared_authentification_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ../../shared/authentification-service */
     "./src/app/shared/authentification-service.ts");
     /* harmony import */
 
 
-    var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! @angular/forms */
     "./node_modules/@angular/forms/fesm2015/forms.js");
-    /* harmony import */
-
-
-    var src_app_app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-    /*! src/app/app.component */
-    "./src/app/app.component.ts");
     /* harmony import */
 
 
@@ -274,65 +274,40 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(SignupPage, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this = this;
-
           this.validations_form = this.formBuilder.group({
-            email: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')])),
-            password: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].minLength(5), _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required])),
-            fullname: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]],
-            role: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]]
-          });
-          this.userservice.read_user().subscribe(function (data) {
-            _this.userList = data.map(function (e) {
-              return {
-                id: e.payload.doc.id,
-                isEdit: false,
-                fullname: e.payload.doc.data()['fullname'],
-                role: e.payload.doc.data()['role']
-              };
-            });
-            console.log(_this.userList);
+            email: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')])),
+            password: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].minLength(5), _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required])),
+            fullname: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].pattern('^[a-zA-Z]+ +[a-zA-Z] +$')]],
+            role: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_5__["Validators"].required]]
           });
         }
       }, {
         key: "ionViewWillEnter",
         value: function ionViewWillEnter() {
-          src_app_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"].isTabVisible = false;
-        }
-      }, {
-        key: "addUser",
-        value: function addUser() {
-          var _this2 = this;
-
-          console.log(this.validations_form.value);
-          this.userservice.create_user(this.validations_form.value).then(function (resp) {
-            _this2.validations_form.reset();
-          })["catch"](function (error) {
-            console.log(error);
-          });
+          src_app_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"].isTabVisible = false;
         }
       }, {
         key: "tryRegister",
         value: function tryRegister(value) {
-          var _this3 = this;
+          var _this = this;
 
           this.authService.registerUser(value).then(function (res) {
             console.log(res);
-            _this3.errorMessage = "";
-            _this3.successMessage = "Your account has been created. Please log in.";
-            console.log(_this3.validations_form.value);
+            _this.errorMessage = "";
+            _this.successMessage = "Your account has been created. Please log in.";
+            console.log(_this.validations_form.value);
 
-            _this3.userservice.create_user(_this3.validations_form.value).then(function (resp) {
-              _this3.validations_form.reset();
+            _this.userservice.create_user(_this.validations_form.value).then(function (resp) {
+              _this.validations_form.reset();
             })["catch"](function (error) {
               console.log(error);
             });
 
-            _this3.router.navigate(['login']);
+            _this.router.navigate(['login']);
           }, function (err) {
             console.log(err);
-            _this3.errorMessage = err.message;
-            _this3.successMessage = "";
+            _this.errorMessage = err.message;
+            _this.successMessage = "";
           });
         }
       }, {
@@ -351,9 +326,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
       }, {
-        type: _shared_authentification_service__WEBPACK_IMPORTED_MODULE_3__["AuthenticationService"]
+        type: _shared_authentification_service__WEBPACK_IMPORTED_MODULE_4__["AuthenticationService"]
       }, {
-        type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"]
       }];
     };
 
@@ -365,7 +340,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./signup.page.scss */
       "./src/app/pages/signup/signup.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_userstore_userfirestore_service__WEBPACK_IMPORTED_MODULE_6__["UserfirestoreService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _shared_authentification_service__WEBPACK_IMPORTED_MODULE_3__["AuthenticationService"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]])], SignupPage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_userstore_userfirestore_service__WEBPACK_IMPORTED_MODULE_6__["UserfirestoreService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _shared_authentification_service__WEBPACK_IMPORTED_MODULE_4__["AuthenticationService"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"]])], SignupPage);
     /***/
   }
 }]);

@@ -3,8 +3,6 @@ import { AppComponent } from 'src/app/app.component';
 import { Chart } from 'chart.js';
 
 
-
-
 import { UserfirestoreService } from 'src/app/services/userstore/userfirestore.service';
 
 class User {

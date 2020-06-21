@@ -1,55 +1,109 @@
-<ion-item color="transparent">
-  <ion-label position="floating">
-    <p>
-      <ion-icon name="briefcase-outline"></ion-icon> Project Name
-    </p>
-  </ion-label>
-  <ion-input type="text" [(ngModel)]="projectname"></ion-input>
-</ion-item>
+<ion-content class="content">
 
-<ion-item color="transparent">
-  <ion-label position="floating">
-    <p>
-      <ion-icon name="information-circle-outline"></ion-icon> Project Information
-    </p>
-  </ion-label>
-  <ion-input type="text" [(ngModel)]="projectinformation"></ion-input>
+  <form [formGroup]="project_form" (ngSubmit)="registerProject(project_form.value)">
 
-</ion-item>
+    <ion-card color="transparent">
 
-<ion-item color="transparent">
-  <ion-label position="floating">
-    <p>
-      <ion-icon name="calendar-outline"></ion-icon>Start date
-    </p>
-  </ion-label>
-  <ion-datetime value="2020-07-07" placeholder="Select Date"></ion-datetime>
-</ion-item>
-<ion-item color="transparent">
-  <ion-label position="floating">
-    <p>
-      <ion-icon name="calendar-outline"></ion-icon> Project Ends on
-    </p>
-  </ion-label>
-  <ion-datetime value="2020-07-07" placeholder="Select Date"></ion-datetime>
-</ion-item>
+      <ion-item color="transparent">
+        <ion-label color="light" position="floating">
+          <p>
+            <ion-icon name="briefcase-outline"></ion-icon> Project Name
+          </p>
+        </ion-label>
+        <ion-input name="pname" required minlength="5" color="primary" formControlName="pname" type="text"></ion-input>
+      </ion-item>
+
+      <div>
+        <ng-container *ngFor="let validation of validation_messages.pname">
+          <div
+            *ngIf="project_form.get('pname').hasError(validation.type)&&(project_form.get('pname').dirty || project_form.get('pname').touched)">
+            <p style="color:red;"> {{validation.message}} </p>
+          </div>
+
+        </ng-container>
+      </div>
+
+      <ion-item color="transparent">
+        <ion-label color="light" position="floating">
+          <p>
+            <ion-icon name="information-circle-outline"></ion-icon> Project Description
+          </p>
+        </ion-label>
+        <ion-textarea name="pinfo" required minlength="5" color="primary" formControlName="pinfo" type="text">
+        </ion-textarea>
+      </ion-item>
+
+      <div>
+        <ng-container *ngFor="let validation of validation_messages.pinfo">
+          <div
+            *ngIf="project_form.get('pinfo').hasError(validation.type)&&(project_form.get('pinfo').dirty || project_form.get('pinfo').touched)">
+            <p style="color:red;"> {{validation.message}}</p>
+
+          </div>
+        </ng-container>
+      </div>
+
+      <ion-item color="transparent">
+        <ion-label color="light" position="floating">
+          <p>
+            <ion-icon name="calendar-outline"></ion-icon>Start date
+          </p>
+        </ion-label>
+        <ion-datetime required done-text="Done" max="2200-01-01" min="2010-01-01" month-names formControlName="pstart">
+        </ion-datetime>
+      </ion-item>
+
+      <div>
+        <ng-container *ngFor="let validation of validation_messages.pstart">
+          <div
+            *ngIf="project_form.get('pstart').hasError(validation.type)&&(project_form.get('pstart').dirty || project_form.get('pstart').touched)">
+            <p style="color:red;" > {{validation.message}}</p>
+          </div>
+
+        </ng-container>
+
+
+      </div>
+
+
+
+
+      <ion-item color="transparent">
+        <ion-label color="light" position="floating">
+          <p>
+            <ion-icon name="calendar-outline"></ion-icon> Project Ends on
+          </p>
+        </ion-label>
+        <ion-datetime required max="2200-01-01" min="2010-01-01" done-text="Done" formControlName="pend">
+        </ion-datetime>
+      </ion-item>
+
+      <div>
+        <ng-container *ngFor="let validation of validation_messages.pend">
+          <div
+            *ngIf="project_form.get('pend').hasError(validation.type)&&(project_form.get('pend').dirty || project_form.get('pend').touched)">
+            <p style="color:red;"> {{validation.message}} </p>
+          </div>
+        </ng-container>
+      </div>
+
+      <ion-button style="float:right;" [disabled]="!project_form.valid" color="warning" type="submit">
+        <ion-icon name="save-outline"></ion-icon> &nbsp; &nbsp;Save
+      </ion-button>
+
+      <ion-button color="danger" (click)="dismissModal()">
+        <ion-icon name="close-circle-outline"></ion-icon> &nbsp; &nbsp;Cancel
+      </ion-button>
 
 
 
 
 
+    </ion-card>
+  </form>
 
 
 
-<div style="display: inline-block;">
-
-  <ion-button fill="clear" (click)="dismissModal()">
-    <ion-icon name="close-circle-outline"></ion-icon> &nbsp; &nbsp;Cancel
-  </ion-button>
-
-  <ion-button fill="clear" (click)="savePoject()">
-    <ion-icon name="save-outline"></ion-icon> &nbsp; &nbsp;Save
-  </ion-button>
 
 
-</div>
+</ion-content>

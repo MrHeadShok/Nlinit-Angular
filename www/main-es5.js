@@ -209,7 +209,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-app>\n\n\n    <ion-menu type=\"push\" class=\"menu\" side=\"start\" content-id=\"main-content\" swipe-gesture=\"true\">\n        <ion-menu-toggle>\n\n            <div *ngIf=\"userData!=null\">\n                <ion-card color=\"transparent\">\n                    <img src=\"../../../assets/img/avatar.jpg\" alt=\"Avatar\">\n                    <ion-card-header>\n                        <ion-card-subtitle color=\"light\">{{userData.role}}</ion-card-subtitle>\n                        <ion-card-title color=\"light\">{{userData.fullname}}</ion-card-title>\n                    </ion-card-header>\n                </ion-card>\n            </div>\n\n            <div class=\"higher\">\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToProjects()\">\n                    <h5>\n                        <ion-icon name=\"bar-chart-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Projects\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToprofile()\">\n                    <h5>\n                        <ion-icon name=\"person-outline\"></ion-icon> &nbsp; &nbsp; &nbsp; &nbsp; My profile\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToMessages()\">\n                    <h5>\n                        <ion-icon name=\"mail-outline\"></ion-icon> &nbsp; &nbsp; &nbsp;\n                        Messages\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToStats()\">\n                    <h5>\n                        <ion-icon name=\"pie-chart-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Statistics\n                    </h5>\n                </ion-button>\n\n            </div>\n\n\n            <div class=\"lower\">\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToSettings()\">\n                    <h5>\n                        <ion-icon name=\"construct-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Settings\n                    </h5>\n                </ion-button>\n\n\n                <ion-button type=\"submit\" (click)=\"logout()\" expand=\"full\" color=\"#7c46ce\">\n                    <h5>\n                        <ion-icon name=\"log-out-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Logout\n                    </h5>\n                </ion-button>\n\n            </div>\n        </ion-menu-toggle>\n    </ion-menu>\n\n\n\n    <div class=\"ion-page\" id=\"main-content\">\n        <ion-header *ngIf=\"getIsTabVisible\">\n\n\n            <!--ToAddARefresher     <ion-refresher slot=\"fixed\" (ionRefresh)=\"doRefresh($event)\">\n                    <ion-refresher-content pullingIcon=\"chevron-down-circle-outline\" pullingText=\"Pull to refresh\"\n                        refreshingSpinner=\"circles\" refreshingText=\"Refreshing...\">\n                    </ion-refresher-content>\n                </ion-refresher> -->\n\n\n            <ion-toolbar >\n\n                <ion-buttons slot=\"start\">\n                    <ion-menu-button>\n                        <ion-icon color=\"primary\" name=\"menu\"></ion-icon>\n                    </ion-menu-button>\n                </ion-buttons>\n\n\n                <ion-button slot=\"end\" color=\"transparent\" (click)=\"presentPopover()\">\n                    <ion-icon color=\"danger\" name=\"notifications-outline\"></ion-icon>\n                </ion-button>\n\n\n\n            </ion-toolbar>\n        </ion-header>\n        <ion-router-outlet></ion-router-outlet>\n    </div>\n\n\n\n\n</ion-app>";
+    __webpack_exports__["default"] = "<ion-app>\n\n\n    <ion-menu type=\"push\" class=\"menu\" side=\"start\" content-id=\"main-content\" swipe-gesture=\"true\">\n        <ion-menu-toggle>\n\n            <div *ngIf=\"userData!=null\">\n                <ion-card color=\"transparent\">\n                    <img src=\"../../../assets/img/avatar.jpg\" alt=\"Avatar\">\n                    <ion-card-header>\n                        <ion-card-subtitle color=\"light\">{{userData.role}}</ion-card-subtitle>\n                        <ion-card-title color=\"light\">{{userData.fullname}}</ion-card-title>\n                    </ion-card-header>\n                </ion-card>\n            </div>\n\n            <div class=\"higher\">\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToProjects()\">\n                    <h5>\n                        <ion-icon name=\"bar-chart-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp;  Projects\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToprofile()\">\n                    <h5>\n                        <ion-icon name=\"person-outline\"></ion-icon> &nbsp; &nbsp; &nbsp; &nbsp; My profile\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToMessages()\">\n                    <h5>\n                        <ion-icon name=\"mail-outline\"></ion-icon> &nbsp; &nbsp; &nbsp; &nbsp;\n                        Messages\n                    </h5>\n                </ion-button>\n\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToStats()\">\n                    <h5>\n                        <ion-icon name=\"pie-chart-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp;  Statistics\n                    </h5>\n                </ion-button>\n\n            </div>\n\n\n            <div class=\"lower\">\n\n                <ion-button expand=\"full\" color=\"#7c46ce\" (click)=\"navigateToSettings()\">\n                    <h5>\n                        <ion-icon name=\"construct-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Settings\n                    </h5>\n                </ion-button>\n\n\n                <ion-button type=\"submit\" (click)=\"logout()\" expand=\"full\" color=\"#7c46ce\">\n                    <h5>\n                        <ion-icon name=\"log-out-outline\"></ion-icon>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Logout\n                    </h5>\n                </ion-button>\n\n            </div>\n        </ion-menu-toggle>\n    </ion-menu>\n\n\n\n    <div class=\"ion-page\" id=\"main-content\">\n        <ion-header *ngIf=\"getIsTabVisible\">\n\n\n            <!--ToAddARefresher     <ion-refresher slot=\"fixed\" (ionRefresh)=\"doRefresh($event)\">\n                    <ion-refresher-content pullingIcon=\"chevron-down-circle-outline\" pullingText=\"Pull to refresh\"\n                        refreshingSpinner=\"circles\" refreshingText=\"Refreshing...\">\n                    </ion-refresher-content>\n                </ion-refresher> -->\n\n\n            <ion-toolbar >\n\n                <ion-buttons slot=\"start\">\n                    <ion-menu-button>\n                        <ion-icon color=\"primary\" name=\"menu\"></ion-icon>\n                    </ion-menu-button>\n                </ion-buttons>\n\n\n                <ion-button slot=\"end\" color=\"transparent\" (click)=\"presentPopover()\">\n                    <ion-icon color=\"danger\" name=\"notifications-outline\"></ion-icon>\n                </ion-button>\n\n\n\n            </ion-toolbar>\n        </ion-header>\n        <ion-router-outlet></ion-router-outlet>\n    </div>\n\n\n\n\n</ion-app>";
     /***/
   },
 
@@ -229,7 +229,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-item color=\"transparent\">\n  <ion-label position=\"floating\">\n    <p>\n      <ion-icon name=\"briefcase-outline\"></ion-icon> Project Name\n    </p>\n  </ion-label>\n  <ion-input type=\"text\" [(ngModel)]=\"projectname\"></ion-input>\n</ion-item>\n\n<ion-item color=\"transparent\">\n  <ion-label position=\"floating\">\n    <p>\n      <ion-icon name=\"information-circle-outline\"></ion-icon> Project Information\n    </p>\n  </ion-label>\n  <ion-input type=\"text\" [(ngModel)]=\"projectinformation\"></ion-input>\n\n</ion-item>\n\n<ion-item color=\"transparent\">\n  <ion-label position=\"floating\">\n    <p>\n      <ion-icon name=\"calendar-outline\"></ion-icon>Start date\n    </p>\n  </ion-label>\n  <ion-datetime value=\"2020-07-07\" placeholder=\"Select Date\"></ion-datetime>\n</ion-item>\n<ion-item color=\"transparent\">\n  <ion-label position=\"floating\">\n    <p>\n      <ion-icon name=\"calendar-outline\"></ion-icon> Project Ends on\n    </p>\n  </ion-label>\n  <ion-datetime value=\"2020-07-07\" placeholder=\"Select Date\"></ion-datetime>\n</ion-item>\n\n\n\n\n\n\n\n\n<div style=\"display: inline-block;\">\n\n  <ion-button fill=\"clear\" (click)=\"dismissModal()\">\n    <ion-icon name=\"close-circle-outline\"></ion-icon> &nbsp; &nbsp;Cancel\n  </ion-button>\n\n  <ion-button fill=\"clear\" (click)=\"savePoject()\">\n    <ion-icon name=\"save-outline\"></ion-icon> &nbsp; &nbsp;Save\n  </ion-button>\n\n\n</div>";
+    __webpack_exports__["default"] = "<ion-content class=\"content\">\n\n  <form [formGroup]=\"project_form\" (ngSubmit)=\"registerProject(project_form.value)\">\n\n    <ion-card color=\"transparent\">\n\n      <ion-item color=\"transparent\">\n        <ion-label color=\"light\" position=\"floating\">\n          <p>\n            <ion-icon name=\"briefcase-outline\"></ion-icon> Project Name\n          </p>\n        </ion-label>\n        <ion-input name=\"pname\" required minlength=\"5\" color=\"primary\" formControlName=\"pname\" type=\"text\"></ion-input>\n      </ion-item>\n\n      <div>\n        <ng-container *ngFor=\"let validation of validation_messages.pname\">\n          <div\n            *ngIf=\"project_form.get('pname').hasError(validation.type)&&(project_form.get('pname').dirty || project_form.get('pname').touched)\">\n            <p style=\"color:red;\"> {{validation.message}} </p>\n          </div>\n\n        </ng-container>\n      </div>\n\n      <ion-item color=\"transparent\">\n        <ion-label color=\"light\" position=\"floating\">\n          <p>\n            <ion-icon name=\"information-circle-outline\"></ion-icon> Project Description\n          </p>\n        </ion-label>\n        <ion-textarea name=\"pinfo\" required minlength=\"5\" color=\"primary\" formControlName=\"pinfo\" type=\"text\">\n        </ion-textarea>\n      </ion-item>\n\n      <div>\n        <ng-container *ngFor=\"let validation of validation_messages.pinfo\">\n          <div\n            *ngIf=\"project_form.get('pinfo').hasError(validation.type)&&(project_form.get('pinfo').dirty || project_form.get('pinfo').touched)\">\n            <p style=\"color:red;\"> {{validation.message}}</p>\n\n          </div>\n        </ng-container>\n      </div>\n\n      <ion-item color=\"transparent\">\n        <ion-label color=\"light\" position=\"floating\">\n          <p>\n            <ion-icon name=\"calendar-outline\"></ion-icon>Start date\n          </p>\n        </ion-label>\n        <ion-datetime required done-text=\"Done\" max=\"2200-01-01\" min=\"2010-01-01\" month-names formControlName=\"pstart\">\n        </ion-datetime>\n      </ion-item>\n\n      <div>\n        <ng-container *ngFor=\"let validation of validation_messages.pstart\">\n          <div\n            *ngIf=\"project_form.get('pstart').hasError(validation.type)&&(project_form.get('pstart').dirty || project_form.get('pstart').touched)\">\n            <p style=\"color:red;\" > {{validation.message}}</p>\n          </div>\n\n        </ng-container>\n\n\n      </div>\n\n\n\n\n      <ion-item color=\"transparent\">\n        <ion-label color=\"light\" position=\"floating\">\n          <p>\n            <ion-icon name=\"calendar-outline\"></ion-icon> Project Ends on\n          </p>\n        </ion-label>\n        <ion-datetime required max=\"2200-01-01\" min=\"2010-01-01\" done-text=\"Done\" formControlName=\"pend\">\n        </ion-datetime>\n      </ion-item>\n\n      <div>\n        <ng-container *ngFor=\"let validation of validation_messages.pend\">\n          <div\n            *ngIf=\"project_form.get('pend').hasError(validation.type)&&(project_form.get('pend').dirty || project_form.get('pend').touched)\">\n            <p style=\"color:red;\"> {{validation.message}} </p>\n          </div>\n        </ng-container>\n      </div>\n\n      <ion-button style=\"float:right;\" [disabled]=\"!project_form.valid\" color=\"warning\" type=\"submit\">\n        <ion-icon name=\"save-outline\"></ion-icon> &nbsp; &nbsp;Save\n      </ion-button>\n\n      <ion-button color=\"danger\" (click)=\"dismissModal()\">\n        <ion-icon name=\"close-circle-outline\"></ion-icon> &nbsp; &nbsp;Cancel\n      </ion-button>\n\n\n\n\n\n    </ion-card>\n  </form>\n\n\n\n\n\n</ion-content>";
     /***/
   },
 
@@ -1497,7 +1497,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"], _components_notifications_notifications_component__WEBPACK_IMPORTED_MODULE_13__["NotificationsComponent"], _components_add_project_add_project_component__WEBPACK_IMPORTED_MODULE_10__["AddProjectComponent"], _components_add2team_add2team_component__WEBPACK_IMPORTED_MODULE_11__["Add2teamComponent"], _components_verificationmod_verificationmod_component__WEBPACK_IMPORTED_MODULE_12__["VerificationmodComponent"]],
       schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["CUSTOM_ELEMENTS_SCHEMA"]],
       entryComponents: [_components_add_project_add_project_component__WEBPACK_IMPORTED_MODULE_10__["AddProjectComponent"], _components_notifications_notifications_component__WEBPACK_IMPORTED_MODULE_13__["NotificationsComponent"], _components_add2team_add2team_component__WEBPACK_IMPORTED_MODULE_11__["Add2teamComponent"], _components_verificationmod_verificationmod_component__WEBPACK_IMPORTED_MODULE_12__["VerificationmodComponent"]],
-      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"], _angular_fire__WEBPACK_IMPORTED_MODULE_14__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_18__["environment"].firebaseConfig), _angular_fire_auth__WEBPACK_IMPORTED_MODULE_15__["AngularFireAuthModule"], _angular_fire_database__WEBPACK_IMPORTED_MODULE_16__["AngularFireDatabaseModule"], _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_17__["AngularFirestoreModule"]],
+      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"], _angular_fire__WEBPACK_IMPORTED_MODULE_14__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_18__["environment"].firebaseConfig), _angular_fire_auth__WEBPACK_IMPORTED_MODULE_15__["AngularFireAuthModule"], _angular_fire_database__WEBPACK_IMPORTED_MODULE_16__["AngularFireDatabaseModule"], _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_17__["AngularFirestoreModule"]],
       providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_17__["AngularFirestoreModule"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], {
         provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"],
         useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"]
@@ -1523,7 +1523,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "/* DOES NOT WORK - not specific enough */\n.modal-wrapper {\n  background: #222;\n}\n/* Works - pass \"my-custom-class\" in cssClass to increase specificity */\nmy-custom-class modal-wrapper {\n  background: #222;\n}\nion-button {\n  position: relative;\n}\nion-card-title {\n  color: #5c5858;\n}\nion-content {\n  --background: linear-gradient(to top, #3a3a3a -39%, #660066 77%);\n}\nion-input {\n  --color: #f4f5f8;\n}\nion-item {\n  padding-top: 3px;\n  position: block;\n  margin-bottom: 2px;\n}\ndiv {\n  margin-top: 154;\n}\nion-button {\n  margin-top: 73px;\n  border-radius: 50%;\n}\np {\n  font-weight: bold;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9hZGQtcHJvamVjdC9DOlxcVXNlcnNcXFRBaWViXFxEb2N1bWVudHNcXEdpdEh1YlxcTmxpbml0LUFuZ3VsYXIvc3JjXFxhcHBcXGNvbXBvbmVudHNcXGFkZC1wcm9qZWN0XFxhZGQtcHJvamVjdC5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvY29tcG9uZW50cy9hZGQtcHJvamVjdC9hZGQtcHJvamVjdC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSx3Q0FBQTtBQUNBO0VBQ0ksZ0JBQUE7QUNDSjtBREVBLHVFQUFBO0FBQ0E7RUFDSSxnQkFBQTtBQ0NKO0FERUE7RUFDSSxrQkFBQTtBQ0NKO0FER0E7RUFDSSxjQUFBO0FDQUo7QURHQTtFQUNJLGdFQUFBO0FDQUo7QURJQTtFQUNJLGdCQUFBO0FDREo7QURJQTtFQUNJLGdCQUFBO0VBQ0EsZUFBQTtFQUNBLGtCQUFBO0FDREo7QURLQTtFQUNJLGVBQUE7QUNGSjtBRE1BO0VBQ0ksZ0JBQUE7RUFDQSxrQkFBQTtBQ0hKO0FET0E7RUFDSSxpQkFBQTtBQ0pKIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9hZGQtcHJvamVjdC9hZGQtcHJvamVjdC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIERPRVMgTk9UIFdPUksgLSBub3Qgc3BlY2lmaWMgZW5vdWdoICovXHJcbi5tb2RhbC13cmFwcGVyIHtcclxuICAgIGJhY2tncm91bmQ6ICMyMjI7XHJcbn1cclxuXHJcbi8qIFdvcmtzIC0gcGFzcyBcIm15LWN1c3RvbS1jbGFzc1wiIGluIGNzc0NsYXNzIHRvIGluY3JlYXNlIHNwZWNpZmljaXR5ICovXHJcbm15LWN1c3RvbS1jbGFzcyBtb2RhbC13cmFwcGVyIHtcclxuICAgIGJhY2tncm91bmQ6ICMyMjI7XHJcbn1cclxuXHJcbmlvbi1idXR0b24ge1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG5cclxufVxyXG5cclxuaW9uLWNhcmQtdGl0bGUge1xyXG4gICAgY29sb3I6IHJnYig5MiwgODgsIDg4KTtcclxufVxyXG5cclxuaW9uLWNvbnRlbnQge1xyXG4gICAgLS1iYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQodG8gdG9wLCAjM2EzYTNhIC0zOSUsICM2NjAwNjYgNzclKTtcclxuXHJcbn1cclxuXHJcbmlvbi1pbnB1dCB7XHJcbiAgICAtLWNvbG9yOiAjZjRmNWY4O1xyXG59XHJcblxyXG5pb24taXRlbSB7XHJcbiAgICBwYWRkaW5nLXRvcDogM3B4O1xyXG4gICAgcG9zaXRpb246IGJsb2NrO1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMnB4O1xyXG59XHJcblxyXG5cclxuZGl2IHtcclxuICAgIG1hcmdpbi10b3A6IDE1NDtcclxufVxyXG5cclxuXHJcbmlvbi1idXR0b24ge1xyXG4gICAgbWFyZ2luLXRvcDogNzNweDtcclxuICAgIGJvcmRlci1yYWRpdXM6IDUwJTtcclxuXHJcbn1cclxuXHJcbnAge1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbn1cclxuIiwiLyogRE9FUyBOT1QgV09SSyAtIG5vdCBzcGVjaWZpYyBlbm91Z2ggKi9cbi5tb2RhbC13cmFwcGVyIHtcbiAgYmFja2dyb3VuZDogIzIyMjtcbn1cblxuLyogV29ya3MgLSBwYXNzIFwibXktY3VzdG9tLWNsYXNzXCIgaW4gY3NzQ2xhc3MgdG8gaW5jcmVhc2Ugc3BlY2lmaWNpdHkgKi9cbm15LWN1c3RvbS1jbGFzcyBtb2RhbC13cmFwcGVyIHtcbiAgYmFja2dyb3VuZDogIzIyMjtcbn1cblxuaW9uLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cblxuaW9uLWNhcmQtdGl0bGUge1xuICBjb2xvcjogIzVjNTg1ODtcbn1cblxuaW9uLWNvbnRlbnQge1xuICAtLWJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCh0byB0b3AsICMzYTNhM2EgLTM5JSwgIzY2MDA2NiA3NyUpO1xufVxuXG5pb24taW5wdXQge1xuICAtLWNvbG9yOiAjZjRmNWY4O1xufVxuXG5pb24taXRlbSB7XG4gIHBhZGRpbmctdG9wOiAzcHg7XG4gIHBvc2l0aW9uOiBibG9jaztcbiAgbWFyZ2luLWJvdHRvbTogMnB4O1xufVxuXG5kaXYge1xuICBtYXJnaW4tdG9wOiAxNTQ7XG59XG5cbmlvbi1idXR0b24ge1xuICBtYXJnaW4tdG9wOiA3M3B4O1xuICBib3JkZXItcmFkaXVzOiA1MCU7XG59XG5cbnAge1xuICBmb250LXdlaWdodDogYm9sZDtcbn0iXX0= */";
+    __webpack_exports__["default"] = "ion-card {\n  height: 150%;\n}\n\nion-button {\n  position: relative;\n}\n\nion-content {\n  --background: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);\n  background-color: #7f5a83;\n  -webkit-font-smoothing: antialiased;\n  margin-left: 0;\n  margin-right: 0;\n  margin-top: 0;\n  margin-bottom: 0;\n  padding-left: 0;\n  padding-right: 0;\n  padding-top: 0;\n  padding-bottom: 0;\n  position: fixed;\n  width: 100%;\n  max-width: 100%;\n  height: 100%;\n  max-height: 100%;\n  overflow: hidden;\n  touch-action: manipulation;\n  -webkit-user-drag: none;\n}\n\nion-input {\n  --color: #f4f5f8;\n}\n\nion-item {\n  padding-top: 3px;\n  position: block;\n  margin-bottom: 2px;\n}\n\nion-button {\n  margin-top: 73px;\n  border-radius: 50%;\n}\n\np {\n  color: red;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9hZGQtcHJvamVjdC9DOlxcVXNlcnNcXFRBaWViXFxEb2N1bWVudHNcXEdpdEh1YlxcTmxpbml0LUFuZ3VsYXIvc3JjXFxhcHBcXGNvbXBvbmVudHNcXGFkZC1wcm9qZWN0XFxhZGQtcHJvamVjdC5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvY29tcG9uZW50cy9hZGQtcHJvamVjdC9hZGQtcHJvamVjdC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNJLFlBQUE7QUNBSjs7QURHQTtFQUNJLGtCQUFBO0FDQUo7O0FETUE7RUFDUSw4REFBQTtFQUNBLHlCQUFBO0VBRUEsbUNBQUE7RUFDQSxjQUFBO0VBQ0EsZUFBQTtFQUNBLGFBQUE7RUFDQSxnQkFBQTtFQUNBLGVBQUE7RUFDQSxnQkFBQTtFQUNBLGNBQUE7RUFDQSxpQkFBQTtFQUNBLGVBQUE7RUFDQSxXQUFBO0VBQ0EsZUFBQTtFQUNBLFlBQUE7RUFDQSxnQkFBQTtFQUNBLGdCQUFBO0VBQ0EsMEJBQUE7RUFDQSx1QkFBQTtBQ0pSOztBRFFBO0VBQ0ksZ0JBQUE7QUNMSjs7QURRQTtFQUNJLGdCQUFBO0VBQ0EsZUFBQTtFQUNBLGtCQUFBO0FDTEo7O0FEVUE7RUFDSSxnQkFBQTtFQUNBLGtCQUFBO0FDUEo7O0FEV0E7RUFDSSxVQUFBO0FDUkoiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2FkZC1wcm9qZWN0L2FkZC1wcm9qZWN0LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbmlvbi1jYXJke1xyXG4gICAgaGVpZ2h0OiAxNTAlO1xyXG59XHJcblxyXG5pb24tYnV0dG9uIHtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuXHJcbn1cclxuXHJcblxyXG5cclxuaW9uLWNvbnRlbnQge1xyXG4gICAgICAgIC0tYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDMxNWRlZywgIzdmNWE4MyAwJSwgIzBkMzI0ZCA3NCUpO1xyXG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICM3ZjVhODM7XHJcblxyXG4gICAgICAgIC13ZWJraXQtZm9udC1zbW9vdGhpbmc6IGFudGlhbGlhc2VkO1xyXG4gICAgICAgIG1hcmdpbi1sZWZ0OiAwO1xyXG4gICAgICAgIG1hcmdpbi1yaWdodDogMDtcclxuICAgICAgICBtYXJnaW4tdG9wOiAwO1xyXG4gICAgICAgIG1hcmdpbi1ib3R0b206IDA7XHJcbiAgICAgICAgcGFkZGluZy1sZWZ0OiAwO1xyXG4gICAgICAgIHBhZGRpbmctcmlnaHQ6IDA7XHJcbiAgICAgICAgcGFkZGluZy10b3A6IDA7XHJcbiAgICAgICAgcGFkZGluZy1ib3R0b206IDA7XHJcbiAgICAgICAgcG9zaXRpb246IGZpeGVkO1xyXG4gICAgICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgICAgIG1heC13aWR0aDogMTAwJTtcclxuICAgICAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgICAgICAgbWF4LWhlaWdodDogMTAwJTtcclxuICAgICAgICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gICAgICAgIHRvdWNoLWFjdGlvbjogbWFuaXB1bGF0aW9uO1xyXG4gICAgICAgIC13ZWJraXQtdXNlci1kcmFnOiBub25lO1xyXG5cclxufVxyXG5cclxuaW9uLWlucHV0IHtcclxuICAgIC0tY29sb3I6ICNmNGY1Zjg7XHJcbn1cclxuXHJcbmlvbi1pdGVtIHtcclxuICAgIHBhZGRpbmctdG9wOiAzcHg7XHJcbiAgICBwb3NpdGlvbjogYmxvY2s7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAycHg7XHJcbn1cclxuXHJcblxyXG5cclxuaW9uLWJ1dHRvbiB7XHJcbiAgICBtYXJnaW4tdG9wOiA3M3B4O1xyXG4gICAgYm9yZGVyLXJhZGl1czogNTAlO1xyXG5cclxufVxyXG5cclxucHtcclxuICAgIGNvbG9yOnJlZDtcclxufSIsImlvbi1jYXJkIHtcbiAgaGVpZ2h0OiAxNTAlO1xufVxuXG5pb24tYnV0dG9uIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xufVxuXG5pb24tY29udGVudCB7XG4gIC0tYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDMxNWRlZywgIzdmNWE4MyAwJSwgIzBkMzI0ZCA3NCUpO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjN2Y1YTgzO1xuICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDtcbiAgbWFyZ2luLWxlZnQ6IDA7XG4gIG1hcmdpbi1yaWdodDogMDtcbiAgbWFyZ2luLXRvcDogMDtcbiAgbWFyZ2luLWJvdHRvbTogMDtcbiAgcGFkZGluZy1sZWZ0OiAwO1xuICBwYWRkaW5nLXJpZ2h0OiAwO1xuICBwYWRkaW5nLXRvcDogMDtcbiAgcGFkZGluZy1ib3R0b206IDA7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgd2lkdGg6IDEwMCU7XG4gIG1heC13aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBtYXgtaGVpZ2h0OiAxMDAlO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICB0b3VjaC1hY3Rpb246IG1hbmlwdWxhdGlvbjtcbiAgLXdlYmtpdC11c2VyLWRyYWc6IG5vbmU7XG59XG5cbmlvbi1pbnB1dCB7XG4gIC0tY29sb3I6ICNmNGY1Zjg7XG59XG5cbmlvbi1pdGVtIHtcbiAgcGFkZGluZy10b3A6IDNweDtcbiAgcG9zaXRpb246IGJsb2NrO1xuICBtYXJnaW4tYm90dG9tOiAycHg7XG59XG5cbmlvbi1idXR0b24ge1xuICBtYXJnaW4tdG9wOiA3M3B4O1xuICBib3JkZXItcmFkaXVzOiA1MCU7XG59XG5cbnAge1xuICBjb2xvcjogcmVkO1xufSJdfQ== */";
     /***/
   },
 
@@ -1564,17 +1564,74 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @ionic/angular */
     "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
+    /* harmony import */
+
+
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var src_app_services_projectstore_projectstore_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! src/app/services/projectstore/projectstore.service */
+    "./src/app/services/projectstore/projectstore.service.ts");
 
     var AddProjectComponent = /*#__PURE__*/function () {
-      function AddProjectComponent(modalController) {
+      function AddProjectComponent(modalController, formBuilder, projectservice) {
         _classCallCheck(this, AddProjectComponent);
 
         this.modalController = modalController;
+        this.formBuilder = formBuilder;
+        this.projectservice = projectservice;
+        this.error_messages = '';
+        this.validation_messages = {
+          'pname': [{
+            type: 'required',
+            message: 'Project name is required.'
+          }, {
+            type: 'minlength',
+            message: 'Project name must be at least 4 characters long.'
+          }],
+          'pinfo': [{
+            type: 'required',
+            message: 'Project description is required.'
+          }, {
+            type: 'minlength',
+            message: 'Project description must be at least 5 characters long.'
+          }],
+          'pstart': [{
+            type: 'required',
+            message: 'You have to select a starting date.'
+          }],
+          'pend': [{
+            type: 'required',
+            message: 'You have to select an estimated time-limit'
+          }]
+        };
       }
 
       _createClass(AddProjectComponent, [{
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          //formcontrol to be added
+          this.project_form = this.formBuilder.group({
+            pname: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(5), _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])),
+            pinfo: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(5), _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])),
+            pstart: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required])),
+            pend: new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]))
+          });
+        }
+      }, {
+        key: "registerProject",
+        value: function registerProject() {
+          console.log(this.project_form.value);
+          var res = this.projectservice.create_project(this.project_form.value);
+          this.project_form.reset;
+          this.modalController.dismiss({
+            'dismissed': true
+          });
+        }
       }, {
         key: "savePoject",
         value: function savePoject() {
@@ -1587,6 +1644,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             'dismissed': true
           });
         }
+      }, {
+        key: "pname",
+        get: function get() {
+          return this.project_form.get('pname');
+        }
       }]);
 
       return AddProjectComponent;
@@ -1595,6 +1657,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     AddProjectComponent.ctorParameters = function () {
       return [{
         type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"]
+      }, {
+        type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"]
+      }, {
+        type: src_app_services_projectstore_projectstore_service__WEBPACK_IMPORTED_MODULE_4__["ProjectstoreService"]
       }];
     };
 
@@ -1606,7 +1672,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./add-project.component.scss */
       "./src/app/components/add-project/add-project.component.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"]])], AddProjectComponent);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"], src_app_services_projectstore_projectstore_service__WEBPACK_IMPORTED_MODULE_4__["ProjectstoreService"]])], AddProjectComponent);
     /***/
   },
 
@@ -1905,6 +1971,89 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /*! ./verificationmod.component.scss */
       "./src/app/components/verificationmod/verificationmod.component.scss"))["default"]]
     }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_shared_authentification_service__WEBPACK_IMPORTED_MODULE_2__["AuthenticationService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ModalController"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])], VerificationmodComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/services/projectstore/projectstore.service.ts":
+  /*!***************************************************************!*\
+    !*** ./src/app/services/projectstore/projectstore.service.ts ***!
+    \***************************************************************/
+
+  /*! exports provided: ProjectstoreService */
+
+  /***/
+  function srcAppServicesProjectstoreProjectstoreServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ProjectstoreService", function () {
+      return ProjectstoreService;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/fire/firestore */
+    "./node_modules/@angular/fire/fesm2015/angular-fire-firestore.js");
+
+    var ProjectstoreService = /*#__PURE__*/function () {
+      function ProjectstoreService(firestore) {
+        _classCallCheck(this, ProjectstoreService);
+
+        this.firestore = firestore;
+        this.collectioname = "projects";
+      }
+
+      _createClass(ProjectstoreService, [{
+        key: "create_project",
+        value: function create_project(record) {
+          return this.firestore.collection(this.collectioname).add(record);
+        }
+      }, {
+        key: "read_project",
+        value: function read_project() {
+          return this.firestore.collection(this.collectioname).snapshotChanges();
+        }
+      }, {
+        key: "update_project",
+        value: function update_project(record, recordID) {
+          return this.firestore.doc(this.collectioname + '/' + recordID).update(record);
+        }
+      }, {
+        key: "delete_project",
+        value: function delete_project(record_id) {
+          return this.firestore.doc(this.collectioname + '/' + record_id)["delete"]();
+        }
+      }]);
+
+      return ProjectstoreService;
+    }();
+
+    ProjectstoreService.ctorParameters = function () {
+      return [{
+        type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"]
+      }];
+    };
+
+    ProjectstoreService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+      providedIn: 'root'
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"]])], ProjectstoreService);
     /***/
   },
 

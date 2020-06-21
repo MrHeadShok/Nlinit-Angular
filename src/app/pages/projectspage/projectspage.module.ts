@@ -8,6 +8,7 @@ import { ProjectspagePageRoutingModule } from './projectspage-routing.module';
 
 import { ProjectspagePage } from './projectspage.page';
 
+
  
 
 
@@ -20,7 +21,8 @@ import { ProjectspagePage } from './projectspage.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ProjectspagePageRoutingModule
+    ProjectspagePageRoutingModule,
+    
   ],
   declarations: [ProjectspagePage ]
 })

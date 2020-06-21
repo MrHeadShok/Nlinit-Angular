@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { AppComponent } from 'src/app/app.component';
 
 
 import { AuthenticationService } from "../../shared/authentification-service";
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
-import { AppComponent } from 'src/app/app.component';
 import { UserfirestoreService } from 'src/app/services/userstore/userfirestore.service';
 
 
@@ -23,7 +22,7 @@ interface User{
 
 
 export class SignupPage implements OnInit {
-//authentication
+//SignInformcontrol
   validations_form: FormGroup;
   errorMessage: string = '';
   successMessage: string = '';
@@ -71,23 +70,11 @@ export class SignupPage implements OnInit {
         Validators.required
       ])),
 
-      fullname: ['', [Validators.required]],
+      fullname: ['', [Validators.required,
+        Validators.pattern('^[a-zA-Z]+ +[a-zA-Z] +$')
+      ]],
       role: ['', [Validators.required]]
     });
-
-    this.userservice.read_user().subscribe(data => {
-      this.userList = data.map(e => {
-        return {
-          id: e.payload.doc.id,
-          isEdit: false,
-          fullname: e.payload.doc.data()['fullname'],
-          role: e.payload.doc.data()['role'],
-        };
-      })
-      console.log(this.userList);
-})
-
-
 
     }
 
@@ -96,16 +83,6 @@ export class SignupPage implements OnInit {
 
   }
 
-
-  addUser() {
-    console.log(this.validations_form.value);
-    this.userservice.create_user(this.validations_form.value).then(resp => {
-      this.validations_form.reset();
-    })
-      .catch(error => {
-        console.log(error);
-      });
-}
 
   tryRegister(value) {
     this.authService.registerUser(value)

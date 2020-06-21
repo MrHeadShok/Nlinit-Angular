@@ -1,39 +1,29 @@
-
 <ion-content>
 
 
-<div class="description">
-  <h2>Welcome back!</h2>
-  <p>Below you can find all of your projects.</p>
+  <div class="description">
+    <h2>Welcome back!</h2>
+    <p>Below you can find all of your projects.</p>
     <p> You can always add new projects by taping the <ion-icon name="add-outline"></ion-icon>
-  </p>
-  
-</div>
+    </p>
 
-  <div class="projectcards">
-  <ion-card type="button" (click)="navigateToDashboard()">
-    <ion-card-header>
-      <ion-card-title>Projectname1</ion-card-title>
-      <ion-card-subtitle>due to date</ion-card-subtitle>
+  </div>
 
-    </ion-card-header>
-    <ion-card-content>
-      Description
-    </ion-card-content>
-    
-   
-  </ion-card>
+  <div *ngFor="let item of projectList" class="projectcards">
+    <ion-card color="danger" type="button" (click)="navigateToDashboard()">
+      <ion-card-header>
+        <ion-card-title>{{item.pname}}</ion-card-title>
+        <ion-card-subtitle>Due to {{item.pend}}</ion-card-subtitle>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Projectname2</ion-card-title>
-            <ion-card-subtitle>due to date</ion-card-subtitle>
-    </ion-card-header>
-    <ion-card-content>
-      Description
-    </ion-card-content>
-  </ion-card>
-</div>
+      </ion-card-header>
+      <ion-card-content>
+        {{item.pinfo}}
+      </ion-card-content>
+
+
+    </ion-card>
+
+  </div>
 
   <ion-fab horizontal="end" vertical="bottom" slot="fixed">
     <ion-fab-button color="dark" (click)="addpPoject()">

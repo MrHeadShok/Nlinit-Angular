@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 //created componenets
 import { AddProjectComponent } from './components/add-project/add-project.component';
 import { Add2teamComponent } from './components/add2team/add2team.component';
@@ -37,7 +39,7 @@ import { environment } from '../environments/environment';
     CUSTOM_ELEMENTS_SCHEMA
   ],
   entryComponents: [AddProjectComponent, NotificationsComponent, Add2teamComponent, VerificationmodComponent],
-  imports: [BrowserModule, FormsModule, IonicModule.forRoot(), AppRoutingModule, AngularFireModule.initializeApp(environment.firebaseConfig),
+  imports: [BrowserModule, ReactiveFormsModule, FormsModule, IonicModule.forRoot(), AppRoutingModule, AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     AngularFirestoreModule],
