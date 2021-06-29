@@ -19,6 +19,7 @@ export class UserfirestoreService {
   }
 
   read_user() {
+
     return this.firestore.collection(this.collectioname).snapshotChanges();
   }
   

@@ -196,7 +196,7 @@ let ProjectspagePage = class ProjectspagePage {
             const modal = yield this.modalController.create({
                 component: src_app_components_add_project_add_project_component__WEBPACK_IMPORTED_MODULE_5__["AddProjectComponent"],
                 enterAnimation,
-                leaveAnimation
+                leaveAnimation,
             });
             return yield modal.present();
         });

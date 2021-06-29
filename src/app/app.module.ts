@@ -17,7 +17,12 @@ import { AddProjectComponent } from './components/add-project/add-project.compon
 import { Add2teamComponent } from './components/add2team/add2team.component';
 import { VerificationmodComponent } from './components/verificationmod/verificationmod.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
- 
+
+
+//CameraUpload + cam picker
+import { Camera } from '@ionic-native/Camera/ngx';
+import { File } from '@ionic-native/file/ngx';
+
 
 
 //firebase related impors
@@ -43,12 +48,13 @@ import { environment } from '../environments/environment';
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     AngularFirestoreModule],
-  
+
   providers: [
     StatusBar, AngularFirestoreModule,
+    Camera, File,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

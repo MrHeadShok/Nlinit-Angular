@@ -3,61 +3,71 @@
     <img src="../../../assets/img/wide1.png" />
     <ion-card-content>
       <ion-text color="light">
-        <p> ProjectAdmin is an app to help you better organize your data.Lead your team to succes.
+        <p>
+          ProjectAdmin is an app to help you better organize your data.Lead your
+          team to succes.
         </p>
       </ion-text>
     </ion-card-content>
-
   </ion-card>
 
-  <form class="form" [formGroup]="validations_form" (ngSubmit)="tryRegister(validations_form.value)">
+  <form
+    class="form"
+    [formGroup]="validations_form"
+    (ngSubmit)="tryRegister(validations_form.value)"
+  >
     <ion-item color="transparent">
       <ion-label color="light" id="name" position="floating">
-        <p>
-          <ion-icon name="body-outline"></ion-icon> Full Name
-        </p>
+        <p><ion-icon name="body-outline"></ion-icon> Full Name</p>
       </ion-label>
       <ion-input formControlName="fullname" color="light" required></ion-input>
     </ion-item>
 
-
     <ion-item color="transparent">
       <ion-label position="floating" color="light">
-        <p>
-          <ion-icon name="person-circle-outline"></ion-icon> Email address
-        </p>
+        <p><ion-icon name="person-circle-outline"></ion-icon> Email address</p>
       </ion-label>
       <ion-input formControlName="email" type="Email"></ion-input>
     </ion-item>
 
     <div class="validation-errors">
       <ng-container *ngFor="let validation of validation_messages.email">
-        <div class="error-message"
-          *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
+        <div
+          class="error-message"
+          *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)"
+        >
           {{ validation.message }}
         </div>
       </ng-container>
     </div>
 
     <ion-item color="transparent">
-      <ion-label color="light" position="floating" minlength="5" pattern="Password">
-        <p>
-          <ion-icon name="lock-closed-outline"></ion-icon> Password
-        </p>
-
+      <ion-label
+        color="light"
+        position="floating"
+        minlength="5"
+        pattern="Password"
+      >
+        <p><ion-icon name="lock-closed-outline"></ion-icon> Password</p>
       </ion-label>
-      <ion-input color="light" type="password" formControlName="password" required></ion-input>
+      <ion-input
+        color="light"
+        type="password"
+        formControlName="password"
+        required
+      ></ion-input>
     </ion-item>
 
     <div class="validation-errors">
       <ng-container *ngFor="let validation of validation_messages.password">
-        <div class="error-message"
-          *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+        <div
+          class="error-message"
+          *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)"
+        >
           {{ validation.message }}
         </div>
       </ng-container>
     </div>
-
 
     <ion-radio-group formControlName="role" value="group" #role required>
       <ion-list-header>
@@ -70,10 +80,16 @@
       <ion-item color="transparent">
         <ion-label color="light">
           <p>
-            <ion-icon name="person-outline"></ion-icon>&nbsp; &nbsp;A team leader
+            <ion-icon name="person-outline"></ion-icon>&nbsp; &nbsp;A team
+            leader
           </p>
         </ion-label>
-        <ion-radio value="Team_Leader" color="transparent" slot="start" color="success">
+        <ion-radio
+          value="Team_Leader"
+          color="transparent"
+          slot="start"
+          color="success"
+        >
         </ion-radio>
       </ion-item>
 
@@ -83,30 +99,32 @@
             <ion-icon name="people-outline"></ion-icon>&nbsp; &nbsp; A member
           </p>
         </ion-label>
-        <ion-radio value="Team_Member" color="transparent" slot="start" color="tertiary">
+        <ion-radio
+          value="Team_Member"
+          color="transparent"
+          slot="start"
+          color="tertiary"
+        >
         </ion-radio>
       </ion-item>
     </ion-radio-group>
 
-
-
     <ion-button color="light" expand="block" type="submit">
       <ion-icon name="person-add-outline"></ion-icon>
-      <p> &nbsp; &nbsp;Create account!</p>
+      <p>&nbsp; &nbsp;Create account!</p>
     </ion-button>
 
     <label class="error-message">{{errorMessage}}</label>
     <label class="success-message">{{successMessage}}</label>
-
   </form>
   <div>
-
-
-    <ion-button fill="clear" color="light" (click)="navigateToLoginPage()" style="margin-left: 133px;">
-      <ion-icon name="log-in-outline"></ion-icon> &nbsp; &nbsp;Login
+    <ion-button
+      fill="clear"
+      color="light"
+      (click)="navigateToLoginPage()"
+      style="margin-left: 133px"
+    >
+      &nbsp;&nbsp; <ion-icon name="log-in-outline"></ion-icon> &nbsp;Login
     </ion-button>
-
-
   </div>
-
 </ion-content>

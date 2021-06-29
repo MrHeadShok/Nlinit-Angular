@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-toolbar color=\"transparent\">\n  <ion-searchbar animated=\"true\" show-cancel-button=\"focus\" color=\"light\"></ion-searchbar>\n</ion-toolbar>\n\n\n<ion-content fullscreen>\n  <ion-card>\n    <ion-item>\n      <div style=\"float:left;\">\n        <img src=\"../../../assets/img/avatar.jpg\" alt=\"Avatar\" style=\"float: left;\">\n      </div>\n      <h3>&nbsp;&nbsp;UserName</h3>\n\n    </ion-item>\n    <ion-button color=\"tertiary\" expand=\"full\" (click)=\"sendInv()\">\n      <ion-icon name=\"person-add-outline\"></ion-icon>&nbsp;&nbsp;&nbsp; Add to my team\n    </ion-button>\n  </ion-card>\n\n</ion-content>";
+    __webpack_exports__["default"] = "<ion-toolbar color=\"transparent\">\n  <ion-searchbar animated=\"true\" show-cancel-button=\"focus\" color=\"light\"></ion-searchbar>\n</ion-toolbar>\n\n\n<ion-content fullscreen>\n\n\n  <div *ngFor=\"let item of userList\" class=\"usercards\">\n\n\n    <ion-card>\n      <ion-item>\n        <div style=\"float:left;\">\n          <img src=\"../../../assets/img/avatar.jpg\" alt=\"Avatar\" style=\"float: left;\">\n        </div>\n        <h3>&nbsp;&nbsp;{{item.fullname}}</h3>\n\n      </ion-item>\n      <ion-button color=\"tertiary\" expand=\"full\" (click)=\"sendInv()\">\n        <ion-icon name=\"person-add-outline\"></ion-icon>&nbsp;&nbsp;&nbsp; Add to my team\n      </ion-button>\n    </ion-card>\n\n\n  </div>\n\n\n</ion-content>";
     /***/
   },
 

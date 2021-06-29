@@ -102,7 +102,8 @@ export class ProjectspagePage implements OnInit {
     const modal = await this.modalController.create({
       component: AddProjectComponent,
       enterAnimation,
-      leaveAnimation
+      leaveAnimation,
+     
     });
     return await modal.present();
   }

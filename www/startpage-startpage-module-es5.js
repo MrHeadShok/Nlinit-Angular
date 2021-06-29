@@ -215,6 +215,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var src_app_app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! src/app/app.component */
+    "./src/app/app.component.ts");
 
     var StartpagePage = /*#__PURE__*/function () {
       function StartpagePage(router) {
@@ -226,8 +232,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(StartpagePage, [{
         key: "navigateToSignUp",
         value: function navigateToSignUp() {
-          this.router.navigate(['signup']);
-          console.log("start pressed");
+          this.router.navigate(['welcomepage']);
+        }
+      }, {
+        key: "ionViewWillEnter",
+        value: function ionViewWillEnter() {
+          src_app_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"].isTabVisible = false;
         }
       }, {
         key: "ngOnInit",
