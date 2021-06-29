@@ -228,9 +228,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var src_app_services_userstore_userfirestore_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _ionic_native_Camera_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @ionic-native/Camera/ngx */
+    "./node_modules/@ionic-native/Camera/ngx/index.js");
+    /* harmony import */
+
+
+    var _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @ionic-native/file/ngx */
+    "./node_modules/@ionic-native/file/ngx/index.js");
+    /* harmony import */
+
+
+    var _ionic_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! @ionic/angular */
+    "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
+    /* harmony import */
+
+
+    var src_app_services_userstore_userfirestore_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! src/app/services/userstore/userfirestore.service */
-    "./src/app/services/userstore/userfirestore.service.ts");
+    "./src/app/services/userstore/userfirestore.service.ts"); //image pick
+
 
     var User = function User(id, isEdit, fullname, role, email, password) {
       _classCallCheck(this, User);
@@ -244,15 +263,85 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     };
 
     var ProfilePage = /*#__PURE__*/function () {
-      function ProfilePage(userService) {
+      function ProfilePage(userService, file, camera, actionSheetController) {
         _classCallCheck(this, ProfilePage);
 
-        this.userService = userService; //userInfo
+        this.userService = userService;
+        this.file = file;
+        this.camera = camera;
+        this.actionSheetController = actionSheetController;
+        this.croppedImagepath = "";
+        this.isLoading = false;
+        this.imagePickerOptions = {
+          maximumImagesCount: 1,
+          quality: 50
+        }; //userInfo
 
         this.userList = [];
       }
 
       _createClass(ProfilePage, [{
+        key: "pickImage",
+        value: function pickImage(sourceType) {
+          var _this = this;
+
+          var options = {
+            quality: 100,
+            sourceType: sourceType,
+            destinationType: this.camera.DestinationType.DATA_URL,
+            encodingType: this.camera.EncodingType.JPEG,
+            mediaType: this.camera.MediaType.PICTURE
+          };
+          this.camera.getPicture(options).then(function (imageData) {
+            // imageData is either a base64 encoded string or a file URI
+            _this.croppedImagepath = 'data:image/jpeg;base64,' + imageData;
+          }, function (err) {// Handle error
+          });
+        }
+      }, {
+        key: "selectImage",
+        value: function selectImage() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+            var _this2 = this;
+
+            var actionSheet;
+            return regeneratorRuntime.wrap(function _callee$(_context) {
+              while (1) {
+                switch (_context.prev = _context.next) {
+                  case 0:
+                    _context.next = 2;
+                    return this.actionSheetController.create({
+                      header: "Select Image source",
+                      buttons: [{
+                        text: 'Load from Library',
+                        handler: function handler() {
+                          _this2.pickImage(_this2.camera.PictureSourceType.PHOTOLIBRARY);
+                        }
+                      }, {
+                        text: 'Use Camera',
+                        handler: function handler() {
+                          _this2.pickImage(_this2.camera.PictureSourceType.CAMERA);
+                        }
+                      }, {
+                        text: 'Cancel',
+                        role: 'cancel'
+                      }]
+                    });
+
+                  case 2:
+                    actionSheet = _context.sent;
+                    _context.next = 5;
+                    return actionSheet.present();
+
+                  case 5:
+                  case "end":
+                    return _context.stop();
+                }
+              }
+            }, _callee, this);
+          }));
+        }
+      }, {
         key: "ionViewWillEnter",
         value: function ionViewWillEnter() {
           src_app_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"].isTabVisible = true;
@@ -260,12 +349,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this = this;
+          var _this3 = this;
 
           this.doughnutChartMethod(); //to be displayed when your page is loaded
 
           this.userService.read_user().subscribe(function (data) {
-            _this.userList = data.map(function (e) {
+            _this3.userList = data.map(function (e) {
+              console.log("id");
               var id = e.payload.doc.id;
               var isEdit = false;
               var fullname = e.payload.doc.data()['fullname'];
@@ -275,12 +365,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               return new User(id, isEdit, fullname, role, email, password);
             });
 
-            if (_this.userList.length > 0) {
-              _this.userData = _this.userList[0];
+            if (_this3.userList.length > 0) {
+              _this3.userData = _this3.userList[0];
             }
 
             console.log("import data");
-            console.log(_this.userList);
+            console.log(_this3.userList);
           });
         }
       }, {
@@ -306,7 +396,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     ProfilePage.ctorParameters = function () {
       return [{
-        type: src_app_services_userstore_userfirestore_service__WEBPACK_IMPORTED_MODULE_4__["UserfirestoreService"]
+        type: src_app_services_userstore_userfirestore_service__WEBPACK_IMPORTED_MODULE_7__["UserfirestoreService"]
+      }, {
+        type: _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_5__["File"]
+      }, {
+        type: _ionic_native_Camera_ngx__WEBPACK_IMPORTED_MODULE_4__["Camera"]
+      }, {
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["ActionSheetController"]
       }];
     };
 
@@ -321,7 +417,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./profile.page.scss */
       "./src/app/pages/profile/profile.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_userstore_userfirestore_service__WEBPACK_IMPORTED_MODULE_4__["UserfirestoreService"]])], ProfilePage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_userstore_userfirestore_service__WEBPACK_IMPORTED_MODULE_7__["UserfirestoreService"], _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_5__["File"], _ionic_native_Camera_ngx__WEBPACK_IMPORTED_MODULE_4__["Camera"], _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["ActionSheetController"]])], ProfilePage);
     /***/
   }
 }]);

@@ -4,17 +4,26 @@
 
 
 <ion-content fullscreen>
-  <ion-card>
-    <ion-item>
-      <div style="float:left;">
-        <img src="../../../assets/img/avatar.jpg" alt="Avatar" style="float: left;">
-      </div>
-      <h3>&nbsp;&nbsp;UserName</h3>
 
-    </ion-item>
-    <ion-button color="tertiary" expand="full" (click)="sendInv()">
-      <ion-icon name="person-add-outline"></ion-icon>&nbsp;&nbsp;&nbsp; Add to my team
-    </ion-button>
-  </ion-card>
+
+  <div *ngFor="let item of userList" class="usercards">
+
+
+    <ion-card>
+      <ion-item>
+        <div style="float:left;">
+          <img src="../../../assets/img/avatar.jpg" alt="Avatar" style="float: left;">
+        </div>
+        <h3>&nbsp;&nbsp;{{item.fullname}}</h3>
+
+      </ion-item>
+      <ion-button color="tertiary" expand="full" (click)="sendInv()">
+        <ion-icon name="person-add-outline"></ion-icon>&nbsp;&nbsp;&nbsp; Add to my team
+      </ion-button>
+    </ion-card>
+
+
+  </div>
+
 
 </ion-content>

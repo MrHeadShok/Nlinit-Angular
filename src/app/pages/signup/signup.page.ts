@@ -94,6 +94,7 @@ export class SignupPage implements OnInit {
         console.log(this.validations_form.value);
         this.userservice.create_user(this.validations_form.value).then(resp => {
           this.validations_form.reset();
+          console.log("Register IDcheck");
         })
           .catch(error => {
             console.log(error);
@@ -114,13 +115,3 @@ export class SignupPage implements OnInit {
   }
 
   
-
-  
-
-
- 
-
-
-
-
-

@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { PopoverController } from '@ionic/angular';  
+import { PopoverController } from '@ionic/angular';
 
 import { Add2teamComponent } from 'src/app/components/add2team/add2team.component';
 import { AnimationController } from '@ionic/angular';
 
+import { AppComponent } from 'src/app/app.component';
+import { UserfirestoreService } from 'src/app/services/userstore/userfirestore.service';
 
 
 
@@ -15,9 +17,9 @@ import { AnimationController } from '@ionic/angular';
 export class Tab3Page {
 
   constructor(public animationCtrl: AnimationController, public popoverCtrl: PopoverController) { }
-  
+
   async sendInv(ev: any) {
-    
+
     const popover = await this.popoverCtrl.create({
       component: Add2teamComponent,
       event: ev,
@@ -25,8 +27,8 @@ export class Tab3Page {
       showBackdrop: true
     });
     return await popover.present();
-  }  
-    
   }
+
+}
 
 

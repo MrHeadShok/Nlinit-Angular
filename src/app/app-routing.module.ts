@@ -49,6 +49,10 @@ const routes: Routes = [
     path: 'messages',
     loadChildren: () => import('./pages/messages/messages.module').then( m => m.MessagesPageModule)
   },
+  {
+    path: 'welcomepage',
+    loadChildren: () => import('./pages/welcomepage/welcomepage.module').then( m => m.WelcomepagePageModule)
+  },
 
 ];
 @NgModule({

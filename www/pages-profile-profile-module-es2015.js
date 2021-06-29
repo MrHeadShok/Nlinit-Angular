@@ -120,8 +120,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/app.component */ "./src/app/app.component.ts");
 /* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! chart.js */ "./node_modules/chart.js/dist/Chart.js");
 /* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(chart_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var src_app_services_userstore_userfirestore_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/userstore/userfirestore.service */ "./src/app/services/userstore/userfirestore.service.ts");
+/* harmony import */ var _ionic_native_Camera_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic-native/Camera/ngx */ "./node_modules/@ionic-native/Camera/ngx/index.js");
+/* harmony import */ var _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic-native/file/ngx */ "./node_modules/@ionic-native/file/ngx/index.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
+/* harmony import */ var src_app_services_userstore_userfirestore_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/services/userstore/userfirestore.service */ "./src/app/services/userstore/userfirestore.service.ts");
 
+
+
+
+//image pick
 
 
 
@@ -137,10 +144,59 @@ class User {
     }
 }
 let ProfilePage = class ProfilePage {
-    constructor(userService) {
+    constructor(userService, file, camera, actionSheetController) {
         this.userService = userService;
+        this.file = file;
+        this.camera = camera;
+        this.actionSheetController = actionSheetController;
+        this.croppedImagepath = "";
+        this.isLoading = false;
+        this.imagePickerOptions = {
+            maximumImagesCount: 1,
+            quality: 50
+        };
         //userInfo
         this.userList = [];
+    }
+    pickImage(sourceType) {
+        const options = {
+            quality: 100,
+            sourceType: sourceType,
+            destinationType: this.camera.DestinationType.DATA_URL,
+            encodingType: this.camera.EncodingType.JPEG,
+            mediaType: this.camera.MediaType.PICTURE
+        };
+        this.camera.getPicture(options).then((imageData) => {
+            // imageData is either a base64 encoded string or a file URI
+            this.croppedImagepath = 'data:image/jpeg;base64,' + imageData;
+        }, (err) => {
+            // Handle error
+        });
+    }
+    selectImage() {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            const actionSheet = yield this.actionSheetController.create({
+                header: "Select Image source",
+                buttons: [{
+                        text: 'Load from Library',
+                        handler: () => {
+                            this.pickImage(this.camera.PictureSourceType.PHOTOLIBRARY);
+                        }
+                    },
+                    {
+                        text: 'Use Camera',
+                        handler: () => {
+                            this.pickImage(this.camera.PictureSourceType.CAMERA);
+                        }
+                    },
+                    {
+                        text: 'Cancel',
+                        role: 'cancel'
+                    }
+                ]
+            });
+            yield actionSheet.present();
+        });
     }
     ionViewWillEnter() {
         src_app_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"].isTabVisible = true;
@@ -149,6 +205,7 @@ let ProfilePage = class ProfilePage {
         this.doughnutChartMethod(); //to be displayed when your page is loaded
         this.userService.read_user().subscribe(data => {
             this.userList = data.map(e => {
+                console.log("id");
                 let id = e.payload.doc.id;
                 let isEdit = false;
                 let fullname = e.payload.doc.data()['fullname'];
@@ -186,7 +243,10 @@ let ProfilePage = class ProfilePage {
     }
 };
 ProfilePage.ctorParameters = () => [
-    { type: src_app_services_userstore_userfirestore_service__WEBPACK_IMPORTED_MODULE_4__["UserfirestoreService"] }
+    { type: src_app_services_userstore_userfirestore_service__WEBPACK_IMPORTED_MODULE_7__["UserfirestoreService"] },
+    { type: _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_5__["File"] },
+    { type: _ionic_native_Camera_ngx__WEBPACK_IMPORTED_MODULE_4__["Camera"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["ActionSheetController"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('doughnutCanvas', { static: true }),
@@ -198,7 +258,7 @@ ProfilePage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./profile.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/profile/profile.page.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./profile.page.scss */ "./src/app/pages/profile/profile.page.scss")).default]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_userstore_userfirestore_service__WEBPACK_IMPORTED_MODULE_4__["UserfirestoreService"]])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_userstore_userfirestore_service__WEBPACK_IMPORTED_MODULE_7__["UserfirestoreService"], _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_5__["File"], _ionic_native_Camera_ngx__WEBPACK_IMPORTED_MODULE_4__["Camera"], _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["ActionSheetController"]])
 ], ProfilePage);
 
 
